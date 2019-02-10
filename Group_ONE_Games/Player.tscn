@@ -14,7 +14,7 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Right",
 "speed": 5.0
@@ -45,7 +45,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "collision" ]
 speed = 200
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D" index="0"]
@@ -80,7 +80,8 @@ _sections_unfolded = [ "Limit" ]
 position = Vector2( -5, 0 )
 scale = Vector2( 0.96875, 1 )
 frames = SubResource( 1 )
-animation = "Up"
+animation = "Down"
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="2"]
 
