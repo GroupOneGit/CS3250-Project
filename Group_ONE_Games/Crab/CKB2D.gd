@@ -2,42 +2,37 @@ extends KinematicBody2D
 
 var velocity = Vector2(0,0) #Where it's going
 var anitime #animation time
-
+var debug = true
+var speed =100
 
 func _ready():
 	velocity.x = 1
 	velocity.y = 0
-	etime = 0.0
+	anitime = 0.0
 
-func set_direction():
+func set_direction(delta):
 	if velocity.x > 0:
 		velocity.x = -1
 	else:
 		velocity.x = 1 
 	randomize()
-	var fl = randf()
-	if fl < .3:
-		velocity.y = .5
-		velocity.x = velocity.x*(6/7)
-	elif fl > .7:
-		velocity.y = -.5
-		velocity.x = velocity.x*(6/7)
-	else:
-		velocity.y = 0
+	var y = (randf() -.5)*.9
+	velocity.y = y
 	
 
 func _physics_process(delta):
 	# This does collisons and tests if the crab collides witha anything
 	if velocity.x == 0:
-		set_direction()
-	var thing = self.move_and_collide(velocity * delta * 100)
+		set_direction(delta)
+	var thing = self.move_and_collide(velocity.normalized() * delta * speed)
+	
 	if thing != null: #if we collide with somethign  
-		set_direction()
+		set_direction(delta)
 	$Sprite.update()
 	
 	# Flip the sprite for animations.
-	etime += delta
-	if etime > .3:
-		etime = 0
+	anitime += delta
+	if anitime > .3:
+		anitime = 0
 		$Sprite.flip_h = not $Sprite.flip_h
 	
