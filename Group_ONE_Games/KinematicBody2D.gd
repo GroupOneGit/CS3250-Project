@@ -5,6 +5,7 @@ var screensize
 
 func _ready():
 	screensize = get_viewport_rect().size
+	
 
 
 func _physics_process(delta):
@@ -28,6 +29,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite.stop()
 	self.move_and_collide(velocity * delta)
+	
 
 	if velocity.x != 0:
 		$AnimatedSprite.animation = 'Right'
