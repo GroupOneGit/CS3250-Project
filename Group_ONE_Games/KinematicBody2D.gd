@@ -28,6 +28,7 @@ func _physics_process(delta):
 		$AnimatedSprite.play()
 	else:
 		$AnimatedSprite.stop()
+		
 	self.move_and_collide(velocity * delta)
 	
 

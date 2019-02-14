@@ -4,12 +4,12 @@
 [ext_resource path="res://Player/player_19.png" type="Texture" id=2]
 [ext_resource path="res://Player/player_17.png" type="Texture" id=3]
 [ext_resource path="res://Player/player_18.png" type="Texture" id=4]
-[ext_resource path="res://Player/player_10.png" type="Texture" id=5]
-[ext_resource path="res://Player/player_08.png" type="Texture" id=6]
-[ext_resource path="res://Player/player_09.png" type="Texture" id=7]
-[ext_resource path="res://Player/player_07.png" type="Texture" id=8]
-[ext_resource path="res://Player/player_05.png" type="Texture" id=9]
-[ext_resource path="res://Player/player_06.png" type="Texture" id=10]
+[ext_resource path="res://Player/player_07.png" type="Texture" id=5]
+[ext_resource path="res://Player/player_05.png" type="Texture" id=6]
+[ext_resource path="res://Player/player_06.png" type="Texture" id=7]
+[ext_resource path="res://Player/player_10.png" type="Texture" id=8]
+[ext_resource path="res://Player/player_08.png" type="Texture" id=9]
+[ext_resource path="res://Player/player_09.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -21,13 +21,13 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "Up",
-"speed": 4.0
+"name": "Down",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "Down",
-"speed": 5.0
+"name": "Up",
+"speed": 4.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -55,15 +55,18 @@ position = Vector2( 6, 0 )
 scale = Vector2( 0.96875, 1 )
 frames = SubResource( 1 )
 animation = "Up"
+frame = 2
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
 
-position = Vector2( 5, 0 )
+position = Vector2( 6, 0 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D" index="2"]
 
+visible = false
 position = Vector2( 6, 0 )
 anchor_mode = 1
 rotating = false
