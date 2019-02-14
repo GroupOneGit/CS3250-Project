@@ -10,7 +10,7 @@ func _ready():
 	velocity.y = 0
 	anitime = 0.0
 
-func set_direction(delta):
+func set_direction():
 	if velocity.x > 0:
 		velocity.x = -1
 	else:
@@ -27,12 +27,11 @@ func _physics_process(delta):
 	var thing = self.move_and_collide(velocity.normalized() * delta * speed)
 	
 	if thing != null: #if we collide with somethign  
-		set_direction(delta)
-	$Sprite.update()
+		set_direction()
 	
 	# Flip the sprite for animations.
 	anitime += delta
 	if anitime > .3:
 		anitime = 0
 		$Sprite.flip_h = not $Sprite.flip_h
-	
+	$Sprite.update()

@@ -38,5 +38,5 @@ func _physics_process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = 'Up'
 		$AnimatedSprite.flip_v = velocity.y > 0
-		
+
 

@@ -18,4 +18,12 @@ position = Vector2( 680, 410 )
 
 position = Vector2( 518.525, 230.623 )
 
+[node name="Crab2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 369.301, 355.589 )
+
+[node name="Crab3" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 462.658, 357.059 )
+
 
