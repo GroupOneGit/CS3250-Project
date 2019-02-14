@@ -4,12 +4,11 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Interface/Interface.tscn" type="PackedScene" id=3]
 
-[node name="Node" type="Node" index="0"]
+[node name="Main" type="Node" index="0"]
 
 [node name="Map" parent="." index="0" instance=ExtResource( 1 )]
 
-visible = false
-position = Vector2( 160, 110 )
+position = Vector2( 114.971, -90.4407 )
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 

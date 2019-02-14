@@ -1,56 +1,73 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Player/player_19.png" type="Texture" id=2]
 [ext_resource path="res://Player/player_17.png" type="Texture" id=3]
 [ext_resource path="res://Player/player_18.png" type="Texture" id=4]
-[ext_resource path="res://Player/player_10.png" type="Texture" id=5]
-[ext_resource path="res://Player/player_08.png" type="Texture" id=6]
-[ext_resource path="res://Player/player_09.png" type="Texture" id=7]
-[ext_resource path="res://Player/player_07.png" type="Texture" id=8]
-[ext_resource path="res://Player/player_05.png" type="Texture" id=9]
-[ext_resource path="res://Player/player_06.png" type="Texture" id=10]
+[ext_resource path="res://Player/player_07.png" type="Texture" id=5]
+[ext_resource path="res://Player/player_05.png" type="Texture" id=6]
+[ext_resource path="res://Player/player_06.png" type="Texture" id=7]
+[ext_resource path="res://Player/player_10.png" type="Texture" id=8]
+[ext_resource path="res://Player/player_08.png" type="Texture" id=9]
+[ext_resource path="res://Player/player_09.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "Up",
-"speed": 4.0
+"name": "Down",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "Down",
-"speed": 5.0
+"name": "Up",
+"speed": 4.0
 } ]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 15.0
+height = 3.0
+
+[node name="Player" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
-position = Vector2( 11, 0 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 speed = 200
 
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D" index="0"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="0"]
 
-position = Vector2( -5, 0 )
+position = Vector2( 6, 0 )
+scale = Vector2( 0.96875, 1 )
+frames = SubResource( 1 )
+animation = "Up"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
+
+position = Vector2( 6, 0 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D" index="2"]
+
+visible = false
+position = Vector2( 6, 0 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -74,19 +91,5 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit" ]
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="1"]
-
-position = Vector2( -5, 0 )
-scale = Vector2( 0.96875, 1 )
-frames = SubResource( 1 )
-animation = "Up"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="2"]
-
-scale = Vector2( 1.02083, 0.96875 )
-build_mode = 1
-polygon = PoolVector2Array( -0.591837, -21.6774, -20.1837, -21.6774, -20, -10, -20, 10, -20, 20, 0, 20, 9.79595, 20.6452, 9.79595, 0, 9.20408, -21.6774 )
-_sections_unfolded = [ "Transform" ]
 
 

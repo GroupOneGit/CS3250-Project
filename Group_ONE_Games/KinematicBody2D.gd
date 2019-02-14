@@ -5,6 +5,7 @@ var screensize
 
 func _ready():
 	screensize = get_viewport_rect().size
+	
 
 
 func _physics_process(delta):
@@ -27,7 +28,9 @@ func _physics_process(delta):
 		$AnimatedSprite.play()
 	else:
 		$AnimatedSprite.stop()
+		
 	self.move_and_collide(velocity * delta)
+	
 
 	if velocity.x != 0:
 		$AnimatedSprite.animation = 'Right'
@@ -38,5 +41,5 @@ func _physics_process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = 'Up'
 		$AnimatedSprite.flip_v = velocity.y > 0
-		
+
 
