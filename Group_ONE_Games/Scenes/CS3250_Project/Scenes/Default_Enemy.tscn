@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Enemies/spike monster B.png" type="Texture" id=2]
+
+[node name="Enemy" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 8
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -127.446, 88.661, -170.478, 42.7188, -135.569, -24.2792, -78.253, -72.3203, 0.705643, -88.7304, 79.9021, -71.8446, 137.694, -25.4683, 171.228, 41.8368, 129.37, 86.3105 )
+
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Exploration4 - Prairie Nights.ogg-0843c3c8a7bf4392d00b446d90fa4b31.oggstr"
+
+[deps]
+
+source_file="res://Audio/Exploration4 - Prairie Nights.ogg"
+dest_files=[ "res://.import/Exploration4 - Prairie Nights.ogg-0843c3c8a7bf4392d00b446d90fa4b31.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

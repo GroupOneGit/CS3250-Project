@@ -1,0 +1,209 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Audio/awesomeness.wav" type="AudioStream" id=2]
+[ext_resource path="res://Art/Background/Transparent PNG/full_background.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Kenney Future.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Scenes/Buttons/NewGameButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Buttons/QuitButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/font/Kenney Future Narrow.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 80
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 25
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="MainMenu" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="Music" type="Node" parent="." index="0"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music" index="0"]
+
+stream = ExtResource( 2 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="TextureRect" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 0
+
+[node name="Menu" type="VBoxContainer" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 70.0
+margin_right = -36.0
+margin_bottom = -90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Margin" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 958.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 10
+text = "Group_One_Game"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 94.0
+margin_right = 958.0
+margin_bottom = 375.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 477.0
+margin_bottom = 281.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+_sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_constants" ]
+
+[node name="NewGameButton" parent="Menu/CenterRow/Buttons" index="0" instance=ExtResource( 5 )]
+
+margin_top = 40.0
+margin_right = 477.0
+margin_bottom = 130.0
+_sections_unfolded = [ "Rect", "Size Flags", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="QuitButton" parent="Menu/CenterRow/Buttons" index="1" instance=ExtResource( 6 )]
+
+margin_top = 150.0
+margin_right = 477.0
+margin_bottom = 240.0
+
+[node name="ArtHere" type="CenterContainer" parent="Menu/CenterRow" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 481.0
+margin_right = 958.0
+margin_bottom = 281.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="GameInfo" type="Label" parent="Menu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 379.0
+margin_right = 958.0
+margin_bottom = 440.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Group_One Studios
+Version 0.0.0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "Theme", "custom_colors", "custom_fonts" ]
+
+[connection signal="pressed" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+
+

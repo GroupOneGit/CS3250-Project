@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Spike_Wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Enemies/Obstacles/spike.png" type="Texture" id=2]
+
+[node name="Small_Spike" instance=ExtResource( 1 )]
+
+modulate = Color( 0.8125, 0.503649, 0.0218414, 1 )
+position = Vector2( 512.039, 270.585 )
+scale = Vector2( 0.645433, 0.645433 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="StaticBody2D" parent="." index="0"]
+
+editor/display_folded = true
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( 0.263519, 101.502 )
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+
+polygon = PoolVector2Array( -44.355, 77.9026, 43.3226, 78.665, 0.11908, -130.49 )
+
+

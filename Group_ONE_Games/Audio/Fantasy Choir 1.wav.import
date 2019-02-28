@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fantasy Choir 1.wav-5d67f3536ff7828f614430fffc8cef9c.sample"
+
+[deps]
+
+source_file="res://Audio/Fantasy Choir 1.wav"
+dest_files=[ "res://.import/Fantasy Choir 1.wav-5d67f3536ff7828f614430fffc8cef9c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
