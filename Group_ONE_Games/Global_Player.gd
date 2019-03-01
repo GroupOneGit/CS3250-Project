@@ -11,12 +11,21 @@ var health = MAX_health
 var thirst = MAX_thirst
 var energy = MAX_energy
 
+export var title_scene = preload("res://Scenes/MainMenu.tscn")
+export var level_scene = preload("res://DemoLevel.tscn")
+export var dead_screen = preload("res://Scenes/EndGameScreen.tscn")
+
 
 func end_game():
-	get_tree().change_scene("res://Scenes/EndGameScreen.tscn")
-	
-func full_health():
+	#Once this function is called the player gains his max health back 
+	#	due to a bug which keeps the player's health at zero
+	Global_Player.full_life()
+	get_tree().change_scene_to(dead_screen)
+
+func full_life():
 	health = MAX_health
+	thirst = MAX_thirst
+	energy = MAX_energy
 
 func take_damage(amount):
 	health -= amount
@@ -58,5 +67,5 @@ func gain_energy(amount):
 		energy += amount
 		if energy > 100:
 			energy = 100
-	emit_signal("energy_changed" , round(energy))
+		emit_signal("energy_changed" , round(energy))
 			
