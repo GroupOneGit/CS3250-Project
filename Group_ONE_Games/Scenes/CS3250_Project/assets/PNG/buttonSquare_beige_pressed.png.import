@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buttonSquare_beige_pressed.png-7d340576e80d79ab89398ed590b85aab.stex"
+path="res://.import/buttonSquare_beige_pressed.png-0cdae11f7f8bbe0b05c6103caef69ccf.stex"
 
 [deps]
 
-source_file="res://assets/PNG/buttonSquare_beige_pressed.png"
-dest_files=[ "res://.import/buttonSquare_beige_pressed.png-7d340576e80d79ab89398ed590b85aab.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/buttonSquare_beige_pressed.png"
+dest_files=[ "res://.import/buttonSquare_beige_pressed.png-0cdae11f7f8bbe0b05c6103caef69ccf.stex" ]
 
 [params]
 

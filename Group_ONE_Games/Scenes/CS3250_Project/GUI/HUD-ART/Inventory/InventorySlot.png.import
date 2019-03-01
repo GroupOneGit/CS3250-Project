@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InventorySlot.png-92204d8da55441fc105eb0fdaed2b7b3.stex"
+path="res://.import/InventorySlot.png-390a731f8c7463094f7d3d779efb15bc.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/Inventory/InventorySlot.png"
-dest_files=[ "res://.import/InventorySlot.png-92204d8da55441fc105eb0fdaed2b7b3.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/Inventory/InventorySlot.png"
+dest_files=[ "res://.import/InventorySlot.png-390a731f8c7463094f7d3d779efb15bc.stex" ]
 
 [params]
 

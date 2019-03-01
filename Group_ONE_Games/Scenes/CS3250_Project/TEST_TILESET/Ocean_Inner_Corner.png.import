@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ocean_Inner_Corner.png-dcc57ad0468101405d151a0fcb7ddeff.stex"
+path="res://.import/Ocean_Inner_Corner.png-ff33c90f51dc10f67401796edfeaf12d.stex"
 
 [deps]
 
-source_file="res://TEST_TILESET/Ocean_Inner_Corner.png"
-dest_files=[ "res://.import/Ocean_Inner_Corner.png-dcc57ad0468101405d151a0fcb7ddeff.stex" ]
+source_file="res://Scenes/CS3250_Project/TEST_TILESET/Ocean_Inner_Corner.png"
+dest_files=[ "res://.import/Ocean_Inner_Corner.png-ff33c90f51dc10f67401796edfeaf12d.stex" ]
 
 [params]
 

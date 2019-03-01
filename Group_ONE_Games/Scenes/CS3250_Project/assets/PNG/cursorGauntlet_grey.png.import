@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cursorGauntlet_grey.png-bc114641d78d96498fd77e0c26886341.stex"
+path="res://.import/cursorGauntlet_grey.png-e7db8e5d9f4ed4f19b659d03957beb53.stex"
 
 [deps]
 
-source_file="res://assets/PNG/cursorGauntlet_grey.png"
-dest_files=[ "res://.import/cursorGauntlet_grey.png-bc114641d78d96498fd77e0c26886341.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/cursorGauntlet_grey.png"
+dest_files=[ "res://.import/cursorGauntlet_grey.png-e7db8e5d9f4ed4f19b659d03957beb53.stex" ]
 
 [params]
 

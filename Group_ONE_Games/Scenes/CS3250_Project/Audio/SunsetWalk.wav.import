@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/SunsetWalk.wav-8bef7d6c24f2daad828566980ed20398.sample"
+path="res://.import/SunsetWalk.wav-af8356391ef0ff8aab6ae0783274ee40.sample"
 
 [deps]
 
-source_file="res://Audio/SunsetWalk.wav"
-dest_files=[ "res://.import/SunsetWalk.wav-8bef7d6c24f2daad828566980ed20398.sample" ]
+source_file="res://Scenes/CS3250_Project/Audio/SunsetWalk.wav"
+dest_files=[ "res://.import/SunsetWalk.wav-af8356391ef0ff8aab6ae0783274ee40.sample" ]
 
 [params]
 

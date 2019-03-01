@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iconCheck_blue.png-a2d18fab62ab4622d8372f4e098a73d1.stex"
+path="res://.import/iconCheck_blue.png-3e6aad5856952f0920635067f55eca56.stex"
 
 [deps]
 
-source_file="res://assets/PNG/iconCheck_blue.png"
-dest_files=[ "res://.import/iconCheck_blue.png-a2d18fab62ab4622d8372f4e098a73d1.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/iconCheck_blue.png"
+dest_files=[ "res://.import/iconCheck_blue.png-3e6aad5856952f0920635067f55eca56.stex" ]
 
 [params]
 

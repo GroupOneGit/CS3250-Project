@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iconCheck_beige.png-1fa02ecc859a6244bb786695673748c6.stex"
+path="res://.import/iconCheck_beige.png-9fb546223db387e7c1377488acac7312.stex"
 
 [deps]
 
-source_file="res://assets/PNG/iconCheck_beige.png"
-dest_files=[ "res://.import/iconCheck_beige.png-1fa02ecc859a6244bb786695673748c6.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/iconCheck_beige.png"
+dest_files=[ "res://.import/iconCheck_beige.png-9fb546223db387e7c1377488acac7312.stex" ]
 
 [params]
 

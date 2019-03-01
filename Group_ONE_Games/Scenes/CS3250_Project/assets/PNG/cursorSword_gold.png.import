@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cursorSword_gold.png-cd09336b87ba7fafd102cc579dbd6c20.stex"
+path="res://.import/cursorSword_gold.png-7e0dff55838fd469572e0be2401d3bf0.stex"
 
 [deps]
 
-source_file="res://assets/PNG/cursorSword_gold.png"
-dest_files=[ "res://.import/cursorSword_gold.png-cd09336b87ba7fafd102cc579dbd6c20.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/cursorSword_gold.png"
+dest_files=[ "res://.import/cursorSword_gold.png-7e0dff55838fd469572e0be2401d3bf0.stex" ]
 
 [params]
 

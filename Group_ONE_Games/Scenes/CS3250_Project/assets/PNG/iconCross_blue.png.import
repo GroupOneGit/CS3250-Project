@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iconCross_blue.png-2d05af74aaa744644aef110d242530b7.stex"
+path="res://.import/iconCross_blue.png-afbde33f67b02856c1c6b6fb53bdef8c.stex"
 
 [deps]
 
-source_file="res://assets/PNG/iconCross_blue.png"
-dest_files=[ "res://.import/iconCross_blue.png-2d05af74aaa744644aef110d242530b7.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/iconCross_blue.png"
+dest_files=[ "res://.import/iconCross_blue.png-afbde33f67b02856c1c6b6fb53bdef8c.stex" ]
 
 [params]
 

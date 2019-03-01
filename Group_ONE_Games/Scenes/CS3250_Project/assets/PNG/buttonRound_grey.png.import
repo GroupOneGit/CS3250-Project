@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buttonRound_grey.png-ced8d58e35974db85ebe220793e59cc5.stex"
+path="res://.import/buttonRound_grey.png-f39e93d703db91b195c446231c624913.stex"
 
 [deps]
 
-source_file="res://assets/PNG/buttonRound_grey.png"
-dest_files=[ "res://.import/buttonRound_grey.png-ced8d58e35974db85ebe220793e59cc5.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/buttonRound_grey.png"
+dest_files=[ "res://.import/buttonRound_grey.png-f39e93d703db91b195c446231c624913.stex" ]
 
 [params]
 

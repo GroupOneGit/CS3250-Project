@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spike monster B.png-58d2dc6c777d14aa68b13aee2cc916f9.stex"
+path="res://.import/spike monster B.png-6f6285845317af88d2341c175e913afb.stex"
 
 [deps]
 
-source_file="res://Characters/Enemies/spike monster B.png"
-dest_files=[ "res://.import/spike monster B.png-58d2dc6c777d14aa68b13aee2cc916f9.stex" ]
+source_file="res://Scenes/CS3250_Project/Characters/Enemies/spike monster B.png"
+dest_files=[ "res://.import/spike monster B.png-6f6285845317af88d2341c175e913afb.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BEACH-Side_TILE.png-f95012ab7fc62ad41275ab5208ab28c7.stex"
+path="res://.import/BEACH-Side_TILE.png-2d8d8c220611b18137ee39a10c2e92dd.stex"
 
 [deps]
 
-source_file="res://TEST_TILESET/BEACH-Side_TILE.png"
-dest_files=[ "res://.import/BEACH-Side_TILE.png-f95012ab7fc62ad41275ab5208ab28c7.stex" ]
+source_file="res://Scenes/CS3250_Project/TEST_TILESET/BEACH-Side_TILE.png"
+dest_files=[ "res://.import/BEACH-Side_TILE.png-2d8d8c220611b18137ee39a10c2e92dd.stex" ]
 
 [params]
 

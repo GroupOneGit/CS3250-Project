@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_18.png-34b0312bc276fac275e0120c188b5137.stex"
+path="res://.import/player_18.png-45d8ece0a9af38898beab6a7893a1082.stex"
 
 [deps]
 
-source_file="res://Characters/Player/player_18.png"
-dest_files=[ "res://.import/player_18.png-34b0312bc276fac275e0120c188b5137.stex" ]
+source_file="res://Scenes/CS3250_Project/Characters/Player/player_18.png"
+dest_files=[ "res://.import/player_18.png-45d8ece0a9af38898beab6a7893a1082.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crate.png-d337587cb4ee9b5feaf180d88e40ff84.stex"
+path="res://.import/crate.png-3f20044646f505a57d856eebdcedbcb5.stex"
 
 [deps]
 
-source_file="res://Art/Items/crate.png"
-dest_files=[ "res://.import/crate.png-d337587cb4ee9b5feaf180d88e40ff84.stex" ]
+source_file="res://Scenes/CS3250_Project/Art/Items/crate.png"
+dest_files=[ "res://.import/crate.png-3f20044646f505a57d856eebdcedbcb5.stex" ]
 
 [params]
 

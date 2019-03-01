@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barYellow_verticalTop.png-58c8cbc1be40061f37a9c689e67c4812.stex"
+path="res://.import/barYellow_verticalTop.png-f202abcdcece47b88093d65a0bdf4d42.stex"
 
 [deps]
 
-source_file="res://assets/PNG/barYellow_verticalTop.png"
-dest_files=[ "res://.import/barYellow_verticalTop.png-58c8cbc1be40061f37a9c689e67c4812.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/barYellow_verticalTop.png"
+dest_files=[ "res://.import/barYellow_verticalTop.png-f202abcdcece47b88093d65a0bdf4d42.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GUI_Concept.png-c16270347ba2b933559d70be9c9f5071.stex"
+path="res://.import/GUI_Concept.png-4b7ec8901c2acef9060066132bcee64c.stex"
 
 [deps]
 
-source_file="res://GUI/GUI_Concept.png"
-dest_files=[ "res://.import/GUI_Concept.png-c16270347ba2b933559d70be9c9f5071.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/GUI_Concept.png"
+dest_files=[ "res://.import/GUI_Concept.png-4b7ec8901c2acef9060066132bcee64c.stex" ]
 
 [params]
 

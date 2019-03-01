@@ -25,7 +25,6 @@ bus = "Master"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -34,32 +33,49 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="GUI" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
 
-editor/display_folded = true
-margin_left = 0.0
-margin_top = -1.0
-margin_right = 0.0
-margin_bottom = -1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_bottom = 2.0
 script = ExtResource( 3 )
 
 [node name="TextureRect" parent="CanvasLayer/GUI" index="0"]
 
+editor/display_folded = false
 visible = true
+margin_left = 66.0
+margin_right = 961.0
+margin_bottom = 593.0
 mouse_filter = 2
-_sections_unfolded = [ "Mouse" ]
+texture = null
+_sections_unfolded = [ "Axis Stretch", "Margin", "Mouse" ]
 
 [node name="GridContainer" parent="CanvasLayer/GUI/TextureRect" index="0"]
 
+margin_left = 122.0
+margin_top = 153.0
+margin_right = 421.0
+margin_bottom = 445.0
 focus_mode = 2
 mouse_filter = 2
 _sections_unfolded = [ "Focus", "Mouse", "Visibility", "custom_constants" ]
 
+[node name="Background" parent="CanvasLayer/GUI" index="1"]
+
+editor/display_folded = false
+margin_top = -13.0
+margin_bottom = 107.0
+texture = null
+
 [node name="Map" parent="." index="2" instance=ExtResource( 4 )]
 
 editor/display_folded = true
-position = Vector2( 115.411, -90.0005 )
+visible = false
+position = Vector2( 97.411, 88.9995 )
 
 [node name="Obstacles" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( 1291.11, 575.14 )
 scale = Vector2( 0.179144, 0.151001 )
 
@@ -105,10 +121,14 @@ position = Vector2( -2711.81, -2398.79 )
 
 [node name="Player" parent="." index="4" instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 680, 410 )
 script = ExtResource( 8 )
 
 [node name="Enemies" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+visible = false
 
 [node name="Crab" parent="Enemies" index="0" instance=ExtResource( 9 )]
 

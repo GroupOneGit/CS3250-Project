@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Apple_Core.png-4f1511269325b2f2bf63719a1b8f5526.stex"
+path="res://.import/Apple_Core.png-1e895888d441132662efad24856f8652.stex"
 
 [deps]
 
-source_file="res://Art/Food/Apple_Core.png"
-dest_files=[ "res://.import/Apple_Core.png-4f1511269325b2f2bf63719a1b8f5526.stex" ]
+source_file="res://Scenes/CS3250_Project/Art/Food/Apple_Core.png"
+dest_files=[ "res://.import/Apple_Core.png-1e895888d441132662efad24856f8652.stex" ]
 
 [params]
 

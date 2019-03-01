@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ocean_SpriteSheet.png-b9995f248da67da163c6a32e1798d699.stex"
+path="res://.import/Ocean_SpriteSheet.png-befb9f623ec84231b120805ce7187276.stex"
 
 [deps]
 
-source_file="res://Art/Background/Ocean_SpriteSheet.png"
-dest_files=[ "res://.import/Ocean_SpriteSheet.png-b9995f248da67da163c6a32e1798d699.stex" ]
+source_file="res://Scenes/CS3250_Project/Art/Background/Ocean_SpriteSheet.png"
+dest_files=[ "res://.import/Ocean_SpriteSheet.png-befb9f623ec84231b120805ce7187276.stex" ]
 
 [params]
 

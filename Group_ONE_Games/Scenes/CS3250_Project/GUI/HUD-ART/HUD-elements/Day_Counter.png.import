@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Day_Counter.png-8fd73babec53d6e8cfab549c533fd43c.stex"
+path="res://.import/Day_Counter.png-15184ab6af10a02283771994322c9a26.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/HUD-elements/Day_Counter.png"
-dest_files=[ "res://.import/Day_Counter.png-8fd73babec53d6e8cfab549c533fd43c.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/HUD-elements/Day_Counter.png"
+dest_files=[ "res://.import/Day_Counter.png-15184ab6af10a02283771994322c9a26.stex" ]
 
 [params]
 

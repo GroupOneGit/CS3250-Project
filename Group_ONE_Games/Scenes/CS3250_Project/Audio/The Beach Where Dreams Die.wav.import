@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/The Beach Where Dreams Die.wav-7c106296e36195d874ffa9019c0ceaed.sample"
+path="res://.import/The Beach Where Dreams Die.wav-4c75f7e01c96f54032f06398a7ce3527.sample"
 
 [deps]
 
-source_file="res://Audio/The Beach Where Dreams Die.wav"
-dest_files=[ "res://.import/The Beach Where Dreams Die.wav-7c106296e36195d874ffa9019c0ceaed.sample" ]
+source_file="res://Scenes/CS3250_Project/Audio/The Beach Where Dreams Die.wav"
+dest_files=[ "res://.import/The Beach Where Dreams Die.wav-4c75f7e01c96f54032f06398a7ce3527.sample" ]
 
 [params]
 

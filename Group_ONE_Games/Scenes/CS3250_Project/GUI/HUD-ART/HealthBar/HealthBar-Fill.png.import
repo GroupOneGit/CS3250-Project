@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HealthBar-Fill.png-d0b8274c7eef9ebbb96a9f902ed0a424.stex"
+path="res://.import/HealthBar-Fill.png-3780285d1f7673167f353a915de12a8b.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/HealthBar/HealthBar-Fill.png"
-dest_files=[ "res://.import/HealthBar-Fill.png-d0b8274c7eef9ebbb96a9f902ed0a424.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/HealthBar/HealthBar-Fill.png"
+dest_files=[ "res://.import/HealthBar-Fill.png-3780285d1f7673167f353a915de12a8b.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Inner_Corner_TILE.png-a14f24d8645a7f11fecb0b3206cac7b2.stex"
+path="res://.import/Inner_Corner_TILE.png-301985946e6f7f3a753194245977cb19.stex"
 
 [deps]
 
-source_file="res://TEST_TILESET/Inner_Corner_TILE.png"
-dest_files=[ "res://.import/Inner_Corner_TILE.png-a14f24d8645a7f11fecb0b3206cac7b2.stex" ]
+source_file="res://Scenes/CS3250_Project/TEST_TILESET/Inner_Corner_TILE.png"
+dest_files=[ "res://.import/Inner_Corner_TILE.png-301985946e6f7f3a753194245977cb19.stex" ]
 
 [params]
 

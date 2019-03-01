@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ThirstBar-BG.png-d9d4959f7fb558040741d8c443184ab7.stex"
+path="res://.import/ThirstBar-BG.png-cd1fb50c0b2dbc0ceefd7d08dab2ee59.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/ThirstBar/ThirstBar-BG.png"
-dest_files=[ "res://.import/ThirstBar-BG.png-d9d4959f7fb558040741d8c443184ab7.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/ThirstBar/ThirstBar-BG.png"
+dest_files=[ "res://.import/ThirstBar-BG.png-cd1fb50c0b2dbc0ceefd7d08dab2ee59.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Filler_TILE.png-74754113c862dc948ea9915660c42c5e.stex"
+path="res://.import/Filler_TILE.png-876cc3ced91f5b2ab8144c8587325b7a.stex"
 
 [deps]
 
-source_file="res://TEST_TILESET/Filler_TILE.png"
-dest_files=[ "res://.import/Filler_TILE.png-74754113c862dc948ea9915660c42c5e.stex" ]
+source_file="res://Scenes/CS3250_Project/TEST_TILESET/Filler_TILE.png"
+dest_files=[ "res://.import/Filler_TILE.png-876cc3ced91f5b2ab8144c8587325b7a.stex" ]
 
 [params]
 

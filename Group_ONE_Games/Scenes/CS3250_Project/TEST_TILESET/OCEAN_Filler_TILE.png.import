@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OCEAN_Filler_TILE.png-da91d842f7c1b2c08a70f122b262fc4a.stex"
+path="res://.import/OCEAN_Filler_TILE.png-a79fabb107fdf46a302583ca91415af3.stex"
 
 [deps]
 
-source_file="res://TEST_TILESET/OCEAN_Filler_TILE.png"
-dest_files=[ "res://.import/OCEAN_Filler_TILE.png-da91d842f7c1b2c08a70f122b262fc4a.stex" ]
+source_file="res://Scenes/CS3250_Project/TEST_TILESET/OCEAN_Filler_TILE.png"
+dest_files=[ "res://.import/OCEAN_Filler_TILE.png-a79fabb107fdf46a302583ca91415af3.stex" ]
 
 [params]
 

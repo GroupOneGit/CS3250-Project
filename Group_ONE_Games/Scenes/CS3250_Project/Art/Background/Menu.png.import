@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Menu.png-d2d8e7f49149f862d2e6bd66cd001710.stex"
+path="res://.import/Menu.png-6dd22b8c90d6be176adf300eea58fe2e.stex"
 
 [deps]
 
-source_file="res://Art/Background/Menu.png"
-dest_files=[ "res://.import/Menu.png-d2d8e7f49149f862d2e6bd66cd001710.stex" ]
+source_file="res://Scenes/CS3250_Project/Art/Background/Menu.png"
+dest_files=[ "res://.import/Menu.png-6dd22b8c90d6be176adf300eea58fe2e.stex" ]
 
 [params]
 

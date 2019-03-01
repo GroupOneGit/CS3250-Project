@@ -2,19 +2,18 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lifebar_fill.png-11451ae6cd9f38ca127db5b77f2b84f6.stex"
+path="res://.import/lifebar_fill.png-837ca9017595da15f7ad57db2aabbae5.stex"
 
 [deps]
 
-source_file="res://assets/GUI/lifebar_fill.png"
-dest_files=[ "res://.import/lifebar_fill.png-11451ae6cd9f38ca127db5b77f2b84f6.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/GUI/lifebar_fill.png"
+dest_files=[ "res://.import/lifebar_fill.png-837ca9017595da15f7ad57db2aabbae5.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -24,7 +23,6 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
-process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

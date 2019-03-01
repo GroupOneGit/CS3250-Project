@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iconCheck_bronze.png-bdfeef861c705b58832adc382d28d17a.stex"
+path="res://.import/iconCheck_bronze.png-5ec91bc1d701d8df1e2f69ddf44fce82.stex"
 
 [deps]
 
-source_file="res://assets/PNG/iconCheck_bronze.png"
-dest_files=[ "res://.import/iconCheck_bronze.png-bdfeef861c705b58832adc382d28d17a.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/iconCheck_bronze.png"
+dest_files=[ "res://.import/iconCheck_bronze.png-5ec91bc1d701d8df1e2f69ddf44fce82.stex" ]
 
 [params]
 

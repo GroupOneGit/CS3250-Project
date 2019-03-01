@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/layer_3.png-ea8d02b12b759014b93a94d95a1228b4.stex"
+path="res://.import/layer_3.png-804639fb1eb6b901e06efd08a83deabb.stex"
 
 [deps]
 
-source_file="res://Art/Background/Transparent PNG/layer_3.png"
-dest_files=[ "res://.import/layer_3.png-ea8d02b12b759014b93a94d95a1228b4.stex" ]
+source_file="res://Scenes/CS3250_Project/Art/Background/Transparent PNG/layer_3.png"
+dest_files=[ "res://.import/layer_3.png-804639fb1eb6b901e06efd08a83deabb.stex" ]
 
 [params]
 

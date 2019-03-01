@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrowBlue_right.png-11a666d31bc40804abdd9207c10083d1.stex"
+path="res://.import/arrowBlue_right.png-b0739e176422fcb811794380cda8f6f3.stex"
 
 [deps]
 
-source_file="res://assets/PNG/arrowBlue_right.png"
-dest_files=[ "res://.import/arrowBlue_right.png-11a666d31bc40804abdd9207c10083d1.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/arrowBlue_right.png"
+dest_files=[ "res://.import/arrowBlue_right.png-b0739e176422fcb811794380cda8f6f3.stex" ]
 
 [params]
 

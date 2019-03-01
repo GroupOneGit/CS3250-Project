@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ThristBar-Fill.png-ee33e433a7a8db25fa9aa2e5eb15c32e.stex"
+path="res://.import/ThristBar-Fill.png-22176468ad3ee56a7028a73697a23129.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/ThirstBar/ThristBar-Fill.png"
-dest_files=[ "res://.import/ThristBar-Fill.png-ee33e433a7a8db25fa9aa2e5eb15c32e.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/ThirstBar/ThristBar-Fill.png"
+dest_files=[ "res://.import/ThristBar-Fill.png-22176468ad3ee56a7028a73697a23129.stex" ]
 
 [params]
 

@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global_Player="*res://Global_Player.gd"
+ItemDatabase="*res://Inventory/ItemDatabase.gd"
 
 [input]
 

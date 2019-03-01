@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/full_background.png-b4b44394793b36ab822eca444e79b15a.stex"
+path="res://.import/full_background.png-7fa2c4295fb4e69ea1858357faf64786.stex"
 
 [deps]
 
-source_file="res://Art/Background/Transparent PNG/full_background.png"
-dest_files=[ "res://.import/full_background.png-b4b44394793b36ab822eca444e79b15a.stex" ]
+source_file="res://Scenes/CS3250_Project/Art/Background/Transparent PNG/full_background.png"
+dest_files=[ "res://.import/full_background.png-7fa2c4295fb4e69ea1858357faf64786.stex" ]
 
 [params]
 

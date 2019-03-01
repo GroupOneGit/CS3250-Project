@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HUD-BG.png-acb032b629f323a9d2391849e2acf4e9.stex"
+path="res://.import/HUD-BG.png-0137fbd4bb9758ea65d01b1a3db1a59b.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/HUD-elements/HUD-BG.png"
-dest_files=[ "res://.import/HUD-BG.png-acb032b629f323a9d2391849e2acf4e9.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/HUD-elements/HUD-BG.png"
+dest_files=[ "res://.import/HUD-BG.png-0137fbd4bb9758ea65d01b1a3db1a59b.stex" ]
 
 [params]
 

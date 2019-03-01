@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crab.png-7d5d25239f97f4d2ac0f915c27d82fe8.stex"
+path="res://.import/crab.png-c68fc56862b15e41c8e15e245726b4b3.stex"
 
 [deps]
 
-source_file="res://Characters/Crab/crab.png"
-dest_files=[ "res://.import/crab.png-7d5d25239f97f4d2ac0f915c27d82fe8.stex" ]
+source_file="res://Scenes/CS3250_Project/Characters/Crab/crab.png"
+dest_files=[ "res://.import/crab.png-c68fc56862b15e41c8e15e245726b4b3.stex" ]
 
 [params]
 

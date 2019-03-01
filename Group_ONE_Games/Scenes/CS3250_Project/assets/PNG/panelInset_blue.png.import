@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panelInset_blue.png-53901cdc67cf532e41c78aaf2ed90d6e.stex"
+path="res://.import/panelInset_blue.png-3c7d3782c421c6ec9958553bf3f1713c.stex"
 
 [deps]
 
-source_file="res://assets/PNG/panelInset_blue.png"
-dest_files=[ "res://.import/panelInset_blue.png-53901cdc67cf532e41c78aaf2ed90d6e.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/panelInset_blue.png"
+dest_files=[ "res://.import/panelInset_blue.png-3c7d3782c421c6ec9958553bf3f1713c.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cursorHand_blue.png-62bf35a60f0c21c13a7e3bcfc504c4e6.stex"
+path="res://.import/cursorHand_blue.png-57504f1cea0bb1e2f64b9ffc4342a30f.stex"
 
 [deps]
 
-source_file="res://assets/PNG/cursorHand_blue.png"
-dest_files=[ "res://.import/cursorHand_blue.png-62bf35a60f0c21c13a7e3bcfc504c4e6.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/cursorHand_blue.png"
+dest_files=[ "res://.import/cursorHand_blue.png-57504f1cea0bb1e2f64b9ffc4342a30f.stex" ]
 
 [params]
 

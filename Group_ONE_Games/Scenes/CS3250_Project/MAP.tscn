@@ -2,7 +2,7 @@
 
 [ext_resource path="res://MAP_TILESCENE.tres" type="TileSet" id=1]
 
-[node name="MAP" type="Node2D"]
+[node name="MAP" type="Node2D" index="0"]
 
 position = Vector2( 15.5672, 13.1723 )
 

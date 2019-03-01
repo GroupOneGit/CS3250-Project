@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panel_beigeLight.png-f83cd6d3043f6ded0bce4029aa863427.stex"
+path="res://.import/panel_beigeLight.png-af13cf97e463a09c21225c77d8190290.stex"
 
 [deps]
 
-source_file="res://assets/PNG/panel_beigeLight.png"
-dest_files=[ "res://.import/panel_beigeLight.png-f83cd6d3043f6ded0bce4029aa863427.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/panel_beigeLight.png"
+dest_files=[ "res://.import/panel_beigeLight.png-af13cf97e463a09c21225c77d8190290.stex" ]
 
 [params]
 

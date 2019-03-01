@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrowSilver_right.png-aaeda1ce76902bf8ba1b81f3645e7dcd.stex"
+path="res://.import/arrowSilver_right.png-5917c36f521ee2bded33d8928fb7a5ac.stex"
 
 [deps]
 
-source_file="res://assets/PNG/arrowSilver_right.png"
-dest_files=[ "res://.import/arrowSilver_right.png-aaeda1ce76902bf8ba1b81f3645e7dcd.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/arrowSilver_right.png"
+dest_files=[ "res://.import/arrowSilver_right.png-5917c36f521ee2bded33d8928fb7a5ac.stex" ]
 
 [params]
 

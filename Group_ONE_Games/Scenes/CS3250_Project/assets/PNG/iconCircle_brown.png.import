@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iconCircle_brown.png-874bca24f82a20f1a223e03051bfbfae.stex"
+path="res://.import/iconCircle_brown.png-61db736719c9cfac55b01ad840271626.stex"
 
 [deps]
 
-source_file="res://assets/PNG/iconCircle_brown.png"
-dest_files=[ "res://.import/iconCircle_brown.png-874bca24f82a20f1a223e03051bfbfae.stex" ]
+source_file="res://Scenes/CS3250_Project/assets/PNG/iconCircle_brown.png"
+dest_files=[ "res://.import/iconCircle_brown.png-61db736719c9cfac55b01ad840271626.stex" ]
 
 [params]
 

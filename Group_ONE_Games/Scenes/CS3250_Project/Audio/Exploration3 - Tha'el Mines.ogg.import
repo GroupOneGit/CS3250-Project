@@ -2,12 +2,12 @@
 
 importer="ogg_vorbis"
 type="AudioStreamOGGVorbis"
-path="res://.import/Exploration3 - Tha'el Mines.ogg-8e0f2bb37198839a250c15c1db0a2044.oggstr"
+path="res://.import/Exploration3 - Tha'el Mines.ogg-98589890a895aec641982b6a321ae8a2.oggstr"
 
 [deps]
 
-source_file="res://Audio/Exploration3 - Tha'el Mines.ogg"
-dest_files=[ "res://.import/Exploration3 - Tha'el Mines.ogg-8e0f2bb37198839a250c15c1db0a2044.oggstr" ]
+source_file="res://Scenes/CS3250_Project/Audio/Exploration3 - Tha'el Mines.ogg"
+dest_files=[ "res://.import/Exploration3 - Tha'el Mines.ogg-98589890a895aec641982b6a321ae8a2.oggstr" ]
 
 [params]
 

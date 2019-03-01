@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Fantasy Choir 2.wav-f021fbf476420c0ad12f00d5b8d0a735.sample"
+path="res://.import/Fantasy Choir 2.wav-b39729f405f4386558de5f138a0a7dbc.sample"
 
 [deps]
 
-source_file="res://Audio/Fantasy Choir 2.wav"
-dest_files=[ "res://.import/Fantasy Choir 2.wav-f021fbf476420c0ad12f00d5b8d0a735.sample" ]
+source_file="res://Scenes/CS3250_Project/Audio/Fantasy Choir 2.wav"
+dest_files=[ "res://.import/Fantasy Choir 2.wav-b39729f405f4386558de5f138a0a7dbc.sample" ]
 
 [params]
 

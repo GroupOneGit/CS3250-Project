@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/awesomeness.wav-bbd54a3b39b81b567d1cee2e8af631e5.sample"
+path="res://.import/awesomeness.wav-b1634046a2c6e842ead48cf8e18cec4c.sample"
 
 [deps]
 
-source_file="res://Audio/awesomeness.wav"
-dest_files=[ "res://.import/awesomeness.wav-bbd54a3b39b81b567d1cee2e8af631e5.sample" ]
+source_file="res://Scenes/CS3250_Project/Audio/awesomeness.wav"
+dest_files=[ "res://.import/awesomeness.wav-b1634046a2c6e842ead48cf8e18cec4c.sample" ]
 
 [params]
 

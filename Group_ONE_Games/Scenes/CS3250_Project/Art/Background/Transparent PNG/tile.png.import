@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile.png-e6301adccb6e532c6a7e72e6ac4d95fa.stex"
+path="res://.import/tile.png-e45af4b948411d33b1ea2fe5a9fc3500.stex"
 
 [deps]
 
-source_file="res://Art/Background/Transparent PNG/tile.png"
-dest_files=[ "res://.import/tile.png-e6301adccb6e532c6a7e72e6ac4d95fa.stex" ]
+source_file="res://Scenes/CS3250_Project/Art/Background/Transparent PNG/tile.png"
+dest_files=[ "res://.import/tile.png-e45af4b948411d33b1ea2fe5a9fc3500.stex" ]
 
 [params]
 

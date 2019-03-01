@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Backpack_Icon.png-c409f6fc6aa94109ac16c5e4d036b163.stex"
+path="res://.import/Backpack_Icon.png-84bd7b07298ab5e61a55722fba39acfd.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/Inventory/Backpack_Icon.png"
-dest_files=[ "res://.import/Backpack_Icon.png-c409f6fc6aa94109ac16c5e4d036b163.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/Inventory/Backpack_Icon.png"
+dest_files=[ "res://.import/Backpack_Icon.png-84bd7b07298ab5e61a55722fba39acfd.stex" ]
 
 [params]
 

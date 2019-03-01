@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnergyBar-BG.png-66285f5cd15be1e3cf031c741aca6915.stex"
+path="res://.import/EnergyBar-BG.png-4b608d24a5acdb22951b464537484a6c.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/EnergyBar/EnergyBar-BG.png"
-dest_files=[ "res://.import/EnergyBar-BG.png-66285f5cd15be1e3cf031c741aca6915.stex" ]
+source_file="res://Scenes/CS3250_Project/GUI/HUD-ART/EnergyBar/EnergyBar-BG.png"
+dest_files=[ "res://.import/EnergyBar-BG.png-4b608d24a5acdb22951b464537484a6c.stex" ]
 
 [params]
 
