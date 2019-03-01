@@ -11,9 +11,9 @@ var health = MAX_health
 var thirst = MAX_thirst
 var energy = MAX_energy
 
-export var title_scene = preload("res://Scenes/MainMenu.tscn")
-export var level_scene = preload("res://DemoLevel.tscn")
-export var dead_screen = preload("res://Scenes/EndGameScreen.tscn")
+export var title_scene = preload("res://Scenes/ScreenScenes/MainMenu.tscn")
+export var level_scene = preload("res://Scenes/ScreenScenes/DemoLevel.tscn")
+export var dead_screen = preload("res://Scenes/ScreenScenes/EndGameScreen.tscn")
 
 
 func end_game():

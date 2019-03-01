@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Exploration1 - Grasslands.ogg-ead0284a64b62de3f83f6dfe4fb313d0.oggstr"
+
+[deps]
+
+source_file="res://Details/Audio/Exploration1 - Grasslands.ogg"
+dest_files=[ "res://.import/Exploration1 - Grasslands.ogg-ead0284a64b62de3f83f6dfe4fb313d0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

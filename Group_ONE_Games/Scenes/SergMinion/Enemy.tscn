@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/SergMinion/AnEnemy.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Enemies/spike monster B.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/SergMinion/AnimatedSprite_Enemy.gd" type="Script" id=3]
+
+
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[node name="Enemy" type="KinematicBody2D"]
+
+position = Vector2( 560.841, 290.833 )
+input_pickable = false
+collision_layer = 8
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+modulate = Color( 0.972656, 0.899446, 0.303301, 1 )
+position = Vector2( -105.421, -54.2518 )
+scale = Vector2( 0.383502, 0.383502 )
+frames = SubResource( 1 )
+animation = "idle"
+script = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+position = Vector2( -99.3473, -56.9205 )
+build_mode = 0
+polygon = PoolVector2Array( -54.7975, 36.8645, -70.8398, 19.1932, -59.4796, -6.3671, -35.4984, -26.6559, -4.69821, -32.8547, 25.1334, -25.8811, 46.8638, -7.47156, 61.0907, 20.1396, 43.1837, 36.2334 )
+
+
