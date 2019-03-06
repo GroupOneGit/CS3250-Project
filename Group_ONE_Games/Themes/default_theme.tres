@@ -1,6 +1,7 @@
 [gd_resource type="Theme" load_steps=2 format=2]
 
-[ext_resource path="res://assets/font/DynamicFonts/default_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Font/DynamicFonts/default_font.tres" type="DynamicFont" id=1]
+
 
 
 [resource]

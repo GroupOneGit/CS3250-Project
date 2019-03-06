@@ -13,10 +13,11 @@ config_version=3
 config/name="Group_ONE_Games"
 run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://icon.png"
+run/icon="res://icon.png"
 
 [autoload]
 
-Global_Player="*res://Global_Player.gd"
+Global_Player="*res://Scripts/Global_Player.gd"
 ItemDatabase="*res://Inventory/ItemDatabase.gd"
 
 [input]

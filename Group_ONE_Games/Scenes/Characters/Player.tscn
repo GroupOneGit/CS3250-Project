@@ -1,17 +1,20 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Body.gd" type="Script" id=2]
-[ext_resource path="res://Characters/Player/player_19.png" type="Texture" id=3]
-[ext_resource path="res://Characters/Player/player_17.png" type="Texture" id=4]
-[ext_resource path="res://Characters/Player/player_18.png" type="Texture" id=5]
-[ext_resource path="res://Characters/Player/player_07.png" type="Texture" id=6]
-[ext_resource path="res://Characters/Player/player_05.png" type="Texture" id=7]
-[ext_resource path="res://Characters/Player/player_06.png" type="Texture" id=8]
-[ext_resource path="res://Characters/Player/player_10.png" type="Texture" id=9]
-[ext_resource path="res://Characters/Player/player_08.png" type="Texture" id=10]
-[ext_resource path="res://Characters/Player/player_09.png" type="Texture" id=11]
+[ext_resource path="res://Art/PlayerT/player_19.png" type="Texture" id=3]
+[ext_resource path="res://Art/PlayerT/player_17.png" type="Texture" id=4]
+[ext_resource path="res://Art/PlayerT/player_18.png" type="Texture" id=5]
+[ext_resource path="res://Art/PlayerT/player_07.png" type="Texture" id=6]
+[ext_resource path="res://Art/PlayerT/player_05.png" type="Texture" id=7]
+[ext_resource path="res://Art/PlayerT/player_06.png" type="Texture" id=8]
+[ext_resource path="res://Art/PlayerT/player_10.png" type="Texture" id=9]
+[ext_resource path="res://Art/PlayerT/player_08.png" type="Texture" id=10]
+[ext_resource path="res://Art/PlayerT/player_09.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Body_AnimatedSprite.gd" type="Script" id=12]
+
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 

@@ -3,10 +3,10 @@
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Audio/awesomeness.wav" type="AudioStream" id=2]
 [ext_resource path="res://Art/Background/Transparent PNG/full_background.png" type="Texture" id=3]
-[ext_resource path="res://assets/font/Kenney Future.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Font/Kenney Future.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Scenes/Buttons/NewGameButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Buttons/QuitButton.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/font/Kenney Future Narrow.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Font/Kenney Future Narrow.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
