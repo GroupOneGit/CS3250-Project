@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InventorySlot_transparent.png-bb1e21cac7e5da6133cd6f8b7ca1f6ed.stex"
+path="res://.import/ThirstBar-BG.png-04f38f44cf378eba65f92871cd85ecd8.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/Inventory/InventorySlot_transparent.png"
-dest_files=[ "res://.import/InventorySlot_transparent.png-bb1e21cac7e5da6133cd6f8b7ca1f6ed.stex" ]
+source_file="res://Art/GUI-ART/ThirstBar/ThirstBar-BG.png"
+dest_files=[ "res://.import/ThirstBar-BG.png-04f38f44cf378eba65f92871cd85ecd8.stex" ]
 
 [params]
 

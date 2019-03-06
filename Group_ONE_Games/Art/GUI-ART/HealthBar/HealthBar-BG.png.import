@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Backpack_Icon.png-c409f6fc6aa94109ac16c5e4d036b163.stex"
+path="res://.import/HealthBar-BG.png-c44d5ad06c75f5953112874273261537.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/Inventory/Backpack_Icon.png"
-dest_files=[ "res://.import/Backpack_Icon.png-c409f6fc6aa94109ac16c5e4d036b163.stex" ]
+source_file="res://Art/GUI-ART/HealthBar/HealthBar-BG.png"
+dest_files=[ "res://.import/HealthBar-BG.png-c44d5ad06c75f5953112874273261537.stex" ]
 
 [params]
 

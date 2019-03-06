@@ -1,18 +1,17 @@
 extends Node
 
-
-onready var HP_label = $BarContainer/HealthBar/Variable_Value
-onready var HP_bar = $BarContainer/HealthBar/TextureProgress
-
-onready var TP_label = $BarContainer/ThirstBar/Variable_Value
-onready var TP_bar = $BarContainer/ThirstBar/TextureProgress
-
-onready var EP_label = $BarContainer/EnergyBar/Variable_Value
-onready var EP_bar = $BarContainer/EnergyBar/TextureProgress
+onready var HP_label = $Background/StatusBarContainer/BarContainer/HealthBar/Variable_Value
+onready var HP_bar = $Background/StatusBarContainer/BarContainer/HealthBar/TextureProgress
+onready var TP_label = $Background/StatusBarContainer/BarContainer/ThirstBar/Variable_Value
+onready var TP_bar = $Background/StatusBarContainer/BarContainer/ThirstBar/TextureProgress
+onready var EP_label = $Background/StatusBarContainer/BarContainer/EnergyBar/Variable_Value
+onready var EP_bar = $Background/StatusBarContainer/BarContainer/EnergyBar/TextureProgress
 
 
 func _ready():
-	Global.GUI = self
+	Global_Player.connect("health_changed", self, "_on_Player_health_changed")
+	Global_Player.connect("thirst_changed", self, "_on_Player_thirst_changed")
+	Global_Player.connect("energy_changed", self, "_on_Player_energy_changed")
 
 
 func _on_Player_health_changed(player_health):

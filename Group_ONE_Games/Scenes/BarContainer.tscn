@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://GUI/HUD-ART/Default_Font.tres" type="DynamicFont" id=1]
-[ext_resource path="res://GUI/HUD-ART/HealthBar/HealthBar-BG.png" type="Texture" id=2]
-[ext_resource path="res://GUI/HUD-ART/HealthBar/HealthBar-Fill.png" type="Texture" id=3]
-[ext_resource path="res://GUI/HUD-ART/ThirstBar/ThirstBar-BG.png" type="Texture" id=4]
-[ext_resource path="res://GUI/HUD-ART/ThirstBar/ThristBar-Fill.png" type="Texture" id=5]
-[ext_resource path="res://GUI/HUD-ART/EnergyBar/EnergyBar-BG.png" type="Texture" id=6]
-[ext_resource path="res://GUI/HUD-ART/EnergyBar/EnergyBar-Fill.png" type="Texture" id=7]
+[ext_resource path="res://Font/Default_Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Art/GUI-ART/HealthBar/HealthBar-BG.png" type="Texture" id=2]
+[ext_resource path="res://Art/GUI-ART/HealthBar/HealthBar-Fill.png" type="Texture" id=3]
+[ext_resource path="res://Art/GUI-ART/ThirstBar/ThirstBar-BG.png" type="Texture" id=4]
+[ext_resource path="res://Art/GUI-ART/ThirstBar/ThristBar-Fill.png" type="Texture" id=5]
+[ext_resource path="res://Art/GUI-ART/EnergyBar/EnergyBar-BG.png" type="Texture" id=6]
+[ext_resource path="res://Art/GUI-ART/EnergyBar/EnergyBar-Fill.png" type="Texture" id=7]
 
 [node name="BarContainer" type="VBoxContainer"]
 
@@ -327,7 +327,7 @@ text = "100"
 align = 2
 valign = 1
 clip_text = true
-percent_visible = 1.0
+percent_visible = 3.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Size Flags", "custom_fonts" ]

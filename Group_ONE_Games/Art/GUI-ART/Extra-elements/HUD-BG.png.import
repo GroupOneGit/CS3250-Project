@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Button_BG.png-bf5b59113550ceac245db6d8e7c24ed3.stex"
+path="res://.import/HUD-BG.png-d9ed7ee87aeae0ddec27e44658e8bc4b.stex"
 
 [deps]
 
-source_file="res://GUI/HUD-ART/HUD-elements/Button_BG.png"
-dest_files=[ "res://.import/Button_BG.png-bf5b59113550ceac245db6d8e7c24ed3.stex" ]
+source_file="res://Art/GUI-ART/Extra-elements/HUD-BG.png"
+dest_files=[ "res://.import/HUD-BG.png-d9ed7ee87aeae0ddec27e44658e8bc4b.stex" ]
 
 [params]
 

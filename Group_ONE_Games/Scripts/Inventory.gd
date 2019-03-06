@@ -1,7 +1,7 @@
 extends Node
-onready var slot_bg = preload("res://GUI/HUD-ART/Inventory/InventorySlot.tscn")
-onready var item_img = preload("res://GUI/HUD-ART/Inventory/Item.tscn")
-onready var grid = $GridContainer
+onready var slot_bg = preload("res://Scenes/temp-InventorySlot.tscn")
+onready var item_img = preload("res://Scenes/temp-Item.tscn")
+onready var grid = $ItemContainer
 var item = null
 var MAX = 28
 var loot = Array()
@@ -21,7 +21,7 @@ func createCrate():
 				pass
 			else:	
 				loot.append(b)
-				currentIndex = loot.size()
+				currentIndex = loot.size() - 1
 				if currentIndex < MAX:
 					grid.get_child(currentIndex).add_child(item_img.instance())
 		return
