@@ -32,7 +32,6 @@ func _ready():
 #		print(slotList.size())
 		grid.add_child(slot_bg.instance())
 	self.hide()
-		
 	
 
 func _process(delta):

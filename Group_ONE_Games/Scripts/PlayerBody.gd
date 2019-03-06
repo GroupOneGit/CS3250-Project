@@ -4,10 +4,10 @@ export var speed = 200 #how fast the player will move\
 var screensize 
 
 func _ready():
-	Global.Body = self
 	screensize = get_viewport_rect().size
 	
-
+func damage(thing, amt):
+	Global_Player.take_damage(amt)
 
 func _physics_process(delta):
 	var gain = (delta * 5)
@@ -15,7 +15,7 @@ func _physics_process(delta):
 	
 	
 	if Input.is_action_pressed('ui_shift'):
-		var loss = (delta * 20)
+		var loss = (delta * 15)
 		speed = 400
 		Global_Player.lose_energy(loss)
 		if Global_Player.energy == 0:
@@ -52,7 +52,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite.stop()
 		
-	self.move_and_slide(velocity)
+	move_and_slide(velocity)
 	
 
 	if velocity.x != 0:

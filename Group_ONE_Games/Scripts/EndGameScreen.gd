@@ -1,6 +1,6 @@
 extends Control
 
-var main_scene = preload("res://DemoLevel.tscn")
+var main_scene = preload("res://Scenes/DemoLevel.tscn")
 var title_scene = preload("res://Scenes/MainMenu.tscn")
 
 func _on_TryAgain_pressed():
