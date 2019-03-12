@@ -4,9 +4,11 @@ signal health_changed
 signal thirst_changed
 signal energy_changed
 
+var current_scene_name = ""
 var MAX_health = 100
 var MAX_thirst = 100
 var MAX_energy = 100
+
 var health = MAX_health
 var thirst = MAX_thirst
 var energy = MAX_energy
@@ -14,6 +16,18 @@ var current_scene_name = ""
 
 func _process(delta):
 	dehydrate(0.5, delta)
+
+func _process(delta):
+	dehydrate(0.5 , delta)
+	if Input.is_action_just_pressed('ui_page_down'):
+		lose_thirst(10)
+		lose_energy(10)
+		take_damage(10)
+	if Input.is_action_just_pressed('ui_page_up'):
+		gain_energy(10)
+		gain_health(10)
+		gain_thirst(10)
+	
 
 func end_game():
 	get_tree().change_scene("res://Scenes/EndGameScreen.tscn")
@@ -78,3 +92,20 @@ func dehydrate(amount, delta):
 		else:
 			take_damage(0.75 * delta)
 			
+
+func dehydrate(amount, delta):
+	current_scene_name = str(get_tree().current_scene.name)
+	if current_scene_name == "DemoLevel":
+		if thirst > 0:
+			if energy < 15:
+				lose_thirst((amount * 5) * delta)
+			else:
+				lose_thirst(amount * delta)
+		if thirst == 0:
+			if energy < 25:
+				take_damage(3 * delta)
+			else:
+				take_damage(0.75 * delta)
+		
+	
+

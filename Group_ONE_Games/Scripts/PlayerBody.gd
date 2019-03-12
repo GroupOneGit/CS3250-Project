@@ -23,6 +23,17 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
+	if Input.is_action_pressed('ui_right'):
+		velocity.x += 1
+		
+	if Input.is_action_pressed('ui_left'):
+		velocity.x -= 1
+		
+	if Input.is_action_pressed('ui_down'):
+		velocity.y += 1
+		
+	if Input.is_action_pressed('ui_up'):
+		velocity.y -= 1
 		
 	
 	if Input.is_action_pressed('ui_shift'):
@@ -34,11 +45,21 @@ func _physics_process(delta):
 		if Global_Player.energy == 0:
 			speed = 50
 			
+	if Input.is_action_just_released('ui_shift'):
+			if Global_Player.energy >= 15:
+				speed = 200
+			if Global_Player.energy < 15 && Global_Player.energy > 0:
+				speed = 200
+			if Global_Player.energy == 0:
+				speed = 50
+			
 	if !Input.is_action_pressed('ui_shift'):
 		if Global_Player.energy < 100:
 			Global_Player.gain_energy(gain)
 		if Global_Player.energy == 0:
 			speed = 50
+			while Global_Player.energy < 15:
+				speed = 100
 		if Global_Player.energy >= 15:
 			speed = 200
 			
