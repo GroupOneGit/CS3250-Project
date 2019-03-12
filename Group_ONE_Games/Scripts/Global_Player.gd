@@ -12,10 +12,8 @@ var MAX_energy = 100
 var health = MAX_health
 var thirst = MAX_thirst
 var energy = MAX_energy
-var current_scene_name = ""
 
-func _process(delta):
-	dehydrate(0.5, delta)
+
 
 func _process(delta):
 	dehydrate(0.5 , delta)
@@ -89,23 +87,9 @@ func dehydrate(amount, delta):
 				lose_thirst(amount * delta)
 		if thirst == 0:
 			take_damage(3 * delta)
-		else:
-			take_damage(0.75 * delta)
+		
 			
 
-func dehydrate(amount, delta):
-	current_scene_name = str(get_tree().current_scene.name)
-	if current_scene_name == "DemoLevel":
-		if thirst > 0:
-			if energy < 15:
-				lose_thirst((amount * 5) * delta)
-			else:
-				lose_thirst(amount * delta)
-		if thirst == 0:
-			if energy < 25:
-				take_damage(3 * delta)
-			else:
-				take_damage(0.75 * delta)
 		
 	
 

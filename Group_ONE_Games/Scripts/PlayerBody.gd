@@ -9,7 +9,8 @@ func _ready():
 
 
 func _physics_process(delta):
-	var gain = (delta * 5)
+	var gain = (delta * 4)
+	var loss = (delta * 15)
 	var velocity = Vector2(0,0)
 	
 	if Input.is_action_pressed('ui_right'):
@@ -23,21 +24,9 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
-	if Input.is_action_pressed('ui_right'):
-		velocity.x += 1
-		
-	if Input.is_action_pressed('ui_left'):
-		velocity.x -= 1
-		
-	if Input.is_action_pressed('ui_down'):
-		velocity.y += 1
-		
-	if Input.is_action_pressed('ui_up'):
-		velocity.y -= 1
-		
 	
 	if Input.is_action_pressed('ui_shift'):
-		var loss = (delta * 15)
+		
 		speed = 400
 		if velocity != Vector2(0,0):
 			Global_Player.lose_energy(loss)
@@ -59,17 +48,19 @@ func _physics_process(delta):
 		if Global_Player.energy == 0:
 			speed = 50
 			while Global_Player.energy < 15:
-				speed = 100
+				speed = 50
 		if Global_Player.energy >= 15:
 			speed = 200
 			
 	if Input.is_action_just_released('ui_shift'):
 			if Global_Player.energy >= 15:
 				speed = 200
-			if Global_Player.energy < 15 && Global_Player.energy > 0:
-				speed = 200
 			if Global_Player.energy == 0:
 				speed = 50
+				while Global_Player.energy < 15:
+					speed = 50
+			
+			
 	if !Input.is_action_pressed('ui_shift'):
 		if Global_Player.energy < 100:
 			Global_Player.gain_energy(gain)
