@@ -8,7 +8,7 @@
 [ext_resource path="res://Font/Default_Font.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Scenes/BarContainer.tscn" type="PackedScene" id=7]
 
-[node name="GUI" type="Control" index="0"]
+[node name="GUI" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -145,7 +145,6 @@ _sections_unfolded = [ "Mouse", "Rect", "Size Flags" ]
 
 [node name="Item1" type="TextureRect" parent="Background/MainItemContainer/MainItems/Slot1" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -385,14 +384,13 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="StatusBarContainer" type="HBoxContainer" parent="Background" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = 30.0
+margin_left = 22.0
 margin_top = -23.0
-margin_right = -624.0
+margin_right = -632.0
 margin_bottom = 37.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
