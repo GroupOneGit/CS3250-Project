@@ -34,21 +34,27 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="GUI" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
 
-editor/display_folded = true
 margin_left = 0.0
 margin_top = -1.0
 margin_right = 0.0
 margin_bottom = -1.0
+mouse_filter = 0
 script = ExtResource( 3 )
+
+[node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
+
+editor/display_folded = true
+
+[node name="Panel" parent="CanvasLayer/GUI/Dropdown" index="0"]
+
+editor/display_folded = true
 
 [node name="Map" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 position = Vector2( 115.411, -90.0005 )
 
 [node name="Obstacles" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 position = Vector2( 1291.11, 575.14 )
 scale = Vector2( 0.179144, 0.151001 )
 
@@ -121,4 +127,5 @@ position = Vector2( 257.489, 108.844 )
 position = Vector2( 458.119, 59.2955 )
 
 
+[editable path="CanvasLayer/GUI"]
 [editable path="Map"]

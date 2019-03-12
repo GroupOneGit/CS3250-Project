@@ -10,13 +10,18 @@ var MAX_energy = 100
 var health = MAX_health
 var thirst = MAX_thirst
 var energy = MAX_energy
+var current_scene_name = ""
 
+func _process(delta):
+	dehydrate(0.5, delta)
 
 func end_game():
 	get_tree().change_scene("res://Scenes/EndGameScreen.tscn")
 	
 func full_health():
 	health = MAX_health
+	energy = MAX_energy
+	thirst = MAX_thirst
 
 func take_damage(amount):
 	health -= amount
@@ -31,14 +36,14 @@ func gain_health(amount):
 			health = 100
 		emit_signal("health_changed", round(health))
 		
-func dehydrate(amount):
+func lose_thirst(amount):
 	if thirst > 0:
 		thirst -= amount
 		if thirst < 0:
 			thirst = 0
 		emit_signal("thirst_changed",round(thirst))
 		
-func rehydrate(amount):
+func gain_thirst(amount):
 	if thirst < 100:
 		thirst += amount
 		if thirst > 100:
@@ -59,4 +64,17 @@ func gain_energy(amount):
 		if energy > 100:
 			energy = 100
 	emit_signal("energy_changed" , round(energy))
+
+func dehydrate(amount, delta):
+	current_scene_name = str(get_tree().current_scene.name)
+	if current_scene_name == "DemoLevel":
+		if thirst > 0:
+			if energy < 15:
+				lose_thirst((amount * 5) * delta)
+			else:
+				lose_thirst(amount * delta)
+		if thirst == 0:
+			take_damage(3 * delta)
+		else:
+			take_damage(0.75 * delta)
 			

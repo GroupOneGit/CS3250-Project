@@ -6,18 +6,31 @@ var screensize
 func _ready():
 	screensize = get_viewport_rect().size
 	
-func damage(thing, amt):
-	Global_Player.take_damage(amt)
+
 
 func _physics_process(delta):
 	var gain = (delta * 5)
 	var velocity = Vector2(0,0)
 	
+	if Input.is_action_pressed('ui_right'):
+		velocity.x += 1
+		
+	if Input.is_action_pressed('ui_left'):
+		velocity.x -= 1
+		
+	if Input.is_action_pressed('ui_down'):
+		velocity.y += 1
+		
+	if Input.is_action_pressed('ui_up'):
+		velocity.y -= 1
+		
 	
 	if Input.is_action_pressed('ui_shift'):
 		var loss = (delta * 15)
 		speed = 400
-		Global_Player.lose_energy(loss)
+		if velocity != Vector2(0,0):
+			Global_Player.lose_energy(loss)
+		else: Global_Player.gain_energy(gain)
 		if Global_Player.energy == 0:
 			speed = 50
 			
@@ -32,19 +45,17 @@ func _physics_process(delta):
 	if Input.is_action_just_released('ui_shift'):
 			if Global_Player.energy >= 15:
 				speed = 200
+			if Global_Player.energy < 15 && Global_Player.energy > 0:
+				speed = 200
+			if Global_Player.energy == 0:
+				speed = 50
+	if !Input.is_action_pressed('ui_shift'):
+		if Global_Player.energy < 100:
+			Global_Player.gain_energy(gain)
+		if Global_Player.energy == 0:
+			speed = 50
 				
-	if Input.is_action_pressed('ui_right'):
-		velocity.x += 1
-		
-	if Input.is_action_pressed('ui_left'):
-		velocity.x -= 1
-		
-	if Input.is_action_pressed('ui_down'):
-		velocity.y += 1
-		
-	if Input.is_action_pressed('ui_up'):
-		velocity.y -= 1
-		
+
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite.play()
