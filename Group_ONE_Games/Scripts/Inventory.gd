@@ -23,7 +23,9 @@ var emptySlots = Array()
 func eat(id):
 	print("got to eat")
 	print(id)
+	
 	if (ItemDatabase.ITEMS[str(id)].edible):
+		Global_Player.gain_health(ItemDatabase.ITEMS[str(id)].healthEffect)
 		match ItemDatabase.ITEMS[str(id)].effects:
 			"poison":
 				print("I shouldn't have eaten that...")
@@ -58,7 +60,7 @@ func eat(id):
 			
 	else:
 		print("That's not edible.")
-		return
+		
 
 func createCrate():
 	loot.resize(0)
@@ -118,7 +120,7 @@ func _process(delta):
 			print(loot.size())
 			print(loot)
 			
-	if Input.is_action_just_pressed('ui_page_up'):
+	if Input.is_action_just_pressed('ui_select'):
 		k = str(randi()%10)
 		print("I'm eating: " + ItemDatabase.ITEMS[k].name)
 		eat(k)
