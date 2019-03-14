@@ -16,7 +16,7 @@ GridContainer/constants/hseparation = 4
 GridContainer/constants/vseparation = 4
 _sections_unfolded = [ "GridContainer", "GridContainer/constants" ]
 
-[node name="GUI" type="Control"]
+[node name="GUI" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
