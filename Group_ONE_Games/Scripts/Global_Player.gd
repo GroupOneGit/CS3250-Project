@@ -15,6 +15,13 @@ var energy = MAX_energy
 
 var poisoned = false
 
+export var screens = {
+	
+	"title" : "res://Scenes/Screens/MainMenu.tscn",
+	"end" : "res://Scenes/Screens/EndGameScreen.tscn",
+	"main" : "res://Scenes/Screens/DemoLevel.tscn",
+	}
+
 func setP(i):
 	poisoned = i
 
@@ -31,8 +38,11 @@ func _process(delta):
 	
 	
 
-func end_game():
-	get_tree().change_scene("res://Scenes/EndGameScreen.tscn")
+func switch_to(name):
+	if name == "quit":
+		get_tree().quit()
+	elif name in screens:
+		get_tree().change_scene(screens[name])
 	
 func full_health():
 	health = MAX_health
@@ -42,7 +52,7 @@ func full_health():
 func take_damage(amount):
 	health -= amount
 	if health < 0:
-		health = 0
+		switch_to("end")
 	emit_signal("health_changed", round(health))
 
 func gain_health(amount):
