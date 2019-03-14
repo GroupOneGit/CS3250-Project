@@ -9,9 +9,11 @@ func _input(event):
 		visible = moment
 	if Input.is_action_pressed("ui_restart"):
 		stop_p()
+		Global_Player.full_health()
 		Global_Player.switch_to("main")
 	elif Input.is_action_just_pressed("ui_title"):
 		stop_p()
+		Global_Player.full_health()
 		Global_Player.switch_to("title")
 	elif Input.is_action_just_pressed("ui_quit"):
 		stop_p()

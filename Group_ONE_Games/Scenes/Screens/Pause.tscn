@@ -3,7 +3,6 @@
 [ext_resource path="res://Scripts/Screens/Pause.gd" type="Script" id=1]
 [ext_resource path="res://Font/DynamicFonts/Kenney Pixel_50.tres" type="DynamicFontData" id=2]
 
-
 [sub_resource type="DynamicFont" id=1]
 
 size = 50
@@ -28,7 +27,7 @@ use_filter = true
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Pause" type="Control"]
+[node name="Pause" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
