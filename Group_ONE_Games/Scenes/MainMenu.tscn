@@ -205,4 +205,6 @@ _sections_unfolded = [ "Size Flags", "Theme", "custom_colors", "custom_fonts" ]
 
 [connection signal="pressed" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 
+[connection signal="pressed" from="Menu/CenterRow/Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]
+
 
