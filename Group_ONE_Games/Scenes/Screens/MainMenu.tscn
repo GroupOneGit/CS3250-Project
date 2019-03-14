@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Audio/awesomeness.wav" type="AudioStream" id=2]
 [ext_resource path="res://Art/Background/Transparent PNG/full_background.png" type="Texture" id=3]
 [ext_resource path="res://Font/Kenney Future.ttf" type="DynamicFontData" id=4]
@@ -194,7 +194,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 5
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Group_One Studios
 Version 0.0.0"
 percent_visible = 1.0

@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Art/Items/parchment_alpha.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/AcceptDialog.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 319.49, 245.889 )
+
+[node name="Note" type="Sprite"]
+
+position = Vector2( 320.831, 165.623 )
+scale = Vector2( 0.502597, 0.502597 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="." index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 83.0
+margin_bottom = 58.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Alert!"
+resizable = false
+dialog_text = "This is where the story begins and your sanity ends .... or not, we'll see!"
+dialog_hide_on_ok = true
+script = ExtResource( 2 )
+_sections_unfolded = [ "Dialog", "Material", "Popup", "Theme" ]
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area2D" to="AcceptDialog" method="_on_Area2D_body_entered"]
+
+

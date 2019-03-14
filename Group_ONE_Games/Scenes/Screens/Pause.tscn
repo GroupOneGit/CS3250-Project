@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/Pause.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Screens/Pause.gd" type="Script" id=1]
 [ext_resource path="res://Font/DynamicFonts/Kenney Pixel_50.tres" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFont" id=2]
+
+[sub_resource type="DynamicFont" id=1]
 
 size = 50
 use_mipmaps = true
@@ -11,7 +12,7 @@ use_filter = true
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Settings" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 
 size = 50
 use_mipmaps = true
@@ -127,7 +128,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -153,7 +154,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
