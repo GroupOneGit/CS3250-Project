@@ -10,16 +10,6 @@ func _ready():
 	velocity.y = 0
 	anitime = 0.0
 
-func damage(key, amount):
-	print("Creautre took " + str(amount) + " from "+ key)
-	if key in creaturelist:
-		pass
-	else:
-		health = health - amount
-		print(health)
-	if health <= 0:
-		death()
-
 func set_direction():
 	if velocity.x > 0:
 		velocity.x = -1
