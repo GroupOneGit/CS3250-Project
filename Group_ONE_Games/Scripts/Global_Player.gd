@@ -51,7 +51,7 @@ func full_health():
 
 func take_damage(amount):
 	health -= amount
-	if health < 0:
+	if health <= 0:
 		switch_to("end")
 	emit_signal("health_changed", round(health))
 
