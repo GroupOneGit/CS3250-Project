@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
-var speed
-var health
-var attack
+var speed = 0
+var health = 0 
+var attack = 0
 var creaturelist = ["crab"]
-var drops
+var drops = []
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -16,6 +16,9 @@ func damage(key, amount):
 		pass
 	else:
 		health = health - amount
+		print(health)
+	if health <= 0:
+		death()
 
 func setcreature(key):
 	match key:
@@ -28,10 +31,10 @@ func setcreature(key):
 
 func death():
 	randomize()
-	var r = randf()
-	for drop in drops:
-		if drop[1] < r:
-			var itemkey = drop[0]
+	# var r = randf()
+	# for drop in drops:
+	# 	if drop[1] < r:
+	# 		var itemkey = drop[0]
 	# make the drop item here
-	free()
+	queue_free()
 	
