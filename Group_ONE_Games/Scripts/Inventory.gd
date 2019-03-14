@@ -11,6 +11,7 @@ var itemList = Array()
 var holdingItem = null
 
 
+var k
 var item = null
 var MAX = 28
 var loot = Array()
@@ -19,6 +20,47 @@ var inventoryTotal = 0
 var emptySlots = Array()
 
 
+func eat(id):
+	print("got to eat")
+	print(id)
+	
+	if (ItemDatabase.ITEMS[str(id)].edible):
+		Global_Player.gain_health(ItemDatabase.ITEMS[str(id)].healthEffect)
+		match ItemDatabase.ITEMS[str(id)].effects:
+			"poison":
+				print("I shouldn't have eaten that...")
+				Global_Player.setP(true)
+				#ItemSlotClass.dropItem(id)
+			"dehydration":
+				print("Yum, slightly thirstier.")
+				Global_Player.lose_thirst(ItemDatabase.ITEMS[str(id)].thirstEffect)
+				#ItemSlotClass.dropItem(id)
+			"Thirst Quench":
+				print("Great! I feel refreshed!")
+				Global_Player.gain_thirst(ItemDatabase.ITEMS[str(id)].thirstEffect)
+				#ItemSlotClass.dropItem(id)
+			"Health Bonus":
+				print("Yum, I feel stronger")
+				Global_Player.gain_health(ItemDatabase.ITEMS[str(id)].healthEffect)
+				#ItemSlotClass.dropItem(id)
+			"Strength Bonus":
+				print("Yum, I feel stronger")
+				#ItemSlotClass.dropItem(id)
+			"Stat Reset":
+				print("Yum, I feel fantastic!")
+				Global_Player.Full_Health()
+				#ItemSlotClass.dropItem(id)
+			"antidote":
+				print("Oh good, I'm not sick now.")
+				Global_Player.setP(false)
+				#ItemSlotClass.dropItem(id)
+			_: 
+				print("Hmmm. Interesting.")
+				#ItemSlotClass.dropItem(id)
+			
+	else:
+		print("That's not edible.")
+		
 
 func createCrate():
 	loot.resize(0)
@@ -30,9 +72,6 @@ func createCrate():
 	if numItems == 0:
 		return
 
-		
-	
-		
 	else:
 		for i in range(numItems):
 			id = randi()%9
@@ -80,6 +119,13 @@ func _process(delta):
 			createCrate()
 			print(loot.size())
 			print(loot)
+			
+	if Input.is_action_just_pressed('ui_select'):
+		k = str(randi()%10)
+		print("I'm eating: " + ItemDatabase.ITEMS[k].name)
+		eat(k)
+		
+		
 			
 			
 func _input(event):

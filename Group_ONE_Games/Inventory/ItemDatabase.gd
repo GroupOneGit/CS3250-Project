@@ -38,7 +38,7 @@ var ITEMS = {
 	"1" : {
 		 name = "Blue Berries",
 		 icon = itemImages[1],
-		 description = "A cluster of small blue berries.",
+		 description = "A cluster of small blue berries. Look tasty!",
 		 itemHealth = 50,
 		 dph = 0,
 		 edible = true,
@@ -47,14 +47,14 @@ var ITEMS = {
 		 cookable = false,
 		 stackable = true,
 		 effects = "dehydration",
-		 thirstEffect = -5,
+		 thirstEffect = 5,
 		 healthEffect = 5
 	},
 
 	"2" : {
 		 name = "Red Berries",
 		 icon = itemImages[2],
-		 description = "A cluster of small red berries.",
+		 description = "A cluster of small red berries. Yum!",
 		 itemHealth = 50,
 		 dph = 0,
 		 edible = true,
@@ -63,7 +63,7 @@ var ITEMS = {
 		 cookable = false,
 		 stackable = true,
 		 effects = "dehydration",
-		 thirstEffect = -5,
+		 thirstEffect = 5,
 		 healthEffect = 5
 	},
 
@@ -148,7 +148,7 @@ var ITEMS = {
 	},
 
 	"8" : {
-		 name = "Raw Crab Meat",
+		 name = "Raw Clam Meat",
 		 icon = itemImages[5],
 		 description = "Raw meat harvested from clams.",
 		 itemHealth = 25,
@@ -370,7 +370,7 @@ var ITEMS = {
 #		 cookable = false,
 #		 stackable = true,
 #		 effects = "Strength Bonus",
-#		 thirstEffect = -1,
+#		 thirstEffect = 1,
 #		 healthEffect = 15
 #	},
 #
@@ -1034,6 +1034,18 @@ func side_effects(id):
 	else:
  		return ITEMS["0"].effects
 
+func thirstEffect(id):
+	if id in ITEMS:
+ 		return ITEMS[id].thirstEffect
+	else:
+ 		return ITEMS["0"].thirstEffect
+		
+func healthEffect(id):
+	if id in ITEMS:
+ 		return ITEMS[id].healthEffect
+	else:
+ 		return ITEMS["0"].healthEffect
+		
 func isEdible(id):
 	if id in ITEMS:
  		return ITEMS[id].edible

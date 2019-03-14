@@ -13,7 +13,10 @@ var health = MAX_health
 var thirst = MAX_thirst
 var energy = MAX_energy
 
+var poisoned = false
 
+func setP(i):
+	poisoned = i
 
 func _process(delta):
 	dehydrate(0.5 , delta)
@@ -25,6 +28,7 @@ func _process(delta):
 		gain_energy(10)
 		gain_health(10)
 		gain_thirst(10)
+	
 	
 
 func end_game():
