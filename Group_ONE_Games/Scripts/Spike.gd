@@ -1,4 +1,5 @@
 extends Area2D
 
 func _on_Area2D_body_entered(body):
-	Global_Player.take_damage(10)
+	if body.has_method("damage"):
+		body.damage("spike", 10)

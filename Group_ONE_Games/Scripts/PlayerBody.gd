@@ -6,7 +6,11 @@ var screensize
 func _ready():
 	screensize = get_viewport_rect().size
 	
-
+func damage(thing, amt):
+	Global_Player.take_damage(amt)
+	
+func heal(thing,amt):
+	Global_Player.gain_health(amt)
 
 func _physics_process(delta):
 	var gain = (delta * 4)

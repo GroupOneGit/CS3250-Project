@@ -1,0 +1,155 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Audio/Exploration6 - Tropical Island.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/GUI.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Screens/Pause.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Spike_Wall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Small_Spike.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Crab.tscn" type="PackedScene" id=10]
+
+[node name="DemoLevel" type="Node" index="0"]
+
+[node name="Music" type="Node" parent="." index="0"]
+
+editor/display_folded = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music" index="0"]
+
+stream = ExtResource( 1 )
+volume_db = -20.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="GUI" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
+
+margin_left = 0.0
+margin_top = -1.0
+margin_right = 0.0
+margin_bottom = -1.0
+mouse_filter = 0
+script = ExtResource( 3 )
+
+[node name="Pause" parent="CanvasLayer" index="1" instance=ExtResource( 4 )]
+
+pause_mode = 2
+visible = false
+_sections_unfolded = [ "Pause" ]
+
+[node name="Map" parent="." index="2" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 115.411, -90.0005 )
+
+[node name="Obstacles" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 1291.11, 575.14 )
+scale = Vector2( 0.179144, 0.151001 )
+
+[node name="SpikeWallObtacles" type="Node2D" parent="Obstacles" index="0"]
+
+editor/display_folded = true
+
+[node name="Spike_Wall3" parent="Obstacles/SpikeWallObtacles" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( -298.264, 221.914 )
+
+[node name="Spike_Wall4" parent="Obstacles/SpikeWallObtacles" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 1097.26, 223.848 )
+
+[node name="Spike_Wall5" parent="Obstacles/SpikeWallObtacles" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 818.156, 221.914 )
+
+[node name="Spike_Wall6" parent="Obstacles/SpikeWallObtacles" index="3" instance=ExtResource( 6 )]
+
+[node name="Spike_Wall7" parent="Obstacles/SpikeWallObtacles" index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 259.946, 221.914 )
+
+[node name="Spike_Wall8" parent="Obstacles/SpikeWallObtacles" index="5" instance=ExtResource( 6 )]
+
+position = Vector2( -19.159, 221.914 )
+
+[node name="Random" type="Node2D" parent="Obstacles" index="1"]
+
+editor/display_folded = true
+
+[node name="Small_Spike" parent="Obstacles/Random" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( -3954.54, -2881.89 )
+
+[node name="Small_Spike2" parent="Obstacles/Random" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( -4295.39, -1826.23 )
+
+[node name="Small_Spike3" parent="Obstacles/Random" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( -2711.81, -2398.79 )
+
+[node name="Food" parent="Obstacles/Random" index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 1632.55, -195.448 )
+
+[node name="Food2" parent="Obstacles/Random" index="4" instance=ExtResource( 8 )]
+
+position = Vector2( 1832.61, -835.919 )
+
+[node name="Food3" parent="Obstacles/Random" index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 2237.13, 223.388 )
+
+[node name="Food4" parent="Obstacles/Random" index="6" instance=ExtResource( 8 )]
+
+position = Vector2( 2678.43, -1003.45 )
+
+[node name="Food5" parent="Obstacles/Random" index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 1175.07, -795.781 )
+
+[node name="Player" parent="." index="4" instance=ExtResource( 9 )]
+
+position = Vector2( 680, 410 )
+
+[node name="Enemies" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="Crab" parent="Enemies" index="0" instance=ExtResource( 10 )]
+
+position = Vector2( 379.716, 167.967 )
+
+[node name="Crab3" parent="Enemies" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( 392.325, 102.346 )
+
+[node name="Crab4" parent="Enemies" index="2" instance=ExtResource( 10 )]
+
+position = Vector2( 532.848, 76.3532 )
+
+[node name="Crab5" parent="Enemies" index="3" instance=ExtResource( 10 )]
+
+position = Vector2( 257.489, 108.844 )
+
+[node name="Crab2" parent="Enemies" index="4" instance=ExtResource( 10 )]
+
+position = Vector2( 458.119, 59.2955 )
+
+
+[editable path="CanvasLayer/GUI"]
+[editable path="Map"]

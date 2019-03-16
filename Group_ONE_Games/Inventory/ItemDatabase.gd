@@ -47,7 +47,11 @@ var ITEMS = {
 		 cookable = false,
 		 stackable = true,
 		 effects = "dehydration",
+<<<<<<< refs/remotes/origin/KaylaPC
 		 thirstEffect = 5,
+=======
+		 thirstEffect = 25,
+>>>>>>> Inventory fixes
 		 healthEffect = 5
 	},
 

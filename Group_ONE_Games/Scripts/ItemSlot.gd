@@ -1,6 +1,6 @@
 extends TextureRect
 
-onready var itemscence = preload("res://Scenes/temp-Item.tscn")
+onready var itemscene = preload("res://Scenes/temp-Item.tscn")
 var slotIndex
 var item = null
 
@@ -30,9 +30,9 @@ func putItem(newItem):
 	get_parent().get_parent().remove_child(item)
 	add_child(item)
 	
-func dropItem(item):
-	get_parent().get_parent().get_child(item).queue_free()
-#	self.queue_free()
-	item = null
-	
-	pass
+#func dropItem():
+#	get_node().queue_free()
+##	self.queue_free()
+#	item = null
+#
+#	pass

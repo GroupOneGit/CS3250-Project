@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Screens/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Audio/awesomeness.wav" type="AudioStream" id=2]
 [ext_resource path="res://Art/Background/Transparent PNG/full_background.png" type="Texture" id=3]
 [ext_resource path="res://Font/Kenney Future.ttf" type="DynamicFontData" id=4]
@@ -37,6 +37,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="Music" type="Node" parent="." index="0"]
 
@@ -71,10 +72,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+<<<<<<< refs/remotes/origin/KaylaPC:Group_ONE_Games/Scenes/MainMenu.tscn
 margin_left = 136.0
 margin_top = 50.0
 margin_right = 70.0
 margin_bottom = -110.0
+=======
+margin_top = 1.0
+margin_bottom = 1.0
+>>>>>>> Inventory fixes:Group_ONE_Games/Scenes/Screens/MainMenu.tscn
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -93,7 +99,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 958.0
+margin_right = 1024.0
 margin_bottom = 90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -119,8 +125,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 94.0
-margin_right = 958.0
-margin_bottom = 375.0
+margin_right = 1024.0
+margin_bottom = 535.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -136,8 +142,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 477.0
-margin_bottom = 281.0
+margin_right = 510.0
+margin_bottom = 441.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -150,16 +156,16 @@ _sections_unfolded = [ "Margin", "Rect", "Size Flags", "custom_constants" ]
 
 [node name="NewGameButton" parent="Menu/CenterRow/Buttons" index="0" instance=ExtResource( 5 )]
 
-margin_top = 40.0
-margin_right = 477.0
-margin_bottom = 130.0
-_sections_unfolded = [ "Rect", "Size Flags", "custom_colors", "custom_fonts", "custom_styles" ]
+margin_top = 120.0
+margin_right = 510.0
+margin_bottom = 210.0
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="QuitButton" parent="Menu/CenterRow/Buttons" index="1" instance=ExtResource( 6 )]
 
-margin_top = 150.0
-margin_right = 477.0
-margin_bottom = 240.0
+margin_top = 230.0
+margin_right = 510.0
+margin_bottom = 320.0
 
 [node name="ArtHere" type="CenterContainer" parent="Menu/CenterRow" index="1"]
 
@@ -167,9 +173,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 481.0
-margin_right = 958.0
-margin_bottom = 281.0
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 441.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -185,9 +191,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 379.0
-margin_right = 958.0
-margin_bottom = 440.0
+margin_top = 539.0
+margin_right = 1024.0
+margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -195,7 +201,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 5
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Group_One Studios
 Version 0.0.0"
 percent_visible = 1.0
@@ -204,5 +210,7 @@ max_lines_visible = -1
 _sections_unfolded = [ "Size Flags", "Theme", "custom_colors", "custom_fonts" ]
 
 [connection signal="pressed" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+
+[connection signal="pressed" from="Menu/CenterRow/Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]
 
 
