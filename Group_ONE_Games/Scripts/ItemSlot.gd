@@ -1,6 +1,5 @@
 extends TextureRect
 
-onready var itemscene = preload("res://Scenes/temp-Item.tscn")
 var slotIndex
 var item = null
 

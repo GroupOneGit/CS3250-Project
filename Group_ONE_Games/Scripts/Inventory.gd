@@ -3,11 +3,14 @@ extends GridContainer
 const ItemClass = preload("res://Scripts/Item.gd")
 const slot_texture = preload("res://Art/GUI-ART/Inventory/InventorySlot.png")
 
+<<<<<<< refs/remotes/origin/KaylaPC
 onready var item_img = preload("res://Scenes/temp-Item.tscn")
 
 
 <<<<<<< refs/remotes/origin/KaylaPC
 =======
+=======
+>>>>>>> Inv. v2
 var holdingItem 
 var itemIndex = 0
 >>>>>>> Inventory fixes
