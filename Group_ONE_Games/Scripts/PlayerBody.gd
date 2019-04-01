@@ -7,7 +7,8 @@ func _ready():
 	screensize = get_viewport_rect().size
 	
 func damage(thing, amt):
-	Global_Player.take_damage(amt)
+	if !(thing == "player"):
+		Global_Player.take_damage(amt)
 
 func _physics_process(delta):
 	var gain = (delta * 4)
@@ -89,4 +90,5 @@ func _physics_process(delta):
 		$AnimatedSprite.animation = 'Up'
 		$AnimatedSprite.flip_v = velocity.y > 0
 
-
+	if Input.is_action_just_pressed('ui_attack'):
+		pass
