@@ -9,6 +9,9 @@ func _ready():
 func damage(thing, amt):
 	if !(thing == "player"):
 		Global_Player.take_damage(amt)
+	
+func heal(thing,amt):
+	Global_Player.gain_health(amt)
 
 func _physics_process(delta):
 	var gain = (delta * 4)

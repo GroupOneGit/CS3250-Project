@@ -6,9 +6,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 69.2352, 23.6512 )
+extents = Vector2( 154.956, 41.6257 )
 
-[node name="Spike_Wall" type="Sprite" index="0"]
+[node name="Spike_Wall" type="Sprite"]
 
 position = Vector2( 539.051, 221.914 )
 scale = Vector2( 1.03691, 1.03691 )

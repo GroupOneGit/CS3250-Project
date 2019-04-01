@@ -1,8 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/AnEnemy.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Working_Minion/AnEnemy.gd" type="Script" id=1]
 [ext_resource path="res://Art/Creatures/spike monster B.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/AnimatedSprite_Enemy.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Working_Minion/AnimatedSprite_Enemy.gd" type="Script" id=3]
+
+
 
 
 
