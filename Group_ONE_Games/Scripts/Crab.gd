@@ -24,7 +24,7 @@ func set_direction():
 func _physics_process(delta):
 	# This does collisons and tests if the crab collides witha anything
 	if velocity.x == 0:
-		set_direction(delta)
+		set_direction()
 		
 	var thing = move_and_collide(velocity.normalized() * delta * speed)
 	
