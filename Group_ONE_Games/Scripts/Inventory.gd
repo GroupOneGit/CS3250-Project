@@ -19,6 +19,91 @@ var currentIndex = 0
 var inventoryTotal = 0
 var emptySlots = Array()
 
+func craft(s1, c1, s2, c2, s3, c3, s4, c4):
+	var iArray  = [s1, s2, s3, s4] #array of items
+	var cArray = [c1, c2, c3, c4] #array of counts of stacking 
+	var lsi; var ssi; var fi; var ki; var sri; var lvi; var wpi; var csi; var bli; var ni #indexes of specific items
+	if iArray.contains(12) : #if items incude Wood Planks
+		wpi = cArray[iArray.find(12)]
+		if iArray.contains(13) : #contains long vines
+			lvi = cArray[iArray.find(13)]
+			if iArray.contains(16) : #contains banana leaf
+				bli = cArray[iArray.find(16)]
+				if iArray.contains(14) : #contains large sticks
+					lsi = cArray[iArray.find(14)]
+					if wpi == 7 && lvi == 7 && bli == 6 && lsi == 5 :
+						print("That made....a Water Collector! I can almost taste that clean water already!")
+						#drop items
+						return 33 #Returns Water Collector
+					else:
+						print("That made....nothing. What a waste.")
+						#drop items
+						return 0 #Returns nothing
+				elif iArray.contains(0):
+					ni = cArray[iArray.find(0)]
+					if wpi == 15 && lvi == 8 && bli == 10 && ni == 0 :
+						print("That made....a Hut! Oh good, some place safe to sleep!")
+						#drop items
+						return 32 #Returns Hut
+					elif wpi == 1 && lvi == 1 && bli == 1 && ni == 0 :
+						print("That made....a Canteen! Nice, water on the go. This will be handy!")
+						#drop items
+						return 34 #Returns Hut
+					else:
+						print("That made....nothing. What a waste.")
+						#drop items
+						return 0 #Returns nothing
+					
+			elif iArray.contains(28) : #contains clothe square
+				csi = cArray[iArray.find(28)] 
+				if iArray.contains(11) : # contains small sticks
+					ssi = cArray[iArray.find(11)]
+					if wpi == 8 && lvi == 5 && csi == 1 && ssi == 4 :
+						print("That made....a Raft! Now maybe I can get off this island!")
+						#drop items
+						return 31 #Returns Raft
+					else:
+						print("That made....nothing. What a waste.")
+						#drop items
+						return 0 #Returns nothing
+						
+				
+	elif iArray.contains(14) : # or is if has large Sticks
+		lsi = iArray.find(14)
+		if iArray.contains(11) : #contains small sticks
+			ssi = cArray[iArray.find(11)]
+			if iArray.contains(17) : #contains flint
+				fi = cArray[iArray.find(17)]
+				if iArray.contains(19) : #contains kindling
+					ki = cArray[iArray.find(19)]
+					if lsi == 3 && ssi == 2 && fi == 1 && ki == 2 :
+						print("That made....a Campfire! Now I can cook my food!")
+						#drop items
+						return 29 #Returns Campfire
+					else:
+						print("That made....nothing. What a waste.")
+						#drop items
+						return 0 #Returns nothing
+		elif iArray.contains(10): # contains small rock
+			sri = cArray[iArray.find(10)]	
+			ni = iArray.count(0)
+			if ni == 2 :
+				if lsi == 1 && sri == 1 && ni == 2 :
+						print("That made....a Spear! sweet!")
+						#drop items
+						return 30 #Returns Spear
+				else:
+					print("That made....nothing. What a waste.")
+						#drop items
+					return 0 #Returns nothing
+			else:
+				print("That made....nothing. What a waste.")
+				#drop items
+				return 0 #Returns nothing
+	else:
+		print("That made....nothing. What a waste.")
+		#drop items
+		return 0 #Returns nothing
 
 func eat(id):
 	print("got to eat")
