@@ -3,15 +3,15 @@ extends Node
 const PATH = null
 const itemImages = [ 
 	preload("res://Art/Item_TEMP_Art/Item0.png"),
-	preload("res://Art/Item_TEMP_Art/Item1.png"),
-	preload("res://Art/Item_TEMP_Art/Item2.png"),
-	preload("res://Art/Item_TEMP_Art/Item3.png"),
-	preload("res://Art/Item_TEMP_Art/Item4.png"),
-	preload("res://Art/Item_TEMP_Art/Item5.png"),
-	preload("res://Art/Item_TEMP_Art/Item6.png"),
-	preload("res://Art/Item_TEMP_Art/Item7.png"),
-	preload("res://Art/Item_TEMP_Art/Item8.png"),
-	preload("res://Art/Item_TEMP_Art/Item9.png"),
+	preload("res://Art/Item_TEMP_Art/blueberry.png"),
+	preload("res://Art/Item_TEMP_Art/redberry.png"),
+	preload("res://Art/Item_TEMP_Art/weakPotion.png"),
+	preload("res://Art/Item_TEMP_Art/coconut.png"),
+	preload("res://Art/Item_TEMP_Art/rawCrab.png"),
+	preload("res://Art/Item_TEMP_Art/rawFish.png"),
+	preload("res://Art/Item_TEMP_Art/banana.png"),
+	preload("res://Art/Item_TEMP_Art/rawClam.png"),
+	preload("res://Art/Item_TEMP_Art/Item0.png"),
 ]
 var ITEMS = {
 
@@ -163,23 +163,23 @@ var ITEMS = {
 		 healthEffect = 5
 	},
 
-	#Common Supplies
-	"9" : {
-		 name = "Nothing",
-		 icon = itemImages[0],
-		 description = "Nothing",
-		 itemHealth = 0,
-		 dph = 0,
-		 edible = false,
-		 questItem = false,
-		 repairable = false,
-		 cookable = false,
-		 stackable = false,
-		 effects = null,
-		 thirstEffect = 0 ,
-		 healthEffect = 0
-	},
-
+#	#Common Supplies
+#	"9" : {
+#		 name = "Nothing",
+#		 icon = itemImages[0],
+#		 description = "Nothing",
+#		 itemHealth = 0,
+#		 dph = 0,
+#		 edible = false,
+#		 questItem = false,
+#		 repairable = false,
+#		 cookable = false,
+#		 stackable = false,
+#		 effects = null,
+#		 thirstEffect = 0 ,
+#		 healthEffect = 0
+#	},
+#
 #	"10" : {
 #		 name = "Small Rock",
 #		 icon = PATH, 

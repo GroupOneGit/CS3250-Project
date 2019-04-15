@@ -13,20 +13,15 @@
 
 [node name="DemoLevel" type="Node" index="0"]
 
-[node name="Music" type="Node" parent="." index="0"]
-
+[node name="Music" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music" index="0"]
-
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 1 )
 volume_db = -20.0
-pitch_scale = 1.0
 autoplay = true
-mix_target = 0
-bus = "Master"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -45,26 +40,21 @@ mouse_filter = 0
 script = ExtResource( 3 )
 
 [node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
-
 editor/display_folded = true
 
 [node name="Panel" parent="CanvasLayer/GUI/Dropdown" index="0"]
-
 editor/display_folded = true
 
-[node name="Pause" parent="CanvasLayer" index="1" instance=ExtResource( 4 )]
-
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 4 )]
 pause_mode = 2
 visible = false
-_sections_unfolded = [ "Pause" ]
 
 [node name="Map" parent="." index="2" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 115.411, -90.0005 )
 
-[node name="Obstacles" type="Node2D" parent="." index="3"]
-
+[node name="Obstacles" type="Node2D" parent="."]
 position = Vector2( 1291.11, 575.14 )
 scale = Vector2( 0.179144, 0.151001 )
 
@@ -74,36 +64,29 @@ scale = Vector2( 0.179144, 0.151001 )
 
 position = Vector2( -298.264, 221.914 )
 
-[node name="Spike_Wall4" parent="Obstacles/SpikeWallObtacles" index="1" instance=ExtResource( 6 )]
-
+[node name="Spike_Wall4" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 1097.26, 223.848 )
 
-[node name="Spike_Wall5" parent="Obstacles/SpikeWallObtacles" index="2" instance=ExtResource( 6 )]
-
+[node name="Spike_Wall5" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 818.156, 221.914 )
 
-[node name="Spike_Wall6" parent="Obstacles/SpikeWallObtacles" index="3" instance=ExtResource( 6 )]
+[node name="Spike_Wall6" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 
-[node name="Spike_Wall7" parent="Obstacles/SpikeWallObtacles" index="4" instance=ExtResource( 6 )]
-
+[node name="Spike_Wall7" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 259.946, 221.914 )
 
-[node name="Spike_Wall8" parent="Obstacles/SpikeWallObtacles" index="5" instance=ExtResource( 6 )]
-
+[node name="Spike_Wall8" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( -19.159, 221.914 )
 
-[node name="Random" type="Node2D" parent="Obstacles" index="1"]
+[node name="Random" type="Node2D" parent="Obstacles"]
 
-[node name="Small_Spike" parent="Obstacles/Random" index="0" instance=ExtResource( 7 )]
-
+[node name="Small_Spike" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( -3954.54, -2881.89 )
 
-[node name="Small_Spike2" parent="Obstacles/Random" index="1" instance=ExtResource( 7 )]
-
+[node name="Small_Spike2" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( -4295.39, -1826.23 )
 
-[node name="Small_Spike3" parent="Obstacles/Random" index="2" instance=ExtResource( 7 )]
-
+[node name="Small_Spike3" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( -2711.81, -2398.79 )
 
 [node name="Food" parent="Obstacles/Random" index="3" instance=ExtResource( 8 )]
@@ -130,7 +113,7 @@ position = Vector2( 1175.07, -795.781 )
 
 position = Vector2( 680, 410 )
 
-[node name="Enemies" type="Node2D" parent="." index="5"]
+[node name="Enemies" type="Node2D" parent="."]
 
 editor/display_folded = true
 
@@ -154,6 +137,10 @@ position = Vector2( 257.489, 108.844 )
 
 position = Vector2( 458.119, 59.2955 )
 
+[node name="Apple" parent="." instance=ExtResource( 10 )]
+position = Vector2( 425.426, 250.242 )
+
 
 [editable path="CanvasLayer/GUI"]
+
 [editable path="Map"]
