@@ -1,92 +1,102 @@
 extends KinematicBody2D
 
-export var speed = 200 #how fast the player will move\
+export var speed = 200 #how fast the player will move
 var screensize 
+var direction = Vector2(0,0)
+var velocity = Vector2(0,0)
+var sprint = false
+var move = false
+var invTime = 0.0
 
 func _ready():
 	screensize = get_viewport_rect().size
 	
 func damage(thing, amt):
-	Global_Player.take_damage(amt)
-
-func _physics_process(delta):
-	var gain = (delta * 4)
-	var loss = (delta * 15)
-	var velocity = Vector2(0,0)
+	if invTime > 0:
+		pass
+	elif !(thing == "player"):
+		invTime =.5
+		$AnimatedSprite.modulate = ColorN("red")
+		Global_Player.take_damage(amt)
 	
-	if Input.is_action_pressed('ui_right'):
-		velocity.x += 1
+func heal(thing,amt):
+	Global_Player.gain_health(amt)
+
+func _input(event):
+	
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = 1
+	elif event.is_action_released("ui_right"):
+		velocity.x = 0
 		
 	if Input.is_action_pressed('ui_left'):
-		velocity.x -= 1
-		
+		velocity.x = -1
+	elif event.is_action_released("ui_left"):
+		velocity.x = 0
+	
 	if Input.is_action_pressed('ui_down'):
-		velocity.y += 1
+		velocity.y = 1
+	elif event.is_action_released("ui_down"):
+		velocity.y = 0
 		
 	if Input.is_action_pressed('ui_up'):
-		velocity.y -= 1
+		velocity.y = -1
+	elif event.is_action_released("ui_up"):
+		velocity.y=0
+		
+	move = (velocity != Vector2(0,0))
+	
+	if move:
+		direction = velocity
 	
 	if Input.is_action_pressed('ui_shift'):
-		
-		speed = 400
-		if velocity != Vector2(0,0):
-			Global_Player.lose_energy(loss)
-		else: Global_Player.gain_energy(gain)
+		sprint = true
+	else:
+		sprint = false
+
+	if event.is_action_pressed('ui_attack'):
+		if Global_Player.energy >= 10:
+			Global_Player.lose_energy(10)
+			$Attack.attack(10, direction.normalized())
+
+
+func _physics_process(delta):
+	invTime = invTime - delta
+	if invTime < 0:
+		$AnimatedSprite.modulate = ColorN("white")
+	if sprint:
 		if Global_Player.energy == 0:
 			speed = 50
-			
-	if Input.is_action_just_released('ui_shift'):
-			if Global_Player.energy >= 15:
-				speed = 200
-			if Global_Player.energy < 15 && Global_Player.energy > 0:
-				speed = 200
-			if Global_Player.energy == 0:
-				speed = 50
-			
-	if !Input.is_action_pressed('ui_shift'):
-		if Global_Player.energy < 100:
-			Global_Player.gain_energy(gain)
-		if Global_Player.energy == 0:
-			speed = 50
-			while Global_Player.energy < 15:
-				speed = 50
+		elif move:
+			speed = 400
+			Global_Player.lose_energy(delta*15)
+
+	else:
 		if Global_Player.energy >= 15:
 			speed = 200
-			
-	if Input.is_action_just_released('ui_shift'):
-			if Global_Player.energy >= 15:
-				speed = 200
-			if Global_Player.energy == 0:
-				speed = 50
-				while Global_Player.energy < 15:
-					speed = 50
-			
-			
-	if !Input.is_action_pressed('ui_shift'):
-		if Global_Player.energy < 100:
-			Global_Player.gain_energy(gain)
-		if Global_Player.energy == 0:
+		elif Global_Player.energy < 15 && Global_Player.energy > 0:
+			speed = 100
+		else:
 			speed = 50
-				
-
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		$AnimatedSprite.play()
+		Global_Player.gain_energy(delta*4)
 		
+	if not move:
+		Global_Player.gain_energy(delta*4)
+			
+
+	if move:
+		$AnimatedSprite.play()
+		move_and_slide(velocity.normalized()*speed)
 	else:
 		$AnimatedSprite.stop()
-		
-	move_and_slide(velocity)
-	
 
-	if velocity.x != 0:
+	if direction.x != 0:
 		$AnimatedSprite.animation = 'Right'
 		$AnimatedSprite.flip_v = false
-		$AnimatedSprite.flip_h = velocity.x < 0
-	if velocity.y > 0:
+		$AnimatedSprite.flip_h = direction.x < 0
+	elif direction.y > 0:
 		$AnimatedSprite.animation = 'Down'
-	elif velocity.y != 0:
+	elif direction.y != 0:
 		$AnimatedSprite.animation = 'Up'
-		$AnimatedSprite.flip_v = velocity.y > 0
 
 

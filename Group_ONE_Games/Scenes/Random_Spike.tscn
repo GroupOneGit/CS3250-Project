@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 77.6685, 31.6224 )
+extents = Vector2( 90, 31.6224 )
 
 [node name="Random_Spike" instance=ExtResource( 1 )]
 
