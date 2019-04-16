@@ -1,6 +1,5 @@
 extends TextureRect
 
-var itemIcon
 var itemName
 var itemSlot
 var picked = false
@@ -26,3 +25,5 @@ func putItem():
 	picked = false
 	pass
 	
+func get_drag_data(position):
+	pass

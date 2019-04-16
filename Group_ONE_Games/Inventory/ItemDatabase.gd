@@ -1,5 +1,6 @@
 extends Node
-
+var heldItem = null
+var originalOwner = null
 const PATH = null
 const itemImages = [ 
 	preload("res://Art/Item_TEMP_Art/Item0.png"),
@@ -133,7 +134,7 @@ var ITEMS = {
 
 	"7" : {
 		 name = "Banana",
-		 icon = itemImages[9],
+		 icon = itemImages[7],
 		 description = "A delicious easy to get fruit.",
 		 itemHealth = 50,
 		 dph = 0,
@@ -149,7 +150,7 @@ var ITEMS = {
 
 	"8" : {
 		 name = "Raw Clam Meat",
-		 icon = itemImages[5],
+		 icon = itemImages[8],
 		 description = "Raw meat harvested from clams.",
 		 itemHealth = 25,
 		 dph = 0,
