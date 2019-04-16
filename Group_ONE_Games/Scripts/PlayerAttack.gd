@@ -27,4 +27,5 @@ func _process(delta):
 	time = time-delta
 	if time < 0 and spawned:
 		spawned = false
+		hit()
 		self.hide()
