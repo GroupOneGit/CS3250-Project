@@ -1,10 +1,10 @@
-extends GridContainer
+extends Node
 
-const ItemClass = preload("res://Scripts/Item.gd")
-const ItemSlotClass = preload("res://Scripts/ItemSlot.gd")
-const slot_texture = preload("res://Art/GUI-ART/Inventory/InventorySlot.png")
 
-onready var item_img = preload("res://Scenes/temp-Item.tscn")
+
+
+
+
 #onready var grid = $ItemContainer
 var slotList = Array()
 var itemList = Array()
@@ -15,9 +15,8 @@ var k
 var item = null
 var MAX = 28
 var loot = Array()
-var currentIndex = 0
 var inventoryTotal = 0
-var emptySlots = Array()
+
 
 func craft(s1, c1, s2, c2, s3, c3, s4, c4):
 	var iArray  = [s1, s2, s3, s4] #array of items
@@ -167,26 +166,6 @@ func createCrate():
 			else:	
 				loot.append(id)
 
-		if currentIndex < MAX:
-			print('CurrentIndex: '+ str(currentIndex))
-			for item in loot:
-					var itemName = ItemDatabase.ITEMS[str(item)].name
-					var itemIcon = ItemDatabase.ITEMS[str(item)].icon
-					var itemDescription = ItemDatabase.ITEMS[str(item)].description
-					itemList.append(ItemClass.new(itemName, itemIcon, null, itemDescription))
-		return itemList
-#			for i in range(itemList.size()):
-#				for j in range(slotList.size()):
-#					if slotList[j].get_child_count() == 0:
-#						slotList[j].setItem(itemList[i])
-#						inventoryTotal += 1
-#						if i < itemList.size() - 1:
-#							i += 1
-#						else:
-#							return
-#					else:
-#						pass
-
 
 
 #func _ready():
@@ -218,41 +197,3 @@ func createCrate():
 #		if event is InputEventMouseMotion:
 #			holdingItem.rect_global_position = Vector2(event.position.x, event.position.y);
 #
-#func _gui_input(event):
-#	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-#		var clickedSlot;
-#		for slot in slotList:
-#			var slotMousePos = slot.get_local_mouse_position();
-#			var slotTexture = slot.texture;
-#			var isClicked = slotMousePos.x >= 0 && slotMousePos.x <= slotTexture.get_width() && slotMousePos.y >= 0 && slotMousePos.y <= slotTexture.get_height();
-#			if isClicked:
-#				clickedSlot = slot;
-#
-#		if clickedSlot == null:
-#			return
-#		if holdingItem != null:
-#			if clickedSlot.item != null:
-#				var tempItem = clickedSlot.item;
-#				var oldSlot = slotList[slotList.find(holdingItem.itemSlot)];
-#				clickedSlot.pickItem();
-#				clickedSlot.putItem(holdingItem);
-#				holdingItem = null;
-#				oldSlot.putItem(tempItem);
-#			else:
-#				clickedSlot.putItem(holdingItem);
-#				holdingItem = null;
-#		elif clickedSlot.item != null:
-#			holdingItem = clickedSlot.item;
-#			clickedSlot.pickItem();
-#			holdingItem.rect_global_position = Vector2(event.position.x + 215, event.position.y + 141);
-#
-#	if event is InputEventMouseButton and event.button_index == BUTTON_RIGHT and event.pressed:
-#		if holdingItem != null:
-#			holdingItem.queue_free()
-#			inventoryTotal -= 1
-#			holdingItem = null
-#			print("gonna drop it")
-#		else:
-#			 return
-#
-#		pass
