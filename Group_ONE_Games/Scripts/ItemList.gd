@@ -50,16 +50,19 @@ func drop_data(position, data):
 	var dropSlot = get_item_at_position(get_local_mouse_position(),true)
 	var heldItem = ItemDatabase.heldItem
 	
+
+			
 	if ItemDatabase.originalOwner != get_focus_owner().name:
-		addItem(ItemDatabase.heldItem)
-		if ItemDatabase.originalOwner == Slot1.name && self.get_item_count() < 28:
-			Slot1.removeItem(data[0])
-		elif ItemDatabase.originalOwner == Slot2.name && self.get_item_count() < 28:
-			Slot2.removeItem(data[0])
-		elif ItemDatabase.originalOwner == Slot3.name && self.get_item_count() < 28:
-			Slot3.removeItem(data[0])
-		elif ItemDatabase.originalOwner == Slot4.name && self.get_item_count() < 28:
-			Slot4.removeItem(data[0])
+		if inventoryTotal < 28:
+			addItem(ItemDatabase.heldItem)
+			if ItemDatabase.originalOwner == Slot1.name:
+				Slot1.removeItem(0)
+			elif ItemDatabase.originalOwner == Slot2.name:
+				Slot2.removeItem(0)
+			elif ItemDatabase.originalOwner == Slot3.name:
+				Slot3.removeItem(0)
+			elif ItemDatabase.originalOwner == Slot4.name:
+				Slot4.removeItem(0)	
 	else:
 		if heldItem != null && dropSlot in range(0, self.get_item_count()):
 			var tempItem = get_item_metadata(dropSlot)
