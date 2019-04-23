@@ -41,7 +41,6 @@ pause_mode = 2
 visible = false
 
 [node name="Map" parent="." instance=ExtResource( 5 )]
-editor/display_folded = true
 position = Vector2( 115.411, -90.0005 )
 
 [node name="Obstacles" type="Node2D" parent="."]

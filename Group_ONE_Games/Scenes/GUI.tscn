@@ -576,6 +576,7 @@ texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
 [node name="StatusBarContainer" type="HBoxContainer" parent="Background"]
+editor/display_folded = true
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -592,6 +593,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="MainItems" type="HBoxContainer" parent="Background"]
+editor/display_folded = true
 anchor_left = 0.918
 anchor_top = 0.5
 anchor_right = 0.918
@@ -753,10 +755,11 @@ margin_top = -15.5
 margin_right = 41.5
 margin_bottom = 15.5
 custom_colors/font_color = Color( 0.6, 0.6, 0.6, 0.733333 )
-text = "DROP ITEMS 
+text = "
       HERE"
 
 [node name="Area2D2" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 951.999, 343.083 )
