@@ -26,7 +26,6 @@ scale = Vector2( 2.88974, 2.88974 )
 frames = SubResource( 1 )
 animation = "idle"
 script = ExtResource( 3 )
-_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
