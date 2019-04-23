@@ -1,6 +1,12 @@
 extends Node
 var heldItem = null
 var originalOwner = null
+var holdingItem = false
+var slot1Item = null
+var slot2Item = null
+var slot3Item = null
+var slot4Item = null
+var itemListArray = Array()
 const PATH = null
 const itemImages = [ 
 	preload("res://Art/Item_TEMP_Art/Item0.png"),

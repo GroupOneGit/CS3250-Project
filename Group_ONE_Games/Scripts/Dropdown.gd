@@ -1,12 +1,6 @@
 extends NinePatchRect
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
 	self.hide()
 
 func _process(delta):
@@ -15,3 +9,10 @@ func _process(delta):
 			self.show()
 		else:
 			self.hide()
+			
+func can_drop_data(position, data):
+	return true
+	
+func drop_data(position, data):
+	ItemDatabase.holdingItem = false
+	ItemDatabase.heldItem = null
