@@ -1,4 +1,5 @@
 extends ItemList
+#warning-ignore-all:unused_variable
 var loot = Array()
 var itemList = Array()
 var k

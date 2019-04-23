@@ -1,4 +1,5 @@
 extends Node
+#warning-ignore-all:unused_variable
 var heldItem = null
 var originalOwner = null
 var holdingItem = false

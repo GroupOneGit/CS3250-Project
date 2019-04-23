@@ -1,4 +1,5 @@
 extends ItemList
+#warning-ignore-all:unused_variable
 var index = 0
 var itemSelected = null
 var itemsSlotted = 0
@@ -240,7 +241,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		var mainNode = $"//root/DemoLevel/Dropped_Items"
 		var itemInstance = itemObject.instance()
 	
-		if Input.is_action_just_released("ui_LMB"):
+		if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
 				print("released")
 				itemOwner.removeItem(itemOwner.itemSelected[0])
 				mainNode.add_child(itemInstance)
@@ -259,9 +260,10 @@ func _on_Area2D2_input_event(viewport, event, shape_idx):
 		print(itemOwner)
 		print(itemOwner.itemSelected)
 		var mainNode = $"//root/DemoLevel/Dropped_Items"
+		var player = $"//root/DemoLevel/Player"
 		var itemInstance = itemObject.instance()
 	
-		if Input.is_action_just_released("ui_LMB"):
+		if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
 				print("released")
 				itemOwner.removeItem(itemOwner.itemSelected[0])
 				mainNode.add_child(itemInstance)
