@@ -26,6 +26,7 @@ func _ready():
 
 
 
+
 func get_drag_data(position):
 	var dragIcon = TextureRect.new()
 	if is_anything_selected():
@@ -40,12 +41,12 @@ func get_drag_data(position):
 	ItemDatabase.holdingItem = true
 	ItemDatabase.originalOwner = get_focus_owner().name
 	return itemSelected
-	
+
 func can_drop_data(position, data):
 	grab_focus()
 	return true
-	pass
 	
+
 
 func drop_data(position, data):
 	var dropSlot = get_item_at_position(get_local_mouse_position(),true)
@@ -64,6 +65,7 @@ func drop_data(position, data):
 				Slot3.removeItem(0)
 			elif ItemDatabase.originalOwner == Slot4.name:
 				Slot4.removeItem(0)	
+		ItemDatabase.holdingItem = false
 	else:
 		if heldItem != null && dropSlot in range(0, self.get_item_count()):
 			var tempItem = get_item_metadata(dropSlot)
@@ -71,9 +73,11 @@ func drop_data(position, data):
 			if dropSlot < data[0]:
 				removeItem(dropSlot +  1)
 			elif dropSlot == data[0]:
+				ItemDatabase.holdingItem = false
 				return
 			else:
 				removeItem(dropSlot - 1)
+				ItemDatabase.holdingItem = false
 			if ItemDatabase.originalOwner != get_focus_owner().name:
 				addItem(ItemDatabase.heldItem)
 			else:
@@ -82,17 +86,23 @@ func drop_data(position, data):
 			move_item(listSize - 1, itemSelected[0])
 			if dropSlot == -1:
 				addItem(ItemDatabase.heldItem)
+				ItemDatabase.holdingItem = false
 			unselect_all()
 		elif dropSlot == -1:
 			if ItemDatabase.originalOwner != get_focus_owner().name:
 				removeItem(itemSelected[0])
 				addItem(ItemDatabase.heldItem)
+				ItemDatabase.holdingItem = false
 			else:
+				ItemDatabase.holdingItem = false
 				return
-
-		unselect_all()
-		release_focus()
-		pass
+		else:
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
+	ItemDatabase.holdingItem = false
+	unselect_all()
+	release_focus()
+	pass
 
 
 func createCrate():
@@ -105,6 +115,7 @@ func createCrate():
 	if numItems == 0:
 		return
 	else:
+#warning-ignore:unused_variable
 		for i in range(numItems):
 			id = randi()%9
 			if id == 0:
@@ -131,6 +142,7 @@ func addItems():
 				ItemDatabase.heldItem = null
 				ItemDatabase.holdingItem = false
 	else:
+		ItemDatabase.holdingItem = false
 		return
 		
 func addItem(key):
@@ -148,6 +160,7 @@ func addItem(key):
 			ItemDatabase.holdingItem = false
 			print("INVTENTORY TOTAL: " + str(inventoryTotal))
 	else:
+		ItemDatabase.holdingItem = false
 		return
 	
 func removeItem(key):

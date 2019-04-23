@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Inventory/Inventory/580b585b2edbce24c47b2463.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Dropdown.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/BarContainer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/GUI-ART/Inventory/InventorySlot.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/ItemSlots.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Panel.gd" type="Script" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.858824, 0.8, 0.721569, 1 )
@@ -510,6 +511,15 @@ corner_radius_bottom_left = 15
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 70, 240 )
 
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.172549, 0.172549, 0.172549, 0.294118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="GUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -523,6 +533,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 82.0
 margin_right = -94.0
+mouse_filter = 0
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
@@ -560,6 +571,7 @@ margin_top = -11.0
 margin_right = 2.0
 margin_bottom = 103.0
 rect_min_size = Vector2( 1024, 70 )
+mouse_filter = 0
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
@@ -720,11 +732,59 @@ script = ExtResource( 8 )
 position = Vector2( 68.1622, 343.083 )
 shape = SubResource( 22 )
 
+[node name="Panel" type="Panel" parent="Area2D"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -6.0
+margin_top = 103.0
+margin_right = 138.0
+margin_bottom = 582.0
+custom_styles/panelf = SubResource( 23 )
+custom_styles/panel = SubResource( 24 )
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Area2D/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.5
+margin_top = -15.5
+margin_right = 41.5
+margin_bottom = 15.5
+custom_colors/font_color = Color( 0.6, 0.6, 0.6, 0.733333 )
+text = "DROP ITEMS 
+      HERE"
+
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 951.999, 343.083 )
 shape = SubResource( 22 )
+
+[node name="Panel2" type="Panel" parent="Area2D2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 885.0
+margin_top = 103.0
+margin_right = 1026.0
+margin_bottom = 582.0
+custom_styles/panelf = SubResource( 23 )
+custom_styles/panel = SubResource( 24 )
+script = ExtResource( 9 )
+
+[node name="Label2" type="Label" parent="Area2D2/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.5
+margin_top = -15.5
+margin_right = 41.5
+margin_bottom = 15.5
+custom_colors/font_color = Color( 0.6, 0.6, 0.6, 0.768627 )
+text = "DROP ITEMS 
+      HERE"
 
 [connection signal="input_event" from="Area2D" to="Background/MainItems/Slot1/Item1" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Area2D2" to="Background/MainItems/Slot1/Item1" method="_on_Area2D2_input_event"]

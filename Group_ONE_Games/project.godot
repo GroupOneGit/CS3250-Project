@@ -26,10 +26,6 @@ Global_Player="*res://Scripts/Global_Player.gd"
 ItemDatabase="*res://Inventory/ItemDatabase.gd"
 Global_Inventory="*res://Scripts/Inventory.gd"
 
-[display]
-
-window/size/resizable=false
-
 [input]
 
 ui_left={

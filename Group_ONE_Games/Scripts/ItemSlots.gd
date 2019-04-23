@@ -7,7 +7,20 @@ onready var Slot1 = get_parent().get_parent().get_node("Slot1/Item1")
 onready var Slot2 = get_parent().get_parent().get_node("Slot2/Item2")
 onready var Slot3 = get_parent().get_parent().get_node("Slot3/Item3")
 onready var Slot4 = get_parent().get_parent().get_node("Slot4/Item4")
+onready var itemObject = load("res://Scenes/Dropped_Item.tscn")
+onready var map = get_node("/root/DemoLevel/Map/TileMap")
+onready var dropDown = get_parent().get_parent().get_parent().get_parent().get_node("Dropdown")
+onready var panel = get_parent().get_parent().get_parent().get_parent().get_node("Area2D/Panel")
+onready var panel2 = get_parent().get_parent().get_parent().get_parent().get_node("Area2D2/Panel2")
 
+func _process(delta):
+	if ItemDatabase.holdingItem == true && dropDown.is_visible():
+		panel.show()
+		panel2.show()
+	else:
+		panel.hide()
+		panel2.hide()
+	
 func _input(event):
 	if ItemDatabase.holdingItem == false:
 		if event is InputEvent && event.is_action_pressed("Num_1"):
@@ -18,6 +31,8 @@ func _input(event):
 				itemSelected = Slot1.get_selected_items()
 				Global_Inventory.eat(str(Slot1.get_item_metadata(itemSelected[0])))
 				Slot1.removeItem(itemSelected[0])
+				ItemDatabase.heldItem = null
+				ItemDatabase.holdingItem = false
 			else:
 				return
 	
@@ -29,6 +44,8 @@ func _input(event):
 				itemSelected = Slot2.get_selected_items()
 				Global_Inventory.eat(str(Slot2.get_item_metadata(itemSelected[0])))
 				Slot2.removeItem(itemSelected[0])
+				ItemDatabase.heldItem = null
+				ItemDatabase.holdingItem = false
 			else:
 				return
 	
@@ -40,6 +57,8 @@ func _input(event):
 				itemSelected = Slot3.get_selected_items()
 				Global_Inventory.eat(str(Slot3.get_item_metadata(itemSelected[0])))
 				Slot3.removeItem(itemSelected[0])
+				ItemDatabase.heldItem = null
+				ItemDatabase.holdingItem = false
 			else:
 				return
 	
@@ -51,6 +70,8 @@ func _input(event):
 				itemSelected = Slot4.get_selected_items()
 				Global_Inventory.eat(str(Slot4.get_item_metadata(itemSelected[0])))
 				Slot4.removeItem(itemSelected[0])
+				ItemDatabase.heldItem = null
+				ItemDatabase.holdingItem = false
 			else:
 				return
 	
@@ -82,43 +103,38 @@ func drop_data(position, data):
 			Slot1.removeItem(data[0])
 			ItemDatabase.slot1Item = null
 			addItem(ItemDatabase.heldItem)
+			ItemDatabase.slot1Item = ItemDatabase.heldItem
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
 		elif ItemDatabase.originalOwner == Slot2.name && itemsSlotted == 0:
 			Slot2.removeItem(data[0])
 			ItemDatabase.slot2Item = null
 			addItem(ItemDatabase.heldItem)
+			ItemDatabase.slot2Item = ItemDatabase.heldItem
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
 		elif ItemDatabase.originalOwner == Slot3.name && itemsSlotted == 0:
 			Slot3.removeItem(data[0])
 			ItemDatabase.slot3Item = null
 			addItem(ItemDatabase.heldItem)
+			ItemDatabase.slot3Item = ItemDatabase.heldItem
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
 		elif ItemDatabase.originalOwner == Slot4.name && itemsSlotted == 0:
 			Slot4.removeItem(data[0])
 			ItemDatabase.slot4Item = null
 			addItem(ItemDatabase.heldItem)
+			ItemDatabase.slot4Item = ItemDatabase.heldItem
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
 		if ItemDatabase.originalOwner != self.name && ItemDatabase.originalOwner != mainItemList.name && itemsSlotted > 0:
 			swapItem()
 		elif itemsSlotted == 0:
 			addItem(ItemDatabase.heldItem)
-			
-	if self.name == Slot1.name:
-		ItemDatabase.slot1Item = ItemDatabase.heldItem
-		ItemDatabase.heldItem = null
-	elif self.name == Slot2.name:
-		ItemDatabase.slot2Item = ItemDatabase.heldItem
-		ItemDatabase.heldItem = null
-	elif self.name == Slot3.name:
-		ItemDatabase.slot3Item = ItemDatabase.heldItem
-		ItemDatabase.heldItem = null
-	elif self.name == Slot4.name:
-		ItemDatabase.slot4Item = ItemDatabase.heldItem
-		ItemDatabase.heldItem = null
-		
-
-	
-
+	ItemDatabase.heldItem = null
 	ItemDatabase.holdingItem = false
 	unselect_all()
 	release_focus()
-	#TODO:: Add swap function to swap items between main slots.
 	pass
 
 func addItem(key):
@@ -140,7 +156,11 @@ func addItem(key):
 		elif self.name == Slot4.name:
 			ItemDatabase.slot4Item = key
 		itemsSlotted += 1
+		ItemDatabase.holdingItem = false
+		ItemDatabase.heldItem = null
 	else:
+		ItemDatabase.holdingItem = false
+		ItemDatabase.heldItem = null
 		return
 
 func removeItem(key):
@@ -155,6 +175,7 @@ func removeItem(key):
 		ItemDatabase.slot4Item = null
 	index -= 1
 	itemsSlotted -= 1
+	ItemDatabase.holdingItem = true
 	pass
 	
 func swapItem():
@@ -185,8 +206,9 @@ func swapItem():
 			self.addItem(ItemDatabase.heldItem)
 			tempSlot.removeItem(0)
 			tempSlot.addItem(tempItem)
-		pass
-	
+	ItemDatabase.holdingItem = false
+
+
 func originalSlotCheck():
 	if ItemDatabase.originalOwner == Slot1.name:
 		return Slot1
@@ -196,6 +218,8 @@ func originalSlotCheck():
 		return Slot3
 	elif ItemDatabase.originalOwner == Slot4.name:
 		return Slot4
+	else:
+		return mainItemList
 		
 func originalSlotItemCheck():
 	var slot = originalSlotCheck()
@@ -207,11 +231,42 @@ func originalSlotItemCheck():
 		return slot.get_item_metadata(0)
 	elif ItemDatabase.originalOwner == slot.name && slot.get_item_metadata(0) != null:
 		return slot.get_item_metadata(0)
-			
-			
-func _notification(what):
-#	if (what==NOTIFICATION_MOUSE_ENTER):
-#    	  print('mouse entered the area of this control: ' + str(self.name))
-#	elif (what==NOTIFICATION_MOUSE_EXIT):
-#		 print('mouse exited the area of this control: ' + str(self.name))
-	pass
+
+func _on_Area2D_input_event(viewport, event, shape_idx):	
+	if dropDown.is_visible():
+		var itemOwner = originalSlotCheck()
+		print(itemOwner)
+		print(itemOwner.itemSelected)
+		var mainNode = $"//root/DemoLevel/Dropped_Items"
+		var itemInstance = itemObject.instance()
+	
+		if Input.is_action_just_released("ui_LMB"):
+				print("released")
+				itemOwner.removeItem(itemOwner.itemSelected[0])
+				mainNode.add_child(itemInstance)
+				itemInstance.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
+				itemInstance.itemData = ItemDatabase.heldItem
+				itemInstance.position = map.get_local_mouse_position() - Vector2(-100, 100)
+				ItemDatabase.holdingItem = false
+				print("ITEM POSITION: " + str(itemInstance.position))
+	else:
+		return
+
+
+func _on_Area2D2_input_event(viewport, event, shape_idx):
+	if dropDown.is_visible():
+		var itemOwner = originalSlotCheck()
+		print(itemOwner)
+		print(itemOwner.itemSelected)
+		var mainNode = $"//root/DemoLevel/Dropped_Items"
+		var itemInstance = itemObject.instance()
+	
+		if Input.is_action_just_released("ui_LMB"):
+				print("released")
+				itemOwner.removeItem(itemOwner.itemSelected[0])
+				mainNode.add_child(itemInstance)
+				itemInstance.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
+				itemInstance.itemData = ItemDatabase.heldItem
+				itemInstance.position = map.get_local_mouse_position() - Vector2(-100, 100)
+				ItemDatabase.holdingItem = false
+				print("ITEM POSITION: " + str(itemInstance.position))

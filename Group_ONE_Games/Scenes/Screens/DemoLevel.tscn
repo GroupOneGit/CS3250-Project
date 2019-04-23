@@ -24,6 +24,7 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
+editor/display_folded = true
 margin_left = 0.0
 margin_top = -1.0
 margin_right = 0.0
@@ -33,6 +34,7 @@ script = ExtResource( 3 )
 
 [node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
 editor/display_folded = true
+visible = false
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 4 )]
 pause_mode = 2
@@ -113,8 +115,8 @@ position = Vector2( 257.489, 108.844 )
 [node name="Crab2" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 458.119, 59.2955 )
 
-[node name="Apple" parent="." instance=ExtResource( 10 )]
-position = Vector2( 425.426, 250.242 )
+[node name="Dropped_Items" type="Node2D" parent="."]
+z_as_relative = false
 
 
 [editable path="CanvasLayer/GUI"]
