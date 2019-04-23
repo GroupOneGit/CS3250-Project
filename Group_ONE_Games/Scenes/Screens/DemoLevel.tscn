@@ -11,7 +11,7 @@
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Crab.tscn" type="PackedScene" id=10]
 
-[node name="DemoLevel" type="Node" index="0"]
+[node name="DemoLevel" type="Node"]
 
 [node name="Music" type="Node" parent="."]
 editor/display_folded = true
@@ -23,15 +23,7 @@ autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="GUI" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
-
-editor/display_folded = true
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
 margin_left = 0.0
 margin_top = -1.0
 margin_right = 0.0
@@ -42,26 +34,23 @@ script = ExtResource( 3 )
 [node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
 editor/display_folded = true
 
-[node name="Panel" parent="CanvasLayer/GUI/Dropdown" index="0"]
-editor/display_folded = true
-
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 4 )]
 pause_mode = 2
 visible = false
 
-[node name="Map" parent="." index="2" instance=ExtResource( 5 )]
-
+[node name="Map" parent="." instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( 115.411, -90.0005 )
 
 [node name="Obstacles" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1291.11, 575.14 )
 scale = Vector2( 0.179144, 0.151001 )
 
-[node name="SpikeWallObtacles" type="Node2D" parent="Obstacles" index="0"]
+[node name="SpikeWallObtacles" type="Node2D" parent="Obstacles"]
+editor/display_folded = true
 
-[node name="Spike_Wall3" parent="Obstacles/SpikeWallObtacles" index="0" instance=ExtResource( 6 )]
-
+[node name="Spike_Wall3" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( -298.264, 221.914 )
 
 [node name="Spike_Wall4" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
@@ -89,52 +78,39 @@ position = Vector2( -4295.39, -1826.23 )
 [node name="Small_Spike3" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( -2711.81, -2398.79 )
 
-[node name="Food" parent="Obstacles/Random" index="3" instance=ExtResource( 8 )]
+[node name="Food" parent="Obstacles/Random" instance=ExtResource( 8 )]
 
-position = Vector2( 1632.55, -195.448 )
-
-[node name="Food2" parent="Obstacles/Random" index="4" instance=ExtResource( 8 )]
-
+[node name="Food2" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 1832.61, -835.919 )
 
-[node name="Food3" parent="Obstacles/Random" index="5" instance=ExtResource( 8 )]
-
+[node name="Food3" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 2237.13, 223.388 )
 
-[node name="Food4" parent="Obstacles/Random" index="6" instance=ExtResource( 8 )]
-
+[node name="Food4" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 2678.43, -1003.45 )
 
-[node name="Food5" parent="Obstacles/Random" index="7" instance=ExtResource( 8 )]
-
+[node name="Food5" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 1175.07, -795.781 )
 
-[node name="Player" parent="." index="4" instance=ExtResource( 9 )]
-
+[node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 680, 410 )
 
 [node name="Enemies" type="Node2D" parent="."]
-
 editor/display_folded = true
 
-[node name="Crab" parent="Enemies" index="0" instance=ExtResource( 10 )]
-
+[node name="Crab" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 379.716, 167.967 )
 
-[node name="Crab3" parent="Enemies" index="1" instance=ExtResource( 10 )]
-
+[node name="Crab3" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 392.325, 102.346 )
 
-[node name="Crab4" parent="Enemies" index="2" instance=ExtResource( 10 )]
-
+[node name="Crab4" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 532.848, 76.3532 )
 
-[node name="Crab5" parent="Enemies" index="3" instance=ExtResource( 10 )]
-
+[node name="Crab5" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 257.489, 108.844 )
 
-[node name="Crab2" parent="Enemies" index="4" instance=ExtResource( 10 )]
-
+[node name="Crab2" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 458.119, 59.2955 )
 
 [node name="Apple" parent="." instance=ExtResource( 10 )]

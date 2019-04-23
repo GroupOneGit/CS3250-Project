@@ -37,6 +37,7 @@ func get_drag_data(position):
 	print("ITEM DICT KEY 1 : " + str(get_item_metadata(itemSelected[0])))
 	set_drag_preview(dragIcon)
 	ItemDatabase.heldItem = get_item_metadata(itemSelected[0])
+	ItemDatabase.holdingItem = true
 	ItemDatabase.originalOwner = get_focus_owner().name
 	return itemSelected
 	
@@ -50,8 +51,6 @@ func drop_data(position, data):
 	var dropSlot = get_item_at_position(get_local_mouse_position(),true)
 	var heldItem = ItemDatabase.heldItem
 	
-
-			
 	if ItemDatabase.originalOwner != get_focus_owner().name:
 		if inventoryTotal < 28:
 			addItem(ItemDatabase.heldItem)
@@ -88,7 +87,9 @@ func drop_data(position, data):
 				addItem(ItemDatabase.heldItem)
 			else:
 				return
-		ItemDatabase.heldItem = null
+
+		unselect_all()
+		release_focus()
 		pass
 
 
@@ -125,6 +126,8 @@ func addItems():
 				set_item_tooltip(index, ItemDatabase.ITEMS[str(id)].description)
 				set_item_metadata(index, id)
 				inventoryTotal += 1
+				ItemDatabase.heldItem = null
+				ItemDatabase.holdingItem = false
 	else:
 		return
 		
@@ -139,6 +142,8 @@ func addItem(key):
 			set_item_tooltip(index, ItemDatabase.ITEMS[str(key)].description)
 			set_item_metadata(index, key)
 			inventoryTotal += 1
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
 			print("INVTENTORY TOTAL: " + str(inventoryTotal))
 	else:
 		return

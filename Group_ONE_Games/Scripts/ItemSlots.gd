@@ -9,7 +9,7 @@ onready var Slot3 = get_parent().get_parent().get_node("Slot3/Item3")
 onready var Slot4 = get_parent().get_parent().get_node("Slot4/Item4")
 
 func _input(event):
-	if ItemDatabase.holdingItem == false:
+	if ItemDatabase.heldItem == null:
 		if event is InputEvent && event.is_action_pressed("Num_1"):
 			grab_focus()
 			itemSelected = Slot1.get_selected_items()
@@ -113,8 +113,8 @@ func drop_data(position, data):
 		ItemDatabase.heldItem = null
 		
 
-	
 
+	ItemDatabase.heldItem = null
 	ItemDatabase.holdingItem = false
 	unselect_all()
 	release_focus()
@@ -196,6 +196,8 @@ func originalSlotCheck():
 		return Slot3
 	elif ItemDatabase.originalOwner == Slot4.name:
 		return Slot4
+	else:
+		return mainItemList
 		
 func originalSlotItemCheck():
 	var slot = originalSlotCheck()
@@ -215,3 +217,52 @@ func _notification(what):
 #	elif (what==NOTIFICATION_MOUSE_EXIT):
 #		 print('mouse exited the area of this control: ' + str(self.name))
 	pass
+
+func _on_Area2D_area_entered(area):
+	print("ENTERED")
+	pass # Replace with function body.
+
+#
+#func _on_Area2D_mouse_entered():
+#	if ItemDatabase.heldItem != null:
+#		var itemOwner = originalSlotCheck()
+##		if Input.is_action_just_released("ui_LMB"):
+##			print("released")
+##			itemOwner.removeItem(itemOwner.itemSelected[0])
+#		print(itemOwner)
+#		print(itemOwner.itemSelected[0])
+#		print("entered")
+#		print("gonna drop")
+#	pass # Replace with function body.
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):	
+	var itemOwner = originalSlotCheck()
+	var mainNode = $"//root/DemoLevel"
+	var itemObject = create_item_object(itemOwner.itemSelected[0])
+	print(mainNode.name)
+	itemObject.position = get_global_mouse_position() + Vector2(160,100)
+	itemObject.scale.x = .75
+	itemObject.scale.y = .75
+	print(itemObject.position)
+	
+	
+	if Input.is_action_just_released("ui_LMB"):
+			print("released")
+			itemOwner.removeItem(itemOwner.itemSelected[0])
+			mainNode.add_child(itemObject)
+	pass # Replace with function body.
+
+
+func _on_Area2D2_input_event(viewport, event, shape_idx):
+	var itemOwner = originalSlotCheck()
+	if Input.is_action_just_released("ui_LMB"):
+			print("released")
+			itemOwner.removeItem(itemOwner.itemSelected[0])
+	pass # Replace with function body.
+	
+	
+func create_item_object(itemSelected):
+	var item = Sprite.new()
+	item.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
+	return item
