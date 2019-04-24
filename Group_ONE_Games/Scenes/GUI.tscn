@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Inventory/Inventory/580b585b2edbce24c47b2463.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Dropdown.gd" type="Script" id=2]
@@ -8,17 +8,18 @@
 [ext_resource path="res://Scenes/BarContainer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/GUI-ART/Inventory/InventorySlot.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/ItemSlots.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Panel.gd" type="Script" id=9]
 
-[sub_resource type="StyleBoxFlat" id=25]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.858824, 0.8, 0.721569, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxEmpty" id=23]
+[sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="StyleBoxFlat" id=24]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.858824, 0.8, 0.721569, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
@@ -42,6 +43,8 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxEmpty" id=5]
+
 [sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="StyleBoxEmpty" id=7]
@@ -60,9 +63,7 @@ corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxEmpty" id=14]
 
-[sub_resource type="StyleBoxEmpty" id=15]
-
-[sub_resource type="Theme" id=5]
+[sub_resource type="Theme" id=15]
 Button/colors/font_color = Color( 0, 0, 0, 1 )
 Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -197,9 +198,9 @@ HSplitContainer/icons/grabber = null
 HSplitContainer/styles/bg = null
 Icons/icons/close = null
 Icons/icons/logo = null
-ItemList/colors/font_color = Color( 0, 0, 0, 1 )
-ItemList/colors/font_color_selected = Color( 0, 0, 0, 1 )
-ItemList/colors/guide_color = Color( 0, 0, 0, 1 )
+ItemList/colors/font_color = Color( 0, 0, 0, 0 )
+ItemList/colors/font_color_selected = Color( 1, 1, 1, 0 )
+ItemList/colors/guide_color = Color( 0, 0, 0, 0 )
 ItemList/constants/hseparation = 4
 ItemList/constants/icon_margin = 4
 ItemList/constants/line_separation = 2
@@ -396,7 +397,7 @@ ToolButton/styles/hover = null
 ToolButton/styles/normal = null
 ToolButton/styles/pressed = null
 TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
-TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 TooltipLabel/constants/shadow_offset_x = 1
 TooltipLabel/constants/shadow_offset_y = 1
 TooltipLabel/fonts/font = null
@@ -445,22 +446,22 @@ VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null
 VScrollBar/icons/increment_highlight = null
-VScrollBar/styles/grabber = SubResource( 6 )
-VScrollBar/styles/grabber_highlight = SubResource( 7 )
-VScrollBar/styles/grabber_pressed = SubResource( 8 )
-VScrollBar/styles/scroll = SubResource( 9 )
-VScrollBar/styles/scroll_focus = SubResource( 10 )
+VScrollBar/styles/grabber = SubResource( 5 )
+VScrollBar/styles/grabber_highlight = SubResource( 6 )
+VScrollBar/styles/grabber_pressed = SubResource( 7 )
+VScrollBar/styles/scroll = SubResource( 8 )
+VScrollBar/styles/scroll_focus = SubResource( 9 )
 VSeparator/constants/separation = 4
 VSeparator/styles/separator = null
 VSlider/icons/grabber = null
 VSlider/icons/grabber_disabled = null
 VSlider/icons/grabber_highlight = null
 VSlider/icons/tick = null
-VSlider/styles/focus = SubResource( 11 )
-VSlider/styles/grabber_area = SubResource( 12 )
-VSlider/styles/grabber_disabled = SubResource( 13 )
-VSlider/styles/grabber_highlight = SubResource( 14 )
-VSlider/styles/slider = SubResource( 15 )
+VSlider/styles/focus = SubResource( 10 )
+VSlider/styles/grabber_area = SubResource( 11 )
+VSlider/styles/grabber_disabled = SubResource( 12 )
+VSlider/styles/grabber_highlight = SubResource( 13 )
+VSlider/styles/slider = SubResource( 14 )
 VSplitContainer/constants/autohide = 1
 VSplitContainer/constants/separation = 12
 VSplitContainer/icons/grabber = null
@@ -475,16 +476,7 @@ WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 
-[sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxEmpty" id=19]
-
-[sub_resource type="StyleBoxFlat" id=27]
+[sub_resource type="StyleBoxFlat" id=16]
 bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
@@ -492,6 +484,15 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id=19]
 
 [sub_resource type="StyleBoxFlat" id=20]
 bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
@@ -507,6 +508,18 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 70, 240 )
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.172549, 0.172549, 0.172549, 0.294118 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="GUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -520,24 +533,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 82.0
 margin_right = -94.0
+mouse_filter = 0
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="ItemList" type="ItemList" parent="Dropdown"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
 margin_left = 152.0
-margin_top = 115.0
-margin_right = -453.0
-margin_bottom = -120.0
+margin_top = -185.0
+margin_right = 400.0
+margin_bottom = 180.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_min_size = Vector2( 248, 365 )
 rect_clip_content = false
 focus_mode = 1
-custom_styles/selected_focus = SubResource( 25 )
-custom_styles/bg_focus = SubResource( 23 )
-custom_styles/selected = SubResource( 24 )
+custom_styles/selected_focus = SubResource( 1 )
+custom_styles/bg_focus = SubResource( 2 )
+custom_styles/selected = SubResource( 3 )
 custom_styles/bg = SubResource( 4 )
 custom_colors/font_color_selected = Color( 0.447059, 0.447059, 0.447059, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -557,6 +571,7 @@ margin_top = -11.0
 margin_right = 2.0
 margin_bottom = 103.0
 rect_min_size = Vector2( 1024, 70 )
+mouse_filter = 0
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
@@ -565,9 +580,9 @@ editor/display_folded = true
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = 22.0
+margin_left = 162.0
 margin_top = -23.0
-margin_right = -632.0
+margin_right = -492.0
 margin_bottom = 37.0
 mouse_filter = 2
 
@@ -578,10 +593,15 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="MainItems" type="HBoxContainer" parent="Background"]
-margin_left = 625.0
-margin_top = 37.0
-margin_right = 837.0
-margin_bottom = 91.0
+editor/display_folded = true
+anchor_left = 0.918
+anchor_top = 0.5
+anchor_right = 0.918
+anchor_bottom = 0.561
+margin_left = -315.032
+margin_top = -20.0
+margin_right = -103.032
+margin_bottom = 27.046
 rect_min_size = Vector2( 0, 50 )
 
 [node name="Slot1" type="TextureRect" parent="Background/MainItems"]
@@ -606,11 +626,11 @@ margin_right = 19.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 5 )
-custom_styles/selected_focus = SubResource( 26 )
-custom_styles/bg_focus = SubResource( 19 )
-custom_styles/selected = SubResource( 27 )
-custom_styles/bg = SubResource( 17 )
+theme = SubResource( 15 )
+custom_styles/selected_focus = SubResource( 16 )
+custom_styles/bg_focus = SubResource( 17 )
+custom_styles/selected = SubResource( 18 )
+custom_styles/bg = SubResource( 19 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 8 )
@@ -637,11 +657,11 @@ margin_right = 19.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 5 )
+theme = SubResource( 15 )
 custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 19 )
+custom_styles/bg_focus = SubResource( 17 )
 custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 17 )
+custom_styles/bg = SubResource( 19 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 8 )
@@ -668,11 +688,11 @@ margin_right = 19.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 5 )
+theme = SubResource( 15 )
 custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 19 )
+custom_styles/bg_focus = SubResource( 17 )
 custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 17 )
+custom_styles/bg = SubResource( 19 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 8 )
@@ -699,12 +719,75 @@ margin_right = 19.8529
 margin_bottom = 19.3235
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 5 )
+theme = SubResource( 15 )
 custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 19 )
+custom_styles/bg_focus = SubResource( 17 )
 custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 17 )
+custom_styles/bg = SubResource( 19 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 8 )
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 68.1622, 343.083 )
+shape = SubResource( 22 )
+
+[node name="Panel" type="Panel" parent="Area2D"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -6.0
+margin_top = 103.0
+margin_right = 138.0
+margin_bottom = 582.0
+custom_styles/panelf = SubResource( 23 )
+custom_styles/panel = SubResource( 24 )
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Area2D/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.5
+margin_top = -15.5
+margin_right = 41.5
+margin_bottom = 15.5
+custom_colors/font_color = Color( 0.6, 0.6, 0.6, 0.733333 )
+text = "
+      HERE"
+
+[node name="Area2D2" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 951.999, 343.083 )
+shape = SubResource( 22 )
+
+[node name="Panel2" type="Panel" parent="Area2D2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 885.0
+margin_top = 103.0
+margin_right = 1026.0
+margin_bottom = 582.0
+custom_styles/panelf = SubResource( 23 )
+custom_styles/panel = SubResource( 24 )
+script = ExtResource( 9 )
+
+[node name="Label2" type="Label" parent="Area2D2/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.5
+margin_top = -15.5
+margin_right = 41.5
+margin_bottom = 15.5
+custom_colors/font_color = Color( 0.6, 0.6, 0.6, 0.768627 )
+text = "DROP ITEMS 
+      HERE"
+
+[connection signal="input_event" from="Area2D" to="Background/MainItems/Slot1/Item1" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Area2D2" to="Background/MainItems/Slot1/Item1" method="_on_Area2D2_input_event"]

@@ -1,4 +1,5 @@
 extends ItemList
+#warning-ignore-all:unused_variable
 var loot = Array()
 var itemList = Array()
 var k
@@ -26,6 +27,7 @@ func _ready():
 
 
 
+
 func get_drag_data(position):
 	var dragIcon = TextureRect.new()
 	if is_anything_selected():
@@ -37,29 +39,34 @@ func get_drag_data(position):
 	print("ITEM DICT KEY 1 : " + str(get_item_metadata(itemSelected[0])))
 	set_drag_preview(dragIcon)
 	ItemDatabase.heldItem = get_item_metadata(itemSelected[0])
+	ItemDatabase.holdingItem = true
 	ItemDatabase.originalOwner = get_focus_owner().name
 	return itemSelected
-	
+
 func can_drop_data(position, data):
 	grab_focus()
 	return true
-	pass
 	
+
 
 func drop_data(position, data):
 	var dropSlot = get_item_at_position(get_local_mouse_position(),true)
 	var heldItem = ItemDatabase.heldItem
 	
+
+			
 	if ItemDatabase.originalOwner != get_focus_owner().name:
-		addItem(ItemDatabase.heldItem)
-		if ItemDatabase.originalOwner == Slot1.name && self.get_item_count() < 28:
-			Slot1.removeItem(data[0])
-		elif ItemDatabase.originalOwner == Slot2.name && self.get_item_count() < 28:
-			Slot2.removeItem(data[0])
-		elif ItemDatabase.originalOwner == Slot3.name && self.get_item_count() < 28:
-			Slot3.removeItem(data[0])
-		elif ItemDatabase.originalOwner == Slot4.name && self.get_item_count() < 28:
-			Slot4.removeItem(data[0])
+		if inventoryTotal < 28:
+			addItem(ItemDatabase.heldItem)
+			if ItemDatabase.originalOwner == Slot1.name:
+				Slot1.removeItem(0)
+			elif ItemDatabase.originalOwner == Slot2.name:
+				Slot2.removeItem(0)
+			elif ItemDatabase.originalOwner == Slot3.name:
+				Slot3.removeItem(0)
+			elif ItemDatabase.originalOwner == Slot4.name:
+				Slot4.removeItem(0)	
+		ItemDatabase.holdingItem = false
 	else:
 		if heldItem != null && dropSlot in range(0, self.get_item_count()):
 			var tempItem = get_item_metadata(dropSlot)
@@ -67,9 +74,11 @@ func drop_data(position, data):
 			if dropSlot < data[0]:
 				removeItem(dropSlot +  1)
 			elif dropSlot == data[0]:
+				ItemDatabase.holdingItem = false
 				return
 			else:
 				removeItem(dropSlot - 1)
+				ItemDatabase.holdingItem = false
 			if ItemDatabase.originalOwner != get_focus_owner().name:
 				addItem(ItemDatabase.heldItem)
 			else:
@@ -78,15 +87,23 @@ func drop_data(position, data):
 			move_item(listSize - 1, itemSelected[0])
 			if dropSlot == -1:
 				addItem(ItemDatabase.heldItem)
+				ItemDatabase.holdingItem = false
 			unselect_all()
 		elif dropSlot == -1:
 			if ItemDatabase.originalOwner != get_focus_owner().name:
 				removeItem(itemSelected[0])
 				addItem(ItemDatabase.heldItem)
+				ItemDatabase.holdingItem = false
 			else:
+				ItemDatabase.holdingItem = false
 				return
-		ItemDatabase.heldItem = null
-		pass
+		else:
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
+	ItemDatabase.holdingItem = false
+	unselect_all()
+	release_focus()
+	pass
 
 
 func createCrate():
@@ -99,6 +116,7 @@ func createCrate():
 	if numItems == 0:
 		return
 	else:
+#warning-ignore:unused_variable
 		for i in range(numItems):
 			id = randi()%9
 			if id == 0:
@@ -122,7 +140,10 @@ func addItems():
 				set_item_tooltip(index, ItemDatabase.ITEMS[str(id)].description)
 				set_item_metadata(index, id)
 				inventoryTotal += 1
+				ItemDatabase.heldItem = null
+				ItemDatabase.holdingItem = false
 	else:
+		ItemDatabase.holdingItem = false
 		return
 		
 func addItem(key):
@@ -136,8 +157,11 @@ func addItem(key):
 			set_item_tooltip(index, ItemDatabase.ITEMS[str(key)].description)
 			set_item_metadata(index, key)
 			inventoryTotal += 1
+			ItemDatabase.heldItem = null
+			ItemDatabase.holdingItem = false
 			print("INVTENTORY TOTAL: " + str(inventoryTotal))
 	else:
+		ItemDatabase.holdingItem = false
 		return
 	
 func removeItem(key):
