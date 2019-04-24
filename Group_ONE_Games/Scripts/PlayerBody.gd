@@ -86,7 +86,7 @@ func _physics_process(delta):
 
 	if move:
 		$AnimatedSprite.play()
-		move_and_slide(velocity.normalized()*speed)
+		move_and_collide(velocity.normalized()*speed*delta)
 	else:
 		$AnimatedSprite.stop()
 
