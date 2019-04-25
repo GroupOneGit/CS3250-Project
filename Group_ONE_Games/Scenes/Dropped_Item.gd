@@ -8,6 +8,6 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	print(body.name)
-	if body.name == "KinematicBody2D":
+	if body.is_in_group("Player"):
 		mainItemList.addItem(self.itemData)
 		queue_free()
