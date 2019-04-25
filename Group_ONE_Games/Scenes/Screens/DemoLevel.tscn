@@ -15,7 +15,6 @@
 [node name="DemoLevel" type="Node"]
 
 [node name="Music" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 1 )
@@ -23,7 +22,6 @@ volume_db = -20.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
 editor/display_folded = true

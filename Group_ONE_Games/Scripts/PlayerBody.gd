@@ -81,12 +81,12 @@ func _physics_process(delta):
 		Global_Player.gain_energy(delta*4)
 		
 	if not move:
-		Global_Player.gain_energy(delta*4)
+		Global_Player.gain_energy(delta*5)
 			
 
 	if move:
 		$AnimatedSprite.play()
-		move_and_collide(velocity.normalized()*speed*delta)
+		move_and_slide(velocity.normalized()*speed)
 	else:
 		$AnimatedSprite.stop()
 
