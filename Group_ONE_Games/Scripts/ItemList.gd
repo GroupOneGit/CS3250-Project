@@ -111,14 +111,14 @@ func createCrate():
 	itemList.resize(0)
 	var numItems = randi()%10
 	var id 
-	if (numItems + inventoryTotal) > MAX:
-		numItems = MAX - inventoryTotal
-	
+#	if (numItems + inventoryTotal) > MAX:
+#		numItems = MAX - inventoryTotal
+#
 	
 #warning-ignore:unused_variable
-		for i in range(numItems):
-			id = randi()%10
-			loot.append(id)
+	for i in range(numItems):
+		id = randi()%10
+		loot.append(id)
 	return loot
 
 

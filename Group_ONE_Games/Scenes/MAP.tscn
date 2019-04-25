@@ -4,22 +4,23 @@
 [ext_resource path="res://Art/Background/Palmtree_coconuts.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/MAP_TILESCENE.tres" type="TileSet" id=3]
 [ext_resource path="res://Art/Items/Plank.png" type="Texture" id=4]
-[ext_resource path="res://Art/Items/Cratepng.png" type="Texture" id=5]
-[ext_resource path="res://Art/Items/Bottle_Message.png" type="Texture" id=6]
-[ext_resource path="res://Art/Food/Coconut2.png" type="Texture" id=7]
-[ext_resource path="res://Art/Food/Banana.png" type="Texture" id=8]
-[ext_resource path="res://Art/Items/Rock.png" type="Texture" id=9]
-[ext_resource path="res://Art/Items/Rope.png" type="Texture" id=10]
-[ext_resource path="res://Art/Items/Water Bottle.png" type="Texture" id=11]
-[ext_resource path="res://Art/Items/Machete.png" type="Texture" id=12]
-[ext_resource path="res://Art/Food/Apple.png" type="Texture" id=13]
-[ext_resource path="res://Art/Items/Tent.png" type="Texture" id=14]
-[ext_resource path="res://Art/Items/Campfire.png" type="Texture" id=15]
+[ext_resource path="res://Art/Items/Bottle_Message.png" type="Texture" id=5]
+[ext_resource path="res://Art/Food/Coconut2.png" type="Texture" id=6]
+[ext_resource path="res://Art/Food/Banana.png" type="Texture" id=7]
+[ext_resource path="res://Art/Items/Rock.png" type="Texture" id=8]
+[ext_resource path="res://Art/Items/Rope.png" type="Texture" id=9]
+[ext_resource path="res://Art/Items/Water Bottle.png" type="Texture" id=10]
+[ext_resource path="res://Art/Items/Machete.png" type="Texture" id=11]
+[ext_resource path="res://Art/Food/Apple.png" type="Texture" id=12]
+[ext_resource path="res://Art/Items/Tent.png" type="Texture" id=13]
+[ext_resource path="res://Art/Items/Campfire.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/crate.tscn" type="PackedScene" id=15]
 
 [node name="MAP" type="Node2D"]
 position = Vector2( 15.5672, 13.1723 )
 
 [node name="Palmtree" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 174.885, 89.2877 )
 texture = ExtResource( 1 )
 
@@ -56,6 +57,7 @@ position = Vector2( -157.926, -66.3021 )
 texture = ExtResource( 2 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree"]
+editor/display_folded = true
 position = Vector2( 522.547, 360.097 )
 texture = ExtResource( 1 )
 
@@ -353,6 +355,7 @@ position = Vector2( -679.421, -366.4 )
 texture = ExtResource( 2 )
 
 [node name="Palmtree10" type="Sprite" parent="Palmtree"]
+editor/display_folded = true
 position = Vector2( 930.692, 509.51 )
 texture = ExtResource( 1 )
 
@@ -413,6 +416,7 @@ position = Vector2( -14.8489, -190.152 )
 texture = ExtResource( 1 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree"]
+editor/display_folded = true
 position = Vector2( 1228, 2.04741 )
 scale = Vector2( 0.98977, 0.887458 )
 texture = ExtResource( 2 )
@@ -489,6 +493,7 @@ position = Vector2( 311.63, -105.87 )
 texture = ExtResource( 2 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree"]
+editor/display_folded = true
 position = Vector2( 1437.83, 317.003 )
 texture = ExtResource( 2 )
 
@@ -517,6 +522,7 @@ position = Vector2( -165.287, 140.595 )
 texture = ExtResource( 2 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree"]
+editor/display_folded = true
 position = Vector2( 1482.94, 7.59008 )
 scale = Vector2( 0.845202, 0.723574 )
 texture = ExtResource( 1 )
@@ -1233,233 +1239,226 @@ position = Vector2( -1357.58, 771.814 )
 rotation = -1.14319
 texture = ExtResource( 4 )
 
-[node name="Cratepng" type="Sprite" parent="TileMap"]
-editor/display_folded = true
-position = Vector2( 2586.67, 4.53965 )
-rotation = -2.98023e-008
-texture = ExtResource( 5 )
-
-[node name="Cratepng4" type="Sprite" parent="TileMap/Cratepng"]
-position = Vector2( -1084.96, 188.623 )
-rotation = 2.98023e-008
-texture = ExtResource( 5 )
-
-[node name="Cratepng2" type="Sprite" parent="TileMap/Cratepng"]
-position = Vector2( -1622.9, 79.0711 )
-rotation = 2.98023e-008
-texture = ExtResource( 5 )
-
-[node name="Cratepng3" type="Sprite" parent="TileMap/Cratepng"]
-position = Vector2( -997.811, 703.185 )
-rotation = 2.98023e-008
-texture = ExtResource( 5 )
-
 [node name="Scroll 1" type="Sprite" parent="TileMap"]
+editor/display_folded = true
 position = Vector2( 850.417, 172.498 )
 rotation = 0.190241
 scale = Vector2( 0.246537, 0.191136 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Scroll 2 and 3" type="Sprite" parent="TileMap/Scroll 1"]
 position = Vector2( 6491.98, -2367.3 )
 rotation = -0.887501
 scale = Vector2( 1.1777, 1.07356 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Coconut3" type="Sprite" parent="TileMap"]
 editor/display_folded = true
 position = Vector2( 771.165, 139.173 )
 scale = Vector2( 0.326055, 0.243532 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Coconut2" type="Sprite" parent="TileMap/Coconut3"]
 position = Vector2( -1827.07, 1554.81 )
 scale = Vector2( 0.814004, 1.18612 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Coconut4" type="Sprite" parent="TileMap/Coconut3/Coconut2"]
 position = Vector2( 2018.83, 19.1392 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Coconut5" type="Sprite" parent="TileMap/Coconut3/Coconut2"]
 position = Vector2( 1914.09, -36.9965 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Coconut3" type="Sprite" parent="TileMap/Coconut3/Coconut2"]
 position = Vector2( 109.698, -78.1287 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Coconut2" type="Sprite" parent="TileMap/Coconut3/Coconut2"]
 position = Vector2( 98.3792, 24.1387 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Banana" type="Sprite" parent="TileMap"]
 position = Vector2( 712.646, 500.648 )
 scale = Vector2( 0.26541, 0.288858 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="Rock3" type="Sprite" parent="TileMap"]
 editor/display_folded = true
 position = Vector2( 407.186, 268.204 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 168.926, -54.3347 )
 scale = Vector2( 0.661562, 0.591055 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock14" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( -191.336, -109.43 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock4" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( -253.794, -113.352 )
 scale = Vector2( 1.0625, 0.515625 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock2" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 2.24646, 67.6232 )
 scale = Vector2( 0.661562, 0.591055 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 offset = Vector2( -61.7573, -101.049 )
 
 [node name="Rock5" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( -195.753, -117.377 )
 scale = Vector2( 0.34375, 0.265625 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock7" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 503.775, -131.849 )
 scale = Vector2( 0.396664, 0.366547 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock6" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 482.35, -127.841 )
 scale = Vector2( 0.663486, 0.654467 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock8" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 924.273, 179.118 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock10" type="Sprite" parent="TileMap/Rock3/Rock8"]
 position = Vector2( -10.7738, 26.5534 )
 scale = Vector2( 1.05359, 0.54452 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock" type="Sprite" parent="TileMap/Rock3/Rock8"]
 position = Vector2( 639.625, -2.62805 )
 scale = Vector2( 1.82009, 1.76542 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock2" type="Sprite" parent="TileMap/Rock3/Rock8"]
 position = Vector2( 688.612, 11.3682 )
 scale = Vector2( 0.763081, 0.562619 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock3" type="Sprite" parent="TileMap/Rock3/Rock8"]
 position = Vector2( 666.451, 42.2765 )
 scale = Vector2( 1.49205, 1.34626 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock9" type="Sprite" parent="TileMap/Rock3/Rock8/Rock3"]
 position = Vector2( -430.712, -13.2198 )
 scale = Vector2( 0.373924, 0.404468 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock2" type="Sprite" parent="TileMap/Rock3/Rock8/Rock3"]
 position = Vector2( -572.604, -208.981 )
 scale = Vector2( 0.927358, 0.412811 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock3" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 1754.6, 82.5986 )
 scale = Vector2( 0.781307, 0.799533 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock9" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 1745.27, 110.008 )
 scale = Vector2( 0.489723, 0.489721 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock10" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 1024.43, -113.205 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock11" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 655.595, -207.277 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock12" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 695.658, -191.769 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock13" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 614.16, 183.793 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock15" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 1271.04, -66.2016 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock16" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 1289.13, -50.3745 )
 scale = Vector2( 0.481853, 0.411194 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock17" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 314.151, 262.167 )
 scale = Vector2( 0.776253, 0.530133 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rock18" type="Sprite" parent="TileMap/Rock3"]
 position = Vector2( 1920.71, -42.0841 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Rope" type="Sprite" parent="TileMap"]
 position = Vector2( 369.678, 257.897 )
 scale = Vector2( 0.322917, 0.4375 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="Water Bottle" type="Sprite" parent="TileMap"]
 editor/display_folded = true
 position = Vector2( 355.257, 286.342 )
 scale = Vector2( 0.369862, 0.312736 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="Water Bottle" type="Sprite" parent="TileMap/Water Bottle"]
 position = Vector2( 16.1462, 9.92841 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="Machete" type="Sprite" parent="TileMap"]
 position = Vector2( 409.579, 254.35 )
 rotation = 17.5161
 scale = Vector2( 0.530855, 0.412812 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="Apple" type="Sprite" parent="TileMap"]
 editor/display_folded = true
 position = Vector2( 393.433, 298.328 )
 scale = Vector2( 0.624999, 0.65625 )
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="Apple2" type="Sprite" parent="TileMap/Apple"]
 position = Vector2( -24.8001, -7.61905 )
 scale = Vector2( 1.05, 0.809524 )
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="Tent" type="Sprite" parent="TileMap"]
 position = Vector2( 186.572, 257.023 )
 scale = Vector2( 1.91007, 1.59095 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 region_filter_clip = true
 
 [node name="Campfire" type="Sprite" parent="TileMap"]
 position = Vector2( 323.487, 428.631 )
 scale = Vector2( 1.28832, 1.44411 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
-[node name="Cratepng" type="Sprite" parent="."]
-position = Vector2( 2225.52, 362.943 )
-texture = ExtResource( 5 )
+[node name="Crates" type="Node2D" parent="."]
+
+[node name="ItemCrate" parent="Crates" instance=ExtResource( 15 )]
+position = Vector2( 2255.61, 371.259 )
+
+[node name="ItemCrate2" parent="Crates" instance=ExtResource( 15 )]
+position = Vector2( 1513.93, 206.313 )
+
+[node name="ItemCrate3" parent="Crates" instance=ExtResource( 15 )]
+position = Vector2( 945.338, 109.891 )
+
+[node name="ItemCrate4" parent="Crates" instance=ExtResource( 15 )]
+position = Vector2( 1584.42, 696.605 )
+
+[node name="ItemCrate5" parent="Crates" instance=ExtResource( 15 )]
+position = Vector2( 2641.79, 14.3499 )
 
