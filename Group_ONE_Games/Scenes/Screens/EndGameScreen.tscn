@@ -43,7 +43,7 @@ margin_top = -254.0
 margin_right = 257.5
 margin_bottom = 254.0
 texture = ExtResource( 3 )
-stretch_mode = 5
+stretch_mode = 1
 
 [node name="HBoxContainer" type="VBoxContainer" parent="Background/TextureRect"]
 anchor_left = 0.5

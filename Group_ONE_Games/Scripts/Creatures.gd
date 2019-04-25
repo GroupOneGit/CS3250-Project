@@ -5,6 +5,7 @@ var health = 0
 var attack = 0
 var creaturelist = ["crab"]
 var drops = []
+onready var itemObject = load("res://Scenes/Dropped_Item.tscn")
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -26,15 +27,29 @@ func setcreature(key):
 			speed = 100
 			health = 10
 			attack = 2
-			# first value is item key second is its cutoff value.
-			drops = [[5, 1.0]]
+			# first value is item key second is its wieght, weights should add to be less than one.
+			drops = [[5, .8]]
 
 func death():
 	randomize()
-	# var r = randf()
-	# for drop in drops:
-	# 	if drop[1] < r:
-	# 		var itemkey = drop[0]
-	# make the drop item here
-	queue_free()
+	var r = randf()
+	var parentNode = self.get_parent()
+	var itemkey = -1
+	
+	var i = 0
+	for drop in drops:
+		i = i + drop[1]
+		if i < r:
+			itemkey = drop[0]
+
+	var Item = ItemDatabase.ITEMS.get(str(itemkey))
+	if Item:
+		print("item dropped")
+		var itemInstance = itemObject.instance()
+		itemInstance.texture = Item.icon
+		itemInstance.itemData = Item
+
+	else:
+		queue_free()
+	
 	

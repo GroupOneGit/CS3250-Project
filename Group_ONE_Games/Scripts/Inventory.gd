@@ -149,22 +149,13 @@ func eat(id):
 func createCrate():
 	loot.resize(0)
 	itemList.resize(0)
-	var numItems = randi()%9
+	var numItems = randi()%10
 	var id 
 	if (numItems + inventoryTotal) > MAX:
 		numItems = MAX - inventoryTotal
-	if numItems == 0:
-		return
-
-	else:
-		for i in range(numItems):
-			id = randi()%9
-			if id == 0:
-				pass
-			elif id == 9:
-				pass
-			else:	
-				loot.append(id)
+	for i in range(numItems):
+		id = randi()%10
+		loot.append(id)
 
 
 

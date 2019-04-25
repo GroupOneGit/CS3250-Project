@@ -140,25 +140,23 @@ func drop_data(position, data):
 
 func addItem(key):
 	if itemsSlotted == 0:
-		if key == 0:
-			return
-		elif key != null:
+		if key != null:
 			var icon = ItemDatabase.ITEMS[str(key)].icon
 			add_icon_item(icon, true)
 			index = self.get_item_count() - 1
 			set_item_tooltip(index, ItemDatabase.ITEMS[str(key)].description)
 			set_item_metadata(index, key)
-		if self.name == Slot1.name:
-			ItemDatabase.slot1Item = key
-		elif self.name == Slot2.name:
-			ItemDatabase.slot2Item = key
-		elif self.name == Slot3.name:
-			ItemDatabase.slot3Item = key
-		elif self.name == Slot4.name:
-			ItemDatabase.slot4Item = key
-		itemsSlotted += 1
-		ItemDatabase.holdingItem = false
-		ItemDatabase.heldItem = null
+			if self.name == Slot1.name:
+				ItemDatabase.slot1Item = key
+			elif self.name == Slot2.name:
+				ItemDatabase.slot2Item = key
+			elif self.name == Slot3.name:
+				ItemDatabase.slot3Item = key
+			elif self.name == Slot4.name:
+				ItemDatabase.slot4Item = key
+			itemsSlotted += 1
+			ItemDatabase.holdingItem = false
+			ItemDatabase.heldItem = null
 	else:
 		ItemDatabase.holdingItem = false
 		ItemDatabase.heldItem = null

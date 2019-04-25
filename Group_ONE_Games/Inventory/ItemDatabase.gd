@@ -10,34 +10,34 @@ var slot4Item = null
 var itemListArray = Array()
 const PATH = null
 const itemImages = [ 
-	preload("res://Art/Item_TEMP_Art/Item0.png"),
-	preload("res://Art/Item_TEMP_Art/blueberry.png"),
-	preload("res://Art/Item_TEMP_Art/redberry.png"),
-	preload("res://Art/Item_TEMP_Art/weakPotion.png"),
-	preload("res://Art/Item_TEMP_Art/coconut.png"),
+	preload("res://Art/Items/Water Bottle.png"),
+	preload("res://Art/Food/Blue Berry.png"),
+	preload("res://Art/Food/Red Berry.png"),
+	preload("res://Art/Items/Potion.png"),
+	preload("res://Art/Food/Coconut2.png"),
 	preload("res://Art/Item_TEMP_Art/rawCrab.png"),
 	preload("res://Art/Item_TEMP_Art/rawFish.png"),
-	preload("res://Art/Item_TEMP_Art/banana.png"),
+	preload("res://Art/Food/Banana.png"),
 	preload("res://Art/Item_TEMP_Art/rawClam.png"),
-	preload("res://Art/Item_TEMP_Art/Item0.png"),
+	preload("res://Art/Food/Apple.png"),
 ]
 var ITEMS = {
 
 	#Nothing! Ha!
 
 	"0" : {
-		 name = "Nothing",
+		 name = "Water",
 		 icon = itemImages[0],
-		 description = "Nothing",
-		 itemHealth = 0,
+		 description = "Clean water! Hurray.",
+		 itemHealth = 50,
 		 dph = 0,
-		 edible = false,
+		 edible = true,
 		 questItem = false,
 		 repairable = false,
-		 cookable = false,
+		 cookable = true,
 		 stackable = false,
 		 effects = null,
-		 thirstEffect = 0 ,
+		 thirstEffect = 50 ,
 		 healthEffect = 0
 	},
 
@@ -171,22 +171,22 @@ var ITEMS = {
 		 healthEffect = 5
 	},
 
-#	#Common Supplies
-#	"9" : {
-#		 name = "Nothing",
-#		 icon = itemImages[0],
-#		 description = "Nothing",
-#		 itemHealth = 0,
-#		 dph = 0,
-#		 edible = false,
-#		 questItem = false,
-#		 repairable = false,
-#		 cookable = false,
-#		 stackable = false,
-#		 effects = null,
-#		 thirstEffect = 0 ,
-#		 healthEffect = 0
-#	},
+	#Common Supplies
+	"9" : {
+		 name = "Apple",
+		 icon = itemImages[9],
+		 description = "Delicious Apples! Yum",
+		 itemHealth = 25,
+		 dph = 0,
+		 edible = true,
+		 questItem = false,
+		 repairable = false,
+		 cookable = false,
+		 stackable = true,
+		 effects = "",
+		 thirstEffect = 0 ,
+		 healthEffect = 0
+	},
 #
 #	"10" : {
 #		 name = "Small Rock",
