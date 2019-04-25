@@ -2,33 +2,33 @@
 
 [ext_resource path="res://Scripts/PlayerBody.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Attack.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Art/Player/Player-16.png.png" type="Texture" id=3]
-[ext_resource path="res://Art/Player/Player-17.png.png" type="Texture" id=4]
-[ext_resource path="res://Art/Player/Player-18.png.png" type="Texture" id=5]
-[ext_resource path="res://Art/Player/Player-15.png.png" type="Texture" id=6]
-[ext_resource path="res://Art/Player/Player-2.png.png" type="Texture" id=7]
-[ext_resource path="res://Art/Player/Player-3.png.png" type="Texture" id=8]
-[ext_resource path="res://Art/Player/Player-4.png.png" type="Texture" id=9]
-[ext_resource path="res://Art/Player/Player-7.png.png" type="Texture" id=10]
-[ext_resource path="res://Art/Player/Player-6.png.png" type="Texture" id=11]
-[ext_resource path="res://Art/Player/Player-8.png.png" type="Texture" id=12]
+[ext_resource path="res://Art/Player/Player-2.png.png" type="Texture" id=3]
+[ext_resource path="res://Art/Player/Player-3.png.png" type="Texture" id=4]
+[ext_resource path="res://Art/Player/Player-4.png.png" type="Texture" id=5]
+[ext_resource path="res://Art/Player/Player-7.png.png" type="Texture" id=6]
+[ext_resource path="res://Art/Player/Player-6.png.png" type="Texture" id=7]
+[ext_resource path="res://Art/Player/Player-8.png.png" type="Texture" id=8]
+[ext_resource path="res://Art/Player/Player-16.png.png" type="Texture" id=9]
+[ext_resource path="res://Art/Player/Player-17.png.png" type="Texture" id=10]
+[ext_resource path="res://Art/Player/Player-18.png.png" type="Texture" id=11]
+[ext_resource path="res://Art/Player/Player-15.png.png" type="Texture" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Up",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Right",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -47,12 +47,11 @@ scale = Vector2( 1.5, 1.5 )
 z_index = 1
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
-position = Vector2( 25.0159, 34.3638 )
+position = Vector2( 0, -20 )
 frames = SubResource( 1 )
 animation = "Up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 24.2651, 56.6185 )
 z_as_relative = false
 shape = SubResource( 2 )
 

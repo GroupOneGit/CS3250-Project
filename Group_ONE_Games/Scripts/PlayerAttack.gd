@@ -11,8 +11,8 @@ func _ready():
 func attack(amt, vec):
 	amount = amt
 	spawned = true
-	self.position.x = vec.x * 30
-	self.position.y = vec.y * 30
+	self.position.x = vec.x * 35
+	self.position.y = vec.y * 35
 	self.show()
 	time = .1
 	hit()

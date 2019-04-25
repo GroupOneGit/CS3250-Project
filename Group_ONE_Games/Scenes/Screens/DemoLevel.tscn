@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Audio/Exploration6 - Tropical Island.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Crab.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=11]
 
 [node name="DemoLevel" type="Node"]
 
@@ -22,6 +23,7 @@ volume_db = -20.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -97,7 +99,6 @@ position = Vector2( 1175.07, -795.781 )
 position = Vector2( 680, 410 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Crab" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 379.716, 167.967 )
@@ -113,6 +114,12 @@ position = Vector2( 257.489, 108.844 )
 
 [node name="Crab2" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 458.119, 59.2955 )
+
+[node name="Spawner" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 512.302, -6.06332 )
+
+[node name="Apple" parent="." instance=ExtResource( 10 )]
+position = Vector2( 425.426, 250.242 )
 
 [node name="Dropped_Items" type="Node2D" parent="."]
 z_as_relative = false
