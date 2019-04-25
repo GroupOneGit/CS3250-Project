@@ -9,10 +9,10 @@ onready var Slot2 = get_parent().get_parent().get_node("Slot2/Item2")
 onready var Slot3 = get_parent().get_parent().get_node("Slot3/Item3")
 onready var Slot4 = get_parent().get_parent().get_node("Slot4/Item4")
 onready var itemObject = load("res://Scenes/Dropped_Item.tscn")
-onready var map = get_node("/root/DemoLevel/Map/TileMap")
 onready var dropDown = get_parent().get_parent().get_parent().get_parent().get_node("Dropdown")
 onready var panel = get_parent().get_parent().get_parent().get_parent().get_node("Area2D/Panel")
 onready var panel2 = get_parent().get_parent().get_parent().get_parent().get_node("Area2D2/Panel2")
+var offset = Vector2(648.587, 237.399)
 
 func _process(delta):
 	if ItemDatabase.holdingItem == true && dropDown.is_visible():
@@ -237,7 +237,9 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		print(itemOwner)
 		print(itemOwner.itemSelected)
 		var mainNode = $"//root/DemoLevel/Dropped_Items"
+		var player = $"//root/DemoLevel/Player/KinematicBody2D"
 		var itemInstance = itemObject.instance()
+		
 	
 		if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
 				print("released")
@@ -245,8 +247,9 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 				mainNode.add_child(itemInstance)
 				itemInstance.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
 				itemInstance.itemData = ItemDatabase.heldItem
-				itemInstance.position = map.get_local_mouse_position() - Vector2(-100, 100)
+				itemInstance.position = player.position + offset
 				ItemDatabase.holdingItem = false
+				offset += Vector2(0, 5)
 				print("ITEM POSITION: " + str(itemInstance.position))
 	else:
 		return
@@ -258,8 +261,9 @@ func _on_Area2D2_input_event(viewport, event, shape_idx):
 		print(itemOwner)
 		print(itemOwner.itemSelected)
 		var mainNode = $"//root/DemoLevel/Dropped_Items"
-		var player = $"//root/DemoLevel/Player"
+		var player = $"//root/DemoLevel/Player/KinematicBody2D"
 		var itemInstance = itemObject.instance()
+
 	
 		if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
 				print("released")
@@ -267,6 +271,8 @@ func _on_Area2D2_input_event(viewport, event, shape_idx):
 				mainNode.add_child(itemInstance)
 				itemInstance.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
 				itemInstance.itemData = ItemDatabase.heldItem
-				itemInstance.position = map.get_local_mouse_position() - Vector2(-100, 100)
+				itemInstance.position = player.position + offset
 				ItemDatabase.holdingItem = false
+				offset += Vector2(0, 5)
 				print("ITEM POSITION: " + str(itemInstance.position))
+				print("PLayer Position: " + str(player.position + Vector2(608.587, 227.399)))
