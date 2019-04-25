@@ -249,7 +249,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 				itemInstance.itemData = ItemDatabase.heldItem
 				itemInstance.position = player.position + offset
 				ItemDatabase.holdingItem = false
-				offset -= Vector2(0, 5)
+				offset += Vector2(0, 5)
 				print("ITEM POSITION: " + str(itemInstance.position))
 	else:
 		return
