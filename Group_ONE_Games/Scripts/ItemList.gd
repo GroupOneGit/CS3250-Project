@@ -18,7 +18,7 @@ onready var Slot4 = get_parent().get_parent().get_node("Background/MainItems/Slo
 func _input(event):
 	if event is InputEvent and event.is_action_pressed("ui_select"):
 		print("testing")
-		var rando = randi()%8
+		var rando = randi()%10
 		addItem(rando)
 
 
@@ -109,31 +109,22 @@ func drop_data(position, data):
 func createCrate():
 	loot.resize(0)
 	itemList.resize(0)
-	var numItems = randi()%9
+	var numItems = randi()%10
 	var id 
 	if (numItems + inventoryTotal) > MAX:
 		numItems = MAX - inventoryTotal
-	if numItems == 0:
-		return
-	else:
+	
+	
 #warning-ignore:unused_variable
 		for i in range(numItems):
-			id = randi()%9
-			if id == 0:
-				pass
-			elif id == 9:
-				pass
-			else:	
-				loot.append(id)
+			id = randi()%10
+			loot.append(id)
 	return loot
 
 
 func addItems():
 	if inventoryTotal < 28:
 		for id in loot:
-			if id == 0:
-				return
-			else:
 				var icon = ItemDatabase.ITEMS[str(id)].icon
 				add_icon_item(icon, true)
 				index = self.get_item_count() - 1 
@@ -148,9 +139,6 @@ func addItems():
 		
 func addItem(key):
 	if inventoryTotal < 28:
-		if key == 0:
-			return
-		else:
 			var icon = ItemDatabase.ITEMS[str(key)].icon
 			add_icon_item(icon, true)
 			index = self.get_item_count() - 1
