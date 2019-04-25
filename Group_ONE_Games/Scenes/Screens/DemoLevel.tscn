@@ -156,3 +156,5 @@ position = Vector2( 656.658, 310.25 )
 
 
 [editable path="CanvasLayer/GUI"]
+
+[editable path="Player"]

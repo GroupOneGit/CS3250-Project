@@ -12,8 +12,9 @@
 [ext_resource path="res://Art/Player/Player-7.png.png" type="Texture" id=10]
 [ext_resource path="res://Art/Player/Player-6.png.png" type="Texture" id=11]
 [ext_resource path="res://Art/Player/Player-8.png.png" type="Texture" id=12]
-[ext_resource path="res://Scenes/CollisionShape2D.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/CollisionShape2D.gd" type="Script" id=13]
 [ext_resource path="res://Scripts/InteractArea.gd" type="Script" id=14]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

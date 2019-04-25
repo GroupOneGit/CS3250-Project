@@ -22,10 +22,14 @@ func _on_Area2D_body_exited(body):
 func _input(event):
 	if event.is_action_pressed("ui_interact") && inArea == true:
 		print("Can Open CRatE")
-		var lootList = inventory.createCrate()
-		for loot in lootList:
-			inventory.addItem(loot)
-		get_parent().get_parent().queue_free()
+		if inventory.inventoryTotal >= 28:
+			print("INVENTORY FULL BUD!")
+		else:
+			var lootList = inventory.createCrate()
+			for loot in lootList:
+				inventory.addItem(loot)
+			get_parent().get_parent().queue_free()
+
 
 
 
