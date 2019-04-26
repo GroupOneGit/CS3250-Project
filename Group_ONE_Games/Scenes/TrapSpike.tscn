@@ -23,7 +23,6 @@ shape = SubResource( 1 )
 position = Vector2( 9.36961, 3.45196 )
 rect = Rect2( -10, -10, 10, 10 )
 
-[connection signal="area_entered" from="Sprite/Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Sprite/Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="screen_exited" from="Sprite/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

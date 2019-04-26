@@ -26,7 +26,6 @@ func shoot():
 		spike_instance.position = spawn_pos - position
 		if i > 0:
 			spike_rotation += rad2deg(step)
-			print(rad2deg(step))
 			spike_y = sin(deg2rad(spike_rotation))
 			spike_x = cos(deg2rad(spike_rotation))
 			spike_instance.rotation_degrees = spike_rotation
@@ -39,14 +38,10 @@ func shoot():
 	get_node("Pole/ReloadTimer").start()
 		
 func _process(delta):
-	if Input.is_action_just_pressed("ui_LMB"):
+	if Input.is_action_just_pressed("ui_LMB") && can_shoot:
 		shoot()
 	if in_range && can_shoot:
 		shoot()
-		
-		
-
-
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
@@ -54,12 +49,10 @@ func _on_Area2D_body_entered(body):
 		
 	pass # Replace with function body.
 
-
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("Player"):
 		in_range = false
 	pass # Replace with function body.
-
 
 func _on_ReloadTimer_timeout():
 	can_shoot = true

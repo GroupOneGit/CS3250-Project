@@ -23,7 +23,6 @@ func _on_Area2D_body_entered(body):
 		body.damage("Player", 15)
 		body.modulate = ColorN("red")
 		
-		
 
 
 func _on_Area2D_body_exited(body):
