@@ -18,7 +18,7 @@ const itemImages = [
 	preload("res://Art/Items/Crab.png"),
 	preload("res://Art/Items/Fish.png"),
 	preload("res://Art/Food/Banana.png"),
-	preload("res://Art/Items/Clam.png"),
+	preload("res://Art/Items/Clam2.png"),
 	preload("res://Art/Food/Apple.png"),
 ]
 var ITEMS = {
