@@ -15,10 +15,10 @@ const itemImages = [
 	preload("res://Art/Food/Red Berry.png"),
 	preload("res://Art/Items/Potion.png"),
 	preload("res://Art/Food/Coconut2.png"),
-	preload("res://Art/Item_TEMP_Art/rawCrab.png"),
-	preload("res://Art/Item_TEMP_Art/rawFish.png"),
+	preload("res://Art/Items/Crab.png"),
+	preload("res://Art/Items/Fish.png"),
 	preload("res://Art/Food/Banana.png"),
-	preload("res://Art/Item_TEMP_Art/rawClam.png"),
+	preload("res://Art/Items/Clam.png"),
 	preload("res://Art/Food/Apple.png"),
 ]
 var ITEMS = {
