@@ -1,7 +1,7 @@
 extends RichTextLabel
 
 var dialog = [
-	"I can't believe I have already been stranded for so long. I beginining to wonder if I will ever get off of this cursed island...", 
+	"I can't believe I have already been stranded for so long. I'm beginning to wonder if I will ever get off of this cursed island...", 
 	"I'm feeling pretty hungry, I should look for some food."
 	]
 var pageNum = 0

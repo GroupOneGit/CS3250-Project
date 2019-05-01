@@ -26,7 +26,7 @@ func setP(i):
 	poisoned = i
 
 func _process(delta):
-#	dehydrate(0.5 , delta)
+	dehydrate(0.5 , delta)
 	if Input.is_action_just_pressed('ui_page_down'):
 		lose_thirst(10)
 		lose_energy(10)

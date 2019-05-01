@@ -124,7 +124,7 @@ func addItems():
 		for id in loot:
 				var icon = ItemDatabase.ITEMS[str(id)].icon
 				add_icon_item(icon, true)
-				index = self.get_item_count() - 1 
+				index = self.get_item_count() - 1
 				set_item_tooltip(index, ItemDatabase.ITEMS[str(id)].description)
 				set_item_metadata(index, id)
 				inventoryTotal += 1
@@ -154,7 +154,9 @@ func addItem(key):
 			var icon = ItemDatabase.ITEMS[str(key)].icon
 			add_icon_item(icon, true)
 			index = self.get_item_count() - 1
-			set_item_tooltip(index, ItemDatabase.ITEMS[str(key)].description)
+			var itemTooltip = ItemDatabase.ITEMS[str(key)].description + "\n    Health: " + str(ItemDatabase.ITEMS[str(key)].healthEffect)
+			itemTooltip = itemTooltip + "\n    Thirst: " + str(ItemDatabase.ITEMS[str(key)].thirstEffect)
+			set_item_tooltip(index, itemTooltip)
 			set_item_metadata(index, key)
 			inventoryTotal += 1
 			ItemDatabase.heldItem = null
