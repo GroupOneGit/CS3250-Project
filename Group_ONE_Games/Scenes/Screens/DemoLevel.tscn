@@ -183,6 +183,7 @@ position = Vector2( 2465.26, 1509.15 )
 position = Vector2( -267.712, 1834.08 )
 
 [node name="Scrolls" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 602.303, 312.551 )
 scale = Vector2( 0.25, 0.25 )
 

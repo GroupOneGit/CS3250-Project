@@ -134,6 +134,7 @@ func drop_data(position, data):
 			addItem(ItemDatabase.heldItem)
 	ItemDatabase.heldItem = null
 	ItemDatabase.holdingItem = false
+	ItemDatabase.originalOwner = null
 	unselect_all()
 	release_focus()
 	pass

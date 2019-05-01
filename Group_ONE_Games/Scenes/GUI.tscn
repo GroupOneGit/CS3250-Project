@@ -531,7 +531,6 @@ mouse_filter = 2
 size_flags_horizontal = 2
 
 [node name="Dropdown" type="NinePatchRect" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 82.0
@@ -574,6 +573,7 @@ margin_left = 430.285
 margin_top = 185.132
 margin_right = -73.7153
 margin_bottom = 225.132
+mouse_filter = 2
 texture = ExtResource( 4 )
 
 [node name="Scroll1" type="TextureRect" parent="Dropdown/Shelf_TOP"]
@@ -615,6 +615,7 @@ margin_left = 459.23
 margin_top = 269.21
 margin_right = -44.7702
 margin_bottom = 309.21
+mouse_filter = 2
 texture = ExtResource( 6 )
 
 [node name="Scroll5" type="TextureRect" parent="Dropdown/Shelf_MID"]
@@ -648,6 +649,7 @@ margin_left = 483.311
 margin_top = 361.264
 margin_right = -20.6886
 margin_bottom = 401.264
+mouse_filter = 2
 texture = ExtResource( 7 )
 
 [node name="Scroll8" type="TextureRect" parent="Dropdown/Shelf_BOT"]
@@ -667,7 +669,6 @@ rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 5 )
 
 [node name="Background" type="NinePatchRect" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 margin_left = -1.55002
 margin_top = -11.0

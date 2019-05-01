@@ -101,6 +101,7 @@ func drop_data(position, data):
 			ItemDatabase.heldItem = null
 			ItemDatabase.holdingItem = false
 	ItemDatabase.holdingItem = false
+	ItemDatabase.originalOwner = null
 	unselect_all()
 	release_focus()
 	pass
@@ -134,15 +135,22 @@ func addItems():
 		return
 		
 func addItem(key):
-	if Slot1.get_item_count() == 0:
-		Slot1.addItem(key)
-	elif Slot2.get_item_count() == 0:
-		Slot2.addItem(key)
-	elif Slot3.get_item_count() == 0:
-		Slot3.addItem(key)
-	elif Slot4.get_item_count() == 0:
-		Slot4.addItem(key)
-	elif inventoryTotal < 28:
+	if ItemDatabase.originalOwner == null:
+		if Slot1.get_item_count() == 0:
+			Slot1.addItem(key)
+			return
+		elif Slot2.get_item_count() == 0:
+			Slot2.addItem(key)
+			return
+		elif Slot3.get_item_count() == 0:
+			Slot3.addItem(key)
+			return
+		elif Slot4.get_item_count() == 0:
+			Slot4.addItem(key)
+			return
+		else:
+			pass
+	if inventoryTotal < 28:
 			var icon = ItemDatabase.ITEMS[str(key)].icon
 			add_icon_item(icon, true)
 			index = self.get_item_count() - 1
