@@ -6,6 +6,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$CanvasLayer/Texture/TextLabel.push_align(RichTextLabel.ALIGN_CENTER)
 	pass # Replace with function body.
 
 

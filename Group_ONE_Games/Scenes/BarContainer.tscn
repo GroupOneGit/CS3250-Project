@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Font/Default_Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Font/KennyFuture.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Art/GUI-ART/HealthBar/HealthBar-BG.png" type="Texture" id=2]
 [ext_resource path="res://Art/GUI-ART/HealthBar/HealthBar-Fill.png" type="Texture" id=3]
 [ext_resource path="res://Art/GUI-ART/ThirstBar/ThirstBar-BG.png" type="Texture" id=4]
@@ -14,140 +14,142 @@ margin_right = 332.0
 margin_bottom = 53.0
 
 [node name="HealthBar" type="HBoxContainer" parent="."]
-margin_right = 331.0
-margin_bottom = 15.0
+margin_right = 356.0
+margin_bottom = 17.0
 
 [node name="HP_Label" type="Label" parent="HealthBar"]
-margin_right = 29.0
-margin_bottom = 15.0
+margin_right = 30.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 30, 0 )
 size_flags_horizontal = 7
 size_flags_vertical = 6
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "HP"
 align = 1
 valign = 1
 
 [node name="Variable_Value" type="Label" parent="HealthBar"]
-margin_left = 33.0
-margin_right = 53.0
-margin_bottom = 15.0
-rect_min_size = Vector2( 20, 15 )
+margin_left = 34.0
+margin_right = 64.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 30, 0 )
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "100"
 align = 2
 valign = 1
 clip_text = true
 
 [node name="Max_Value" type="Label" parent="HealthBar"]
-margin_left = 57.0
-margin_right = 81.0
-margin_bottom = 15.0
+margin_left = 68.0
+margin_right = 106.0
+margin_bottom = 17.0
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "/ 100"
 align = 1
 valign = 1
 
 [node name="TextureProgress" type="TextureProgress" parent="HealthBar"]
-margin_left = 85.0
-margin_right = 331.0
-margin_bottom = 15.0
+margin_left = 110.0
+margin_right = 356.0
+margin_bottom = 17.0
 value = 100.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 3 )
 
 [node name="ThirstBar" type="HBoxContainer" parent="."]
-margin_top = 19.0
-margin_right = 331.0
-margin_bottom = 34.0
+margin_top = 21.0
+margin_right = 356.0
+margin_bottom = 38.0
 alignment = 1
 
 [node name="HP_Label" type="Label" parent="ThirstBar"]
-margin_right = 28.0
-margin_bottom = 15.0
+margin_right = 29.0
+margin_bottom = 17.0
 size_flags_horizontal = 7
 size_flags_vertical = 6
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "TP"
 align = 1
 valign = 1
 
 [node name="Variable_Value" type="Label" parent="ThirstBar"]
-margin_left = 32.0
-margin_right = 52.0
-margin_bottom = 15.0
-rect_min_size = Vector2( 20, 15 )
+margin_left = 33.0
+margin_right = 63.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 30, 17 )
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "100"
 align = 2
 valign = 1
 clip_text = true
 
 [node name="Max_Value" type="Label" parent="ThirstBar"]
-margin_left = 56.0
-margin_right = 80.0
-margin_bottom = 15.0
+margin_left = 67.0
+margin_right = 105.0
+margin_bottom = 17.0
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "/ 100"
 align = 1
 valign = 1
 
 [node name="TextureProgress" type="TextureProgress" parent="ThirstBar"]
-margin_left = 84.0
-margin_right = 331.0
-margin_bottom = 15.0
+margin_left = 109.0
+margin_right = 356.0
+margin_bottom = 17.0
 value = 100.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 5 )
 
 [node name="EnergyBar" type="HBoxContainer" parent="."]
-margin_top = 38.0
-margin_right = 331.0
-margin_bottom = 53.0
+margin_top = 42.0
+margin_right = 356.0
+margin_bottom = 59.0
 alignment = 1
 
 [node name="HP_Label" type="Label" parent="EnergyBar"]
-margin_right = 29.0
-margin_bottom = 15.0
+margin_right = 30.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 30, 17 )
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "EP"
 align = 1
 valign = 1
 
 [node name="Variable_Value" type="Label" parent="EnergyBar"]
-margin_left = 33.0
-margin_right = 53.0
-margin_bottom = 15.0
-rect_min_size = Vector2( 20, 15 )
+margin_left = 34.0
+margin_right = 64.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 30, 17 )
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "100"
 align = 2
 valign = 1
 clip_text = true
 
 [node name="Max_Value" type="Label" parent="EnergyBar"]
-margin_left = 57.0
-margin_right = 81.0
-margin_bottom = 15.0
+margin_left = 68.0
+margin_right = 106.0
+margin_bottom = 17.0
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.172549, 0.121569, 0.00392157, 1 )
 text = "/ 100"
 align = 1
 valign = 1
 
 [node name="TextureProgress" type="TextureProgress" parent="EnergyBar"]
-margin_left = 85.0
-margin_right = 331.0
-margin_bottom = 15.0
+margin_left = 110.0
+margin_right = 356.0
+margin_bottom = 17.0
 value = 100.0
 texture_under = ExtResource( 6 )
 texture_progress = ExtResource( 7 )

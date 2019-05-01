@@ -1,22 +1,24 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Audio/Exploration6 - Tropical Island.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Screens/Pause.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Spike_Wall.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Small_Spike.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Crab.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/TrapPole.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/ScrollBottle.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/DialogBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Spike_Wall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Small_Spike.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Crab.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/TrapPole.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/ScrollBottle.tscn" type="PackedScene" id=14]
 
 [node name="DemoLevel" type="Node"]
 
 [node name="Music" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
 pause_mode = 2
@@ -25,7 +27,6 @@ volume_db = -25.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -46,6 +47,8 @@ editor/display_folded = false
 pause_mode = 2
 visible = false
 
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource( 5 )]
+
 [node name="Obstacles" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 797.55, 1228.5 )
@@ -54,106 +57,106 @@ scale = Vector2( 0.179144, 0.151001 )
 [node name="SpikeWallObtacles" type="Node2D" parent="Obstacles"]
 editor/display_folded = true
 
-[node name="Spike_Wall3" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall3" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 11404.9, -6142.96 )
 
-[node name="Spike_Wall9" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall9" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 10746.5, -7014.64 )
 
-[node name="Spike_Wall4" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall4" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 4950.93, -5615.81 )
 
-[node name="Spike_Wall5" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall5" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 4402.78, -5624.04 )
 
-[node name="Spike_Wall6" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall6" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 4655.93, -6095.86 )
 
-[node name="Spike_Wall7" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall7" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 11370.2, -7766.34 )
 
-[node name="Spike_Wall8" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall8" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 10753.6, -5587.98 )
 
-[node name="Spike_Wall10" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall10" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 11412.9, -4668.7 )
 
-[node name="Spike_Wall11" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 5 )]
+[node name="Spike_Wall11" parent="Obstacles/SpikeWallObtacles" instance=ExtResource( 6 )]
 position = Vector2( 10788.8, -3921.41 )
 
 [node name="Random" type="Node2D" parent="Obstacles"]
 editor/display_folded = true
 
-[node name="Small_Spike" parent="Obstacles/Random" instance=ExtResource( 6 )]
+[node name="Small_Spike" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( 1942.45, -3851.96 )
 
-[node name="Small_Spike2" parent="Obstacles/Random" instance=ExtResource( 6 )]
+[node name="Small_Spike2" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( 3101.63, -3822.08 )
 
-[node name="Small_Spike3" parent="Obstacles/Random" instance=ExtResource( 6 )]
+[node name="Small_Spike3" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( 4271.27, -4070.28 )
 
-[node name="Food" parent="Obstacles/Random" instance=ExtResource( 7 )]
+[node name="Food" parent="Obstacles/Random" instance=ExtResource( 8 )]
 
-[node name="Food2" parent="Obstacles/Random" instance=ExtResource( 7 )]
+[node name="Food2" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 4993.15, -5293.4 )
 
-[node name="Food3" parent="Obstacles/Random" instance=ExtResource( 7 )]
+[node name="Food3" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 3502.25, -7881.54 )
 
-[node name="Food4" parent="Obstacles/Random" instance=ExtResource( 7 )]
+[node name="Food4" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 3558.41, -5665.02 )
 
-[node name="Food5" parent="Obstacles/Random" instance=ExtResource( 7 )]
+[node name="Food5" parent="Obstacles/Random" instance=ExtResource( 8 )]
 position = Vector2( 9977.4, -7005.48 )
 
 [node name="Enemies" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Crab" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 1311.71, 411.316 )
 
-[node name="Crab3" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab3" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 2383.65, 88.0521 )
 
-[node name="Crab4" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab4" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 1768.35, 79.9785 )
 
-[node name="Crab5" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab5" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 2150.58, 128.938 )
 
-[node name="Crab2" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab2" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 2371.94, 477.262 )
 
-[node name="Crab6" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab6" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 2644.66, 781.153 )
 
-[node name="Crab7" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab7" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 2786.87, 837.645 )
 
-[node name="Crab8" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab8" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 2777.13, 360.381 )
 
-[node name="Crab9" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab9" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 1614.16, 790.893 )
 
-[node name="Crab10" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab10" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 1456.37, 637 )
 
-[node name="Crab11" parent="Enemies" instance=ExtResource( 8 )]
+[node name="Crab11" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 1131.05, 831.801 )
 
-[node name="Spawner" parent="Enemies" instance=ExtResource( 9 )]
-position = Vector2( 2412.1, 569.621 )
+[node name="Spawner" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( 2465.6, 34.4163 )
 
-[node name="Player" parent="." instance=ExtResource( 10 )]
+[node name="Player" parent="." instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 608.587, 227.399 )
 
 [node name="KinematicBody2D" parent="Player" index="0"]
 editor/display_folded = true
 
-[node name="Map" parent="." instance=ExtResource( 11 )]
+[node name="Map" parent="." instance=ExtResource( 12 )]
 position = Vector2( 112.893, -80.0161 )
 
 [node name="Dropped_Items" type="Node2D" parent="."]
@@ -162,24 +165,24 @@ z_as_relative = false
 [node name="Traps" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="SpikePole" parent="Traps" instance=ExtResource( 12 )]
+[node name="SpikePole" parent="Traps" instance=ExtResource( 13 )]
 position = Vector2( 2109.53, 347.89 )
 z_index = -1
 
 [node name="SpikePole2" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 12 )]
+] instance=ExtResource( 13 )]
 position = Vector2( 1001.08, 1178.97 )
 z_index = -1
 
 [node name="SpikePole3" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 12 )]
+] instance=ExtResource( 13 )]
 position = Vector2( 2465.26, 1509.15 )
 
 [node name="SpikePole4" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 12 )]
+] instance=ExtResource( 13 )]
 position = Vector2( -267.712, 1834.08 )
 
 [node name="Scrolls" type="Node2D" parent="."]
@@ -187,7 +190,7 @@ editor/display_folded = true
 position = Vector2( 602.303, 312.551 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="Scroll1" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll1" parent="Scrolls" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 1413.41, -895.661 )
 rotation = 0.322269
@@ -200,7 +203,7 @@ margin_right = 122.932
 margin_bottom = 388.561
 rect_rotation = -19.1354
 
-[node name="Scroll2" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll2" parent="Scrolls" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 8178.65, -1494.63 )
 rotation = -0.898589
@@ -213,7 +216,7 @@ margin_right = 335.814
 margin_bottom = 270.52
 rect_rotation = 50.885
 
-[node name="Scroll3" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll3" parent="Scrolls" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 3986.51, 1203.28 )
 rotation = 0.657503
@@ -226,7 +229,7 @@ margin_right = 70.5313
 margin_bottom = 412.766
 rect_rotation = -37.799
 
-[node name="Scroll4" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll4" parent="Scrolls" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 9414.06, 3686.28 )
 rotation = -0.667892
@@ -239,12 +242,12 @@ margin_right = 197.586
 margin_bottom = 359.829
 rect_rotation = 38.603
 
-[node name="Scroll5" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll5" parent="Scrolls" instance=ExtResource( 14 )]
 position = Vector2( -6327.27, 4983.93 )
 rotation = 0.0594288
 scale = Vector2( 1, 1 )
 
-[node name="Scroll6" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll6" parent="Scrolls" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( -2187.86, 3535.41 )
 rotation = 0.516868
@@ -257,7 +260,7 @@ margin_right = 137.018
 margin_bottom = 442.659
 rect_rotation = -30.4866
 
-[node name="Scroll7" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll7" parent="Scrolls" instance=ExtResource( 14 )]
 editor/display_folded = true
 position = Vector2( 8635.14, 7875.84 )
 rotation = -1.1841
@@ -270,13 +273,15 @@ margin_right = 240.203
 margin_bottom = 381.521
 rect_rotation = 67.592
 
-[node name="Scroll8" parent="Scrolls" instance=ExtResource( 13 )]
+[node name="Scroll8" parent="Scrolls" instance=ExtResource( 14 )]
 position = Vector2( -2712.04, -1170.4 )
 rotation = 0.321127
 scale = Vector2( 1, 1 )
 
 
 [editable path="CanvasLayer/GUI"]
+
+[editable path="CanvasLayer/DialogBox"]
 
 [editable path="Player"]
 

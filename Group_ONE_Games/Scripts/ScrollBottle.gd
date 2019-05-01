@@ -42,33 +42,36 @@ func _on_InteractArea_body_entered(body):
 	if body.is_in_group("Player"):
 		inArea = true
 		scrollLabel.show()
-#		$AudioStreamPlayer2D.stream_paused = false
+
 			
 
 func _on_InteractArea_body_exited(body):
 	if body.is_in_group("Player"):
 		inArea = false
 		scrollLabel.hide()
-#		$AudioStreamPlayer2D.stream_paused = true
+
 
 func _input(event):
 	if event.is_action_pressed("ui_interact") && inArea == true:
-		scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
 		match self.name:
 			"Scroll1":
+				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
 				print("1")
 				print(scrollText[1].text)
 				show_scroll(scrollText[1].text)
 				#Do stuff if scroll picked up is Scroll1
 			"Scroll2":
+				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
 				print("2")
 				show_scroll(scrollText[2].text)
 				#Do stuff if scroll picked up is Scroll2
 			"Scroll3":
+				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
 				print("3")
 				show_scroll(scrollText[3].text)
 				#Do stuff if scroll picked up is Scroll3
 			"Scroll4":
+				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
 				print("4")
 				show_scroll(scrollText[4].text)
 				#Do stuff if scroll picked up is Scroll4

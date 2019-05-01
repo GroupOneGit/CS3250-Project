@@ -19,6 +19,7 @@
 position = Vector2( 15.5672, 13.1723 )
 
 [node name="TileMap" type="TileMap" parent="."]
+editor/display_folded = true
 z_index = -1
 tile_set = ExtResource( 1 )
 collision_friction = 0.0
@@ -427,6 +428,7 @@ scale = Vector2( 2.39741, 3.01828 )
 texture = ExtResource( 5 )
 
 [node name="Palmtree" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 174.885, 89.2877 )
 z_as_relative = false
 texture = ExtResource( 12 )
@@ -1780,6 +1782,7 @@ position = Vector2( 685.256, 886.165 )
 texture = ExtResource( 12 )
 
 [node name="Crates" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="ItemCrate" parent="Crates" instance=ExtResource( 14 )]
 position = Vector2( 2235.67, 364.611 )

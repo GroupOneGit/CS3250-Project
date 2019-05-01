@@ -11,7 +11,7 @@ extents = Vector2( 60, 60 )
 extents = Vector2( 20, 20 )
 
 [node name="Crate" type="Node2D" groups=[
-"Interactable",
+"Crate",
 ]]
 z_index = -1
 
@@ -52,3 +52,4 @@ text = "E"
 
 [connection signal="body_entered" from="Image/InteractArea" to="Image/InteractArea" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Image/InteractArea" to="Image/InteractArea" method="_on_Area2D_body_exited"]
+[connection signal="opened" from="Image/InteractArea" to="Image/InteractArea" method="_on_InteractArea_opened"]

@@ -39,10 +39,11 @@ custom_colors/default_color = Color( 0.345098, 0.172549, 0.0235294, 1 )
 scroll_active = false
 
 [node name="Press" type="Label" parent="CanvasLayer/Texture"]
-margin_left = 219.138
-margin_top = 616.52
-margin_right = 289.138
-margin_bottom = 639.52
+margin_left = 232.271
+margin_top = 617.169
+margin_right = 302.271
+margin_bottom = 640.169
+rect_scale = Vector2( 1.25, 1.25 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.282353, 0.2, 0.00784314, 1 )
 text = "Press"
@@ -62,6 +63,7 @@ margin_left = 459.638
 margin_top = 616.979
 margin_right = 567.638
 margin_bottom = 639.979
+rect_scale = Vector2( 1.25, 1.25 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.282353, 0.2, 0.00784314, 1 )
 text = "to close."
