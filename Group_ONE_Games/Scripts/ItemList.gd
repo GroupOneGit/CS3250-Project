@@ -111,10 +111,6 @@ func createCrate():
 	itemList.resize(0)
 	var numItems = randi()%10
 	var id 
-#	if (numItems + inventoryTotal) > MAX:
-#		numItems = MAX - inventoryTotal
-#
-	
 #warning-ignore:unused_variable
 	for i in range(numItems):
 		id = randi()%10
@@ -138,7 +134,15 @@ func addItems():
 		return
 		
 func addItem(key):
-	if inventoryTotal < 28:
+	if Slot1.get_item_count() == 0:
+		Slot1.addItem(key)
+	elif Slot2.get_item_count() == 0:
+		Slot2.addItem(key)
+	elif Slot3.get_item_count() == 0:
+		Slot3.addItem(key)
+	elif Slot4.get_item_count() == 0:
+		Slot4.addItem(key)
+	elif inventoryTotal < 28:
 			var icon = ItemDatabase.ITEMS[str(key)].icon
 			add_icon_item(icon, true)
 			index = self.get_item_count() - 1

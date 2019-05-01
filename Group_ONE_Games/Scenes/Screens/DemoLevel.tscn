@@ -19,13 +19,16 @@
 [node name="Music" type="Node" parent="."]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
+pause_mode = 2
 stream = ExtResource( 1 )
-volume_db = -20.0
+volume_db = -25.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
+editor/display_folded = true
 margin_left = 1.67017
 margin_top = 4.01056
 margin_right = 1.67017
@@ -147,8 +150,11 @@ position = Vector2( 2412.1, 569.621 )
 editor/display_folded = true
 position = Vector2( 608.587, 227.399 )
 
+[node name="KinematicBody2D" parent="Player" index="0"]
+editor/display_folded = true
+
 [node name="Map" parent="." instance=ExtResource( 11 )]
-position = Vector2( 112.893, -81.0161 )
+position = Vector2( 112.893, -80.0161 )
 
 [node name="Dropped_Items" type="Node2D" parent="."]
 z_as_relative = false
@@ -158,11 +164,13 @@ editor/display_folded = true
 
 [node name="SpikePole" parent="Traps" instance=ExtResource( 12 )]
 position = Vector2( 2109.53, 347.89 )
+z_index = -1
 
 [node name="SpikePole2" parent="Traps" groups=[
 "Traps",
 ] instance=ExtResource( 12 )]
-position = Vector2( 969.848, 1209.57 )
+position = Vector2( 1001.08, 1178.97 )
+z_index = -1
 
 [node name="SpikePole3" parent="Traps" groups=[
 "Traps",
@@ -172,12 +180,113 @@ position = Vector2( 2465.26, 1509.15 )
 [node name="SpikePole4" parent="Traps" groups=[
 "Traps",
 ] instance=ExtResource( 12 )]
-position = Vector2( -196.462, 1813.18 )
+position = Vector2( -267.712, 1834.08 )
 
-[node name="ScrollBottle" parent="." instance=ExtResource( 13 )]
+[node name="Scrolls" type="Node2D" parent="."]
 position = Vector2( 602.303, 312.551 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="Scroll1" parent="Scrolls" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 1413.41, -895.661 )
+rotation = 0.322269
+scale = Vector2( 1, 1 )
+
+[node name="Label" parent="Scrolls/Scroll1/Z_Index" index="0"]
+margin_left = -254.068
+margin_top = 37.5609
+margin_right = 122.932
+margin_bottom = 388.561
+rect_rotation = -19.1354
+
+[node name="Scroll2" parent="Scrolls" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 8178.65, -1494.63 )
+rotation = -0.898589
+scale = Vector2( 1, 1 )
+
+[node name="Label" parent="Scrolls/Scroll2/Z_Index" index="0"]
+margin_left = -41.1855
+margin_top = -80.4805
+margin_right = 335.814
+margin_bottom = 270.52
+rect_rotation = 50.885
+
+[node name="Scroll3" parent="Scrolls" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 3986.51, 1203.28 )
+rotation = 0.657503
+scale = Vector2( 1, 1 )
+
+[node name="Label" parent="Scrolls/Scroll3/Z_Index" index="0"]
+margin_left = -306.469
+margin_top = 61.7661
+margin_right = 70.5313
+margin_bottom = 412.766
+rect_rotation = -37.799
+
+[node name="Scroll4" parent="Scrolls" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 9414.06, 3686.28 )
+rotation = -0.667892
+scale = Vector2( 1, 1 )
+
+[node name="Label" parent="Scrolls/Scroll4/Z_Index" index="0"]
+margin_left = -179.414
+margin_top = 8.82861
+margin_right = 197.586
+margin_bottom = 359.829
+rect_rotation = 38.603
+
+[node name="Scroll5" parent="Scrolls" instance=ExtResource( 13 )]
+position = Vector2( -6327.27, 4983.93 )
+rotation = 0.0594288
+scale = Vector2( 1, 1 )
+
+[node name="Scroll6" parent="Scrolls" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( -2187.86, 3535.41 )
+rotation = 0.516868
+scale = Vector2( 1, 1 )
+
+[node name="Label" parent="Scrolls/Scroll6/Z_Index" index="0"]
+margin_left = -239.982
+margin_top = 91.6592
+margin_right = 137.018
+margin_bottom = 442.659
+rect_rotation = -30.4866
+
+[node name="Scroll7" parent="Scrolls" instance=ExtResource( 13 )]
+editor/display_folded = true
+position = Vector2( 8635.14, 7875.84 )
+rotation = -1.1841
+scale = Vector2( 1, 1 )
+
+[node name="Label" parent="Scrolls/Scroll7/Z_Index" index="0"]
+margin_left = -136.797
+margin_top = 30.5215
+margin_right = 240.203
+margin_bottom = 381.521
+rect_rotation = 67.592
+
+[node name="Scroll8" parent="Scrolls" instance=ExtResource( 13 )]
+position = Vector2( -2712.04, -1170.4 )
+rotation = 0.321127
+scale = Vector2( 1, 1 )
 
 
 [editable path="CanvasLayer/GUI"]
 
 [editable path="Player"]
+
+[editable path="Scrolls/Scroll1"]
+
+[editable path="Scrolls/Scroll2"]
+
+[editable path="Scrolls/Scroll3"]
+
+[editable path="Scrolls/Scroll4"]
+
+[editable path="Scrolls/Scroll6"]
+
+[editable path="Scrolls/Scroll7"]

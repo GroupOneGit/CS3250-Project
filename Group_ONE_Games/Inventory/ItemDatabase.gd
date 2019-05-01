@@ -36,7 +36,7 @@ var ITEMS = {
 		 repairable = false,
 		 cookable = true,
 		 stackable = false,
-		 effects = null,
+		 effects = "Thirst Quench",
 		 thirstEffect = 50 ,
 		 healthEffect = 0
 	},
@@ -56,7 +56,7 @@ var ITEMS = {
 		 stackable = true,
 		 effects = "dehydration",
 		 thirstEffect = 5,
-		 healthEffect = 5
+		 healthEffect = 15
 	},
 
 	"2" : {
@@ -72,7 +72,7 @@ var ITEMS = {
 		 stackable = true,
 		 effects = "dehydration",
 		 thirstEffect = 5,
-		 healthEffect = 5
+		 healthEffect = 15
 	},
 
 	"3" : {
@@ -102,9 +102,9 @@ var ITEMS = {
 		 repairable = false,
 		 cookable = false,
 		 stackable = true,
-		 effects = null,
-		 thirstEffect = 0,
-		 healthEffect = 5
+		 effects = "Thirst Quench",
+		 thirstEffect = 25,
+		 healthEffect = 10
 	},
 
 	"5" : {
@@ -150,9 +150,9 @@ var ITEMS = {
 		 repairable = false,
 		 cookable = false,
 		 stackable = true,
-		 effects = null,
+		 effects = "Health Bonus",
 		 thirstEffect = 0,
-		 healthEffect = 5
+		 healthEffect = 15
 	},
 
 	"8" : {
@@ -183,9 +183,9 @@ var ITEMS = {
 		 repairable = false,
 		 cookable = false,
 		 stackable = true,
-		 effects = "",
+		 effects = "Health Bonus",
 		 thirstEffect = 0 ,
-		 healthEffect = 0
+		 healthEffect = 10
 	},
 #
 #	"10" : {

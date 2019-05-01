@@ -1,5 +1,6 @@
 extends Area2D
 onready var inventory = $"/root/DemoLevel/CanvasLayer/GUI/Dropdown/ItemList"
+onready var crateLabel = get_parent().get_parent().get_node("Z_Index/Label")
 var inArea = false
 func _ready():
 
@@ -11,12 +12,13 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		inArea = true
+		crateLabel.show()
 
 	
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("Player"):
 		inArea = false
-
+		crateLabel.hide()
 		
 func _input(event):
 	if event.is_action_pressed("ui_interact") && inArea == true:
