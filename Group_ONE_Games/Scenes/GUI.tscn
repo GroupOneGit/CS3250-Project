@@ -48,44 +48,44 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id=16]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxEmpty" id=17]
+[sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="StyleBoxFlat" id=18]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxEmpty" id=19]
+[sub_resource type="StyleBoxEmpty" id=8]
 
-[sub_resource type="StyleBoxFlat" id=20]
+[sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxFlat" id=21]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 70, 240 )
 
-[sub_resource type="StyleBoxEmpty" id=23]
+[sub_resource type="StyleBoxEmpty" id=12]
 
-[sub_resource type="StyleBoxFlat" id=24]
+[sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.172549, 0.172549, 0.172549, 0.294118 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -277,7 +277,6 @@ margin_bottom = 27.046
 rect_min_size = Vector2( 0, 50 )
 
 [node name="Slot1" type="TextureRect" parent="Background/MainItems"]
-editor/display_folded = true
 margin_right = 50.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 50, 0 )
@@ -293,23 +292,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.4706
+margin_left = -20.4706
 margin_top = -19.0
-margin_right = 19.5294
+margin_right = 20.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 theme = ExtResource( 3 )
-custom_styles/selected_focus = SubResource( 16 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 18 )
-custom_styles/bg = SubResource( 19 )
+custom_styles/selected_focus = SubResource( 5 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 13 )
 
 [node name="Slot2" type="TextureRect" parent="Background/MainItems"]
-editor/display_folded = true
 margin_left = 54.0
 margin_right = 104.0
 margin_bottom = 45.0
@@ -325,17 +323,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.4706
+margin_left = -20.4706
 margin_top = -19.0
-margin_right = 19.5294
+margin_right = 20.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 theme = ExtResource( 3 )
-custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 19 )
+custom_styles/selected_focus = SubResource( 9 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 10 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 13 )
@@ -356,23 +354,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.4706
+margin_left = -20.4706
 margin_top = -19.0
-margin_right = 19.5294
+margin_right = 20.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 theme = ExtResource( 3 )
-custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 19 )
+custom_styles/selected_focus = SubResource( 9 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 10 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 13 )
 
 [node name="Slot4" type="TextureRect" parent="Background/MainItems"]
-editor/display_folded = true
 margin_left = 162.0
 margin_right = 212.0
 margin_bottom = 45.0
@@ -388,17 +385,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.1471
+margin_left = -20.1471
 margin_top = -18.6765
-margin_right = 19.8529
+margin_right = 20.8529
 margin_bottom = 19.3235
 size_flags_horizontal = 5
 size_flags_vertical = 5
 theme = ExtResource( 3 )
-custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 19 )
+custom_styles/selected_focus = SubResource( 9 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 10 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
 script = ExtResource( 13 )
@@ -408,7 +405,7 @@ editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 68.1622, 343.083 )
-shape = SubResource( 22 )
+shape = SubResource( 11 )
 
 [node name="Panel" type="Panel" parent="Area2D"]
 anchor_right = 1.0
@@ -417,8 +414,8 @@ margin_left = -6.0
 margin_top = 103.0
 margin_right = 138.0
 margin_bottom = 582.0
-custom_styles/panelf = SubResource( 23 )
-custom_styles/panel = SubResource( 24 )
+custom_styles/panelf = SubResource( 12 )
+custom_styles/panel = SubResource( 13 )
 script = ExtResource( 14 )
 
 [node name="Label" type="Label" parent="Area2D/Panel"]
@@ -439,7 +436,7 @@ editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 951.999, 343.083 )
-shape = SubResource( 22 )
+shape = SubResource( 11 )
 
 [node name="Panel2" type="Panel" parent="Area2D2"]
 editor/display_folded = true
@@ -449,8 +446,8 @@ margin_left = 885.0
 margin_top = 103.0
 margin_right = 1026.0
 margin_bottom = 582.0
-custom_styles/panelf = SubResource( 23 )
-custom_styles/panel = SubResource( 24 )
+custom_styles/panelf = SubResource( 12 )
+custom_styles/panel = SubResource( 13 )
 script = ExtResource( 14 )
 
 [node name="Label2" type="Label" parent="Area2D2/Panel2"]

@@ -12,29 +12,32 @@ onready var popUpScroll = popUpScrollScene.instance()
 var scrollText = {
 	
 	1: {
-		text = "This is the text for Scroll 1, Keep finding dem scrolls!"
+		text = "I ended up on this island... Some massive storm carried my ship here while I was on my way to Europe to deliver these crates of artifacts to a client. I tried to escape by..."
 	},
 	
 	2: {
-		text = "This is the text for Scroll 2, KEep ON NOW YA HEAR!"
+		text = "... building a raft out of these long vines I found in the forest, some clothe from a washed up crate, and a few trees; basically whatever I found on the island, but..."
 	},
 	3: {
-		text = "This is the text for Scroll 3"
+		text = "... that same type of storm keeps bringing me back to this island. I'm starting to feel cursed. My latest effort ended with a wrecked raft. I also keep hearing... "
 	},
 	4: {
-		text = "This is the text for Scroll 4"
+		text = "... sounds at night now and it's getting creepy. I feel like something is following me. I dont think I can stay here. I must move again. I have to find another way off this island.  THe museum better pay up big time for making me carry those crates of..."
 	},
 	5: {
-		text = "This is the text for Scroll 5"
+		text = "... cursed items for that new exhibit.  I wonder why they wanted a bunch of a dead guy's clothing. Probably because it was taken out of a chest found in the ocean.  I admit they are... "
 	},
 	6: {
-		text = "This is the text for Scroll 6"
+		text = "... pretty comfortable clothes and I look pretty snappy in this getup.  It's missing a hat though, must have been on the next shipment. The noises are getting worse. I see things now, faintly glowing weird looking creatures.  They seem to be interested in these clothes and..."
 	},
 	7: {
-		text = "This is the text for Scroll 7"
+		text = "... they seem angry that I am sporting them.  I noticed an old pirate ship on the far beach, seems ghosly. I'mguessing that is where these weird creatures are coming from. These clothes..."
 	},
 	8: {
-		text = "This is the text for Scroll 8, ALMOST THERE!"
+		text = "... kept pulling me toward the ship and I found a glowing chest that is simply tantalizing.  It calls to my mind... I feel like it wants me to open it. I keep hearing 'return them' in my mind. Them? The clothes maybe?"
+	},
+	9: {
+		text = "The hat...it...wanted the hat."
 	}
 }
 

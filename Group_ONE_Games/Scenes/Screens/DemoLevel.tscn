@@ -44,12 +44,6 @@ visible = false
 [node name="Shelf_TOP" parent="CanvasLayer/GUI/Dropdown" index="1"]
 editor/display_folded = false
 
-[node name="Area2D" parent="CanvasLayer/GUI" index="2"]
-editor/display_folded = true
-
-[node name="Area2D2" parent="CanvasLayer/GUI" index="3"]
-editor/display_folded = true
-
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 4 )]
 pause_mode = 2
 visible = false
