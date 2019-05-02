@@ -11,9 +11,11 @@ func _ready():
 func attack(amt, vec):
 	amount = amt
 	spawned = true
+	var angle = Vector2(0,-1).angle_to(vec)
 	self.position.x = vec.x * 35
 	self.position.y = vec.y * 35
 	self.show()
+	self.rotation = angle
 	time = .1
 	hit()
 
