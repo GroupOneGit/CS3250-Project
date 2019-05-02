@@ -1,16 +1,19 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Inventory/Inventory/580b585b2edbce24c47b2463.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Dropdown.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/ItemList.gd" type="Script" id=3]
-[ext_resource path="res://Inventory/Inventory/scroll-large-bottom.png" type="Texture" id=4]
-[ext_resource path="res://Background.gd" type="Script" id=5]
-[ext_resource path="res://Scenes/BarContainer.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Art/GUI-ART/Inventory/InventorySlot.png" type="Texture" id=7]
-[ext_resource path="res://Scripts/ItemSlots.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/Panel.gd" type="Script" id=9]
-
-
+[ext_resource path="res://Themes/Tooltip.tres" type="Theme" id=3]
+[ext_resource path="res://Scripts/ItemList.gd" type="Script" id=4]
+[ext_resource path="res://Art/Items/Shelf_TOP.png" type="Texture" id=5]
+[ext_resource path="res://Art/Items/Grayed_Bottle_Message.png" type="Texture" id=6]
+[ext_resource path="res://Art/Items/Shelf_MID.png" type="Texture" id=7]
+[ext_resource path="res://Art/Items/Shelf_BOT.png" type="Texture" id=8]
+[ext_resource path="res://Inventory/Inventory/scroll-large-bottom.png" type="Texture" id=9]
+[ext_resource path="res://Background.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/BarContainer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Art/GUI-ART/Inventory/InventorySlot.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/ItemSlots.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/Panel.gd" type="Script" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.858824, 0.8, 0.721569, 1 )
@@ -45,477 +48,44 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxEmpty" id=8]
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxEmpty" id=10]
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 70, 240 )
 
 [sub_resource type="StyleBoxEmpty" id=12]
 
-[sub_resource type="StyleBoxEmpty" id=13]
-
-[sub_resource type="StyleBoxEmpty" id=14]
-
-[sub_resource type="Theme" id=15]
-Button/colors/font_color = Color( 0, 0, 0, 1 )
-Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
-Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-Button/constants/hseparation = 2
-Button/fonts/font = null
-Button/styles/disabled = null
-Button/styles/focus = null
-Button/styles/hover = null
-Button/styles/normal = null
-Button/styles/pressed = null
-CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
-CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-CheckBox/colors/font_color_hover = Color( 0, 0, 0, 1 )
-CheckBox/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
-CheckBox/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-CheckBox/constants/check_vadjust = 0
-CheckBox/constants/hseparation = 4
-CheckBox/fonts/font = null
-CheckBox/icons/checked = null
-CheckBox/icons/radio_checked = null
-CheckBox/icons/radio_unchecked = null
-CheckBox/icons/unchecked = null
-CheckBox/styles/disabled = null
-CheckBox/styles/focus = null
-CheckBox/styles/hover = null
-CheckBox/styles/hover_pressed = null
-CheckBox/styles/normal = null
-CheckBox/styles/pressed = null
-CheckButton/colors/font_color = Color( 0, 0, 0, 1 )
-CheckButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-CheckButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
-CheckButton/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
-CheckButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-CheckButton/constants/check_vadjust = 0
-CheckButton/constants/hseparation = 4
-CheckButton/fonts/font = null
-CheckButton/icons/off = null
-CheckButton/icons/on = null
-CheckButton/styles/disabled = null
-CheckButton/styles/focus = null
-CheckButton/styles/hover = null
-CheckButton/styles/hover_pressed = null
-CheckButton/styles/normal = null
-CheckButton/styles/pressed = null
-ColorPicker/constants/h_width = 30
-ColorPicker/constants/label_width = 10
-ColorPicker/constants/margin = 4
-ColorPicker/constants/sv_height = 256
-ColorPicker/constants/sv_width = 256
-ColorPicker/icons/add_preset = null
-ColorPicker/icons/color_hue = null
-ColorPicker/icons/color_sample = null
-ColorPicker/icons/preset_bg = null
-ColorPicker/icons/screen_picker = null
-ColorPickerButton/colors/font_color = Color( 0, 0, 0, 1 )
-ColorPickerButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-ColorPickerButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
-ColorPickerButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-ColorPickerButton/constants/hseparation = 2
-ColorPickerButton/fonts/font = null
-ColorPickerButton/icons/bg = null
-ColorPickerButton/styles/disabled = null
-ColorPickerButton/styles/focus = null
-ColorPickerButton/styles/hover = null
-ColorPickerButton/styles/normal = null
-ColorPickerButton/styles/pressed = null
-Dialogs/constants/button_margin = 32
-Dialogs/constants/margin = 8
-FileDialog/colors/files_disabled = Color( 0, 0, 0, 1 )
-FileDialog/icons/folder = null
-FileDialog/icons/parent_folder = null
-FileDialog/icons/reload = null
-Fonts/fonts/large = null
-Fonts/fonts/normal = null
-GraphEdit/colors/activity = Color( 0, 0, 0, 1 )
-GraphEdit/colors/grid_major = Color( 0, 0, 0, 1 )
-GraphEdit/colors/grid_minor = Color( 0, 0, 0, 1 )
-GraphEdit/constants/bezier_len_neg = 160
-GraphEdit/constants/bezier_len_pos = 80
-GraphEdit/constants/port_grab_distance_horizontal = 48
-GraphEdit/constants/port_grab_distance_vertical = 6
-GraphEdit/icons/minus = null
-GraphEdit/icons/more = null
-GraphEdit/icons/reset = null
-GraphEdit/icons/snap = null
-GraphEdit/styles/bg = null
-GraphNode/colors/close_color = Color( 0, 0, 0, 1 )
-GraphNode/colors/title_color = Color( 0, 0, 0, 1 )
-GraphNode/constants/close_offset = 18
-GraphNode/constants/port_offset = 3
-GraphNode/constants/separation = 1
-GraphNode/constants/title_offset = 20
-GraphNode/fonts/title_font = null
-GraphNode/icons/close = null
-GraphNode/icons/port = null
-GraphNode/icons/resizer = null
-GraphNode/styles/breakpoint = null
-GraphNode/styles/comment = null
-GraphNode/styles/commentfocus = null
-GraphNode/styles/defaultfocus = null
-GraphNode/styles/defaultframe = null
-GraphNode/styles/frame = null
-GraphNode/styles/position = null
-GraphNode/styles/selectedframe = null
-GridContainer/constants/hseparation = 4
-GridContainer/constants/vseparation = 4
-HBoxContainer/constants/separation = 4
-HScrollBar/icons/decrement = null
-HScrollBar/icons/decrement_highlight = null
-HScrollBar/icons/increment = null
-HScrollBar/icons/increment_highlight = null
-HScrollBar/styles/grabber = null
-HScrollBar/styles/grabber_highlight = null
-HScrollBar/styles/grabber_pressed = null
-HScrollBar/styles/scroll = null
-HScrollBar/styles/scroll_focus = null
-HSeparator/constants/separation = 4
-HSeparator/styles/separator = null
-HSlider/icons/grabber = null
-HSlider/icons/grabber_disabled = null
-HSlider/icons/grabber_highlight = null
-HSlider/icons/tick = null
-HSlider/styles/focus = null
-HSlider/styles/grabber_area = null
-HSlider/styles/grabber_disabled = null
-HSlider/styles/grabber_highlight = null
-HSlider/styles/slider = null
-HSplitContainer/constants/autohide = 1
-HSplitContainer/constants/separation = 12
-HSplitContainer/icons/grabber = null
-HSplitContainer/styles/bg = null
-Icons/icons/close = null
-Icons/icons/logo = null
-ItemList/colors/font_color = Color( 0, 0, 0, 0 )
-ItemList/colors/font_color_selected = Color( 1, 1, 1, 0 )
-ItemList/colors/guide_color = Color( 0, 0, 0, 0 )
-ItemList/constants/hseparation = 4
-ItemList/constants/icon_margin = 4
-ItemList/constants/line_separation = 2
-ItemList/constants/vseparation = 2
-ItemList/fonts/font = null
-ItemList/styles/bg = null
-ItemList/styles/bg_focus = null
-ItemList/styles/cursor = null
-ItemList/styles/cursor_unfocused = null
-ItemList/styles/selected = null
-ItemList/styles/selected_focus = null
-Label/colors/font_color = Color( 0, 0, 0, 1 )
-Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
-Label/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-Label/constants/line_spacing = 3
-Label/constants/shadow_as_outline = 0
-Label/constants/shadow_offset_x = 1
-Label/constants/shadow_offset_y = 1
-Label/fonts/font = null
-Label/styles/normal = null
-LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
-LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
-LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
-LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
-LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
-LineEdit/colors/selection_color = Color( 0, 0, 0, 1 )
-LineEdit/constants/minimum_spaces = 12
-LineEdit/fonts/font = null
-LineEdit/icons/clear = null
-LineEdit/styles/focus = null
-LineEdit/styles/normal = null
-LineEdit/styles/read_only = null
-LinkButton/colors/font_color = Color( 0, 0, 0, 1 )
-LinkButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
-LinkButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-LinkButton/constants/underline_spacing = 2
-LinkButton/fonts/font = null
-LinkButton/styles/focus = null
-MarginContainer/constants/margin_bottom = 0
-MarginContainer/constants/margin_left = 0
-MarginContainer/constants/margin_right = 0
-MarginContainer/constants/margin_top = 0
-MenuButton/colors/font_color = Color( 0, 0, 0, 1 )
-MenuButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-MenuButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
-MenuButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-MenuButton/constants/hseparation = 3
-MenuButton/fonts/font = null
-MenuButton/styles/disabled = null
-MenuButton/styles/focus = null
-MenuButton/styles/hover = null
-MenuButton/styles/normal = null
-MenuButton/styles/pressed = null
-OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
-OptionButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-OptionButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
-OptionButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-OptionButton/constants/arrow_margin = 2
-OptionButton/constants/hseparation = 2
-OptionButton/fonts/font = null
-OptionButton/icons/arrow = null
-OptionButton/styles/disabled = null
-OptionButton/styles/focus = null
-OptionButton/styles/hover = null
-OptionButton/styles/normal = null
-OptionButton/styles/pressed = null
-Panel/styles/panel = null
-Panel/styles/panelf = null
-Panel/styles/panelnc = null
-PanelContainer/styles/panel = null
-PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )
-PopupMenu/colors/font_color_accel = Color( 0, 0, 0, 1 )
-PopupMenu/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-PopupMenu/colors/font_color_hover = Color( 0, 0, 0, 1 )
-PopupMenu/constants/hseparation = 4
-PopupMenu/constants/vseparation = 4
-PopupMenu/fonts/font = null
-PopupMenu/icons/checked = null
-PopupMenu/icons/radio_checked = null
-PopupMenu/icons/radio_unchecked = null
-PopupMenu/icons/submenu = null
-PopupMenu/icons/unchecked = null
-PopupMenu/styles/hover = null
-PopupMenu/styles/labeled_separator_left = null
-PopupMenu/styles/labeled_separator_right = null
-PopupMenu/styles/panel = null
-PopupMenu/styles/panel_disabled = null
-PopupMenu/styles/separator = null
-PopupPanel/styles/panel = null
-ProgressBar/colors/font_color = Color( 0, 0, 0, 1 )
-ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
-ProgressBar/fonts/font = null
-ProgressBar/styles/bg = null
-ProgressBar/styles/fg = null
-RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
-RichTextLabel/colors/font_color_selected = Color( 0, 0, 0, 1 )
-RichTextLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
-RichTextLabel/colors/selection_color = Color( 0, 0, 0, 1 )
-RichTextLabel/constants/line_separation = 1
-RichTextLabel/constants/shadow_as_outline = 0
-RichTextLabel/constants/shadow_offset_x = 1
-RichTextLabel/constants/shadow_offset_y = 1
-RichTextLabel/constants/table_hseparation = 3
-RichTextLabel/constants/table_vseparation = 3
-RichTextLabel/fonts/bold_font = null
-RichTextLabel/fonts/bold_italics_font = null
-RichTextLabel/fonts/italics_font = null
-RichTextLabel/fonts/mono_font = null
-RichTextLabel/fonts/normal_font = null
-RichTextLabel/styles/focus = null
-RichTextLabel/styles/normal = null
-ScrollContainer/styles/bg = null
-SpinBox/icons/updown = null
-TabContainer/colors/font_color_bg = Color( 0, 0, 0, 1 )
-TabContainer/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-TabContainer/colors/font_color_fg = Color( 0, 0, 0, 1 )
-TabContainer/constants/hseparation = 4
-TabContainer/constants/label_valign_bg = 2
-TabContainer/constants/label_valign_fg = 0
-TabContainer/constants/side_margin = 8
-TabContainer/constants/top_margin = 24
-TabContainer/fonts/font = null
-TabContainer/icons/decrement = null
-TabContainer/icons/decrement_highlight = null
-TabContainer/icons/increment = null
-TabContainer/icons/increment_highlight = null
-TabContainer/icons/menu = null
-TabContainer/icons/menu_highlight = null
-TabContainer/styles/panel = null
-TabContainer/styles/tab_bg = null
-TabContainer/styles/tab_disabled = null
-TabContainer/styles/tab_fg = null
-Tabs/colors/font_color_bg = Color( 0, 0, 0, 1 )
-Tabs/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-Tabs/colors/font_color_fg = Color( 0, 0, 0, 1 )
-Tabs/constants/hseparation = 4
-Tabs/constants/label_valign_bg = 2
-Tabs/constants/label_valign_fg = 0
-Tabs/constants/top_margin = 24
-Tabs/fonts/font = null
-Tabs/icons/close = null
-Tabs/icons/decrement = null
-Tabs/icons/decrement_highlight = null
-Tabs/icons/increment = null
-Tabs/icons/increment_highlight = null
-Tabs/styles/button = null
-Tabs/styles/button_pressed = null
-Tabs/styles/panel = null
-Tabs/styles/tab_bg = null
-Tabs/styles/tab_disabled = null
-Tabs/styles/tab_fg = null
-TextEdit/colors/background_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/brace_mismatch_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/breakpoint_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/caret_background_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/caret_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/code_folding_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/completion_background_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/completion_existing_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/completion_font_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/completion_scroll_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/completion_selected_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/current_line_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
-TextEdit/colors/function_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/line_number_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/mark_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/member_variable_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/number_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/safe_line_number_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/selection_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/symbol_color = Color( 0, 0, 0, 1 )
-TextEdit/colors/word_highlighted_color = Color( 0, 0, 0, 1 )
-TextEdit/constants/completion_lines = 7
-TextEdit/constants/completion_max_width = 50
-TextEdit/constants/completion_scroll_width = 3
-TextEdit/constants/line_spacing = 4
-TextEdit/fonts/font = null
-TextEdit/icons/tab = null
-TextEdit/styles/completion = null
-TextEdit/styles/focus = null
-TextEdit/styles/normal = null
-TextEdit/styles/read_only = null
-ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
-ToolButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-ToolButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
-ToolButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-ToolButton/constants/hseparation = 3
-ToolButton/fonts/font = null
-ToolButton/styles/disabled = null
-ToolButton/styles/focus = null
-ToolButton/styles/hover = null
-ToolButton/styles/normal = null
-ToolButton/styles/pressed = null
-TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
-TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 0 )
-TooltipLabel/constants/shadow_offset_x = 1
-TooltipLabel/constants/shadow_offset_y = 1
-TooltipLabel/fonts/font = null
-TooltipPanel/styles/panel = null
-Tree/colors/cursor_color = Color( 0, 0, 0, 1 )
-Tree/colors/custom_button_font_highlight = Color( 0, 0, 0, 1 )
-Tree/colors/drop_position_color = Color( 0, 0, 0, 1 )
-Tree/colors/font_color = Color( 0, 0, 0, 1 )
-Tree/colors/font_color_selected = Color( 0, 0, 0, 1 )
-Tree/colors/guide_color = Color( 0, 0, 0, 1 )
-Tree/colors/relationship_line_color = Color( 0, 0, 0, 1 )
-Tree/colors/selection_color = Color( 0, 0, 0, 1 )
-Tree/colors/title_button_color = Color( 0, 0, 0, 1 )
-Tree/constants/button_margin = 4
-Tree/constants/draw_guides = 1
-Tree/constants/draw_relationship_lines = 0
-Tree/constants/guide_width = 2
-Tree/constants/hseparation = 4
-Tree/constants/item_margin = 12
-Tree/constants/scroll_border = 4
-Tree/constants/scroll_speed = 12
-Tree/constants/vseparation = 4
-Tree/fonts/font = null
-Tree/fonts/title_button_font = null
-Tree/icons/arrow = null
-Tree/icons/arrow_collapsed = null
-Tree/icons/checked = null
-Tree/icons/select_arrow = null
-Tree/icons/unchecked = null
-Tree/icons/updown = null
-Tree/styles/bg = null
-Tree/styles/bg_focus = null
-Tree/styles/button_pressed = null
-Tree/styles/cursor = null
-Tree/styles/cursor_unfocused = null
-Tree/styles/custom_button = null
-Tree/styles/custom_button_hover = null
-Tree/styles/custom_button_pressed = null
-Tree/styles/selected = null
-Tree/styles/selected_focus = null
-Tree/styles/title_button_hover = null
-Tree/styles/title_button_normal = null
-Tree/styles/title_button_pressed = null
-VBoxContainer/constants/separation = 4
-VScrollBar/icons/decrement = null
-VScrollBar/icons/decrement_highlight = null
-VScrollBar/icons/increment = null
-VScrollBar/icons/increment_highlight = null
-VScrollBar/styles/grabber = SubResource( 5 )
-VScrollBar/styles/grabber_highlight = SubResource( 6 )
-VScrollBar/styles/grabber_pressed = SubResource( 7 )
-VScrollBar/styles/scroll = SubResource( 8 )
-VScrollBar/styles/scroll_focus = SubResource( 9 )
-VSeparator/constants/separation = 4
-VSeparator/styles/separator = null
-VSlider/icons/grabber = null
-VSlider/icons/grabber_disabled = null
-VSlider/icons/grabber_highlight = null
-VSlider/icons/tick = null
-VSlider/styles/focus = SubResource( 10 )
-VSlider/styles/grabber_area = SubResource( 11 )
-VSlider/styles/grabber_disabled = SubResource( 12 )
-VSlider/styles/grabber_highlight = SubResource( 13 )
-VSlider/styles/slider = SubResource( 14 )
-VSplitContainer/constants/autohide = 1
-VSplitContainer/constants/separation = 12
-VSplitContainer/icons/grabber = null
-VSplitContainer/styles/bg = null
-WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
-WindowDialog/constants/close_h_ofs = 18
-WindowDialog/constants/close_v_ofs = 18
-WindowDialog/constants/scaleborder_size = 4
-WindowDialog/constants/title_height = 20
-WindowDialog/fonts/title_font = null
-WindowDialog/icons/close = null
-WindowDialog/icons/close_highlight = null
-WindowDialog/styles/panel = null
-
-[sub_resource type="StyleBoxFlat" id=16]
-bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxEmpty" id=17]
-
-[sub_resource type="StyleBoxFlat" id=18]
-bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxEmpty" id=19]
-
-[sub_resource type="StyleBoxFlat" id=20]
-bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id=21]
-bg_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 70, 240 )
-
-[sub_resource type="StyleBoxEmpty" id=23]
-
-[sub_resource type="StyleBoxFlat" id=24]
+[sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.172549, 0.172549, 0.172549, 0.294118 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -525,8 +95,6 @@ corner_radius_bottom_left = 10
 [node name="GUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 6.0
-margin_right = 11.0
 mouse_filter = 2
 size_flags_horizontal = 2
 
@@ -543,14 +111,15 @@ script = ExtResource( 2 )
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 152.0
-margin_top = -185.0
+margin_top = -185.463
 margin_right = 400.0
-margin_bottom = 180.0
+margin_bottom = 179.537
 grow_horizontal = 0
 grow_vertical = 0
 rect_min_size = Vector2( 248, 365 )
 rect_clip_content = false
 focus_mode = 1
+theme = ExtResource( 3 )
 custom_styles/selected_focus = SubResource( 1 )
 custom_styles/bg_focus = SubResource( 2 )
 custom_styles/selected = SubResource( 3 )
@@ -564,21 +133,122 @@ same_column_width = true
 fixed_column_width = 48
 icon_mode = 0
 fixed_icon_size = Vector2( 45, 45 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="Shelf_TOP" type="TextureRect" parent="Dropdown"]
+editor/display_folded = true
+anchor_right = 1.0
+margin_left = 430.285
+margin_top = 185.132
+margin_right = -73.7153
+margin_bottom = 225.132
+mouse_filter = 2
+texture = ExtResource( 5 )
+
+[node name="Scroll1" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+margin_left = 14.0205
+margin_top = -70.3322
+margin_right = 314.021
+margin_bottom = 229.668
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Scroll2" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+margin_left = 90.1617
+margin_top = -69.3107
+margin_right = 390.162
+margin_bottom = 230.689
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Scroll3" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+margin_left = 166.281
+margin_top = -70.4
+margin_right = 466.281
+margin_bottom = 229.6
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Scroll4" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+margin_left = 243.337
+margin_top = -70.3106
+margin_right = 543.337
+margin_bottom = 229.689
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Shelf_MID" type="TextureRect" parent="Dropdown"]
+editor/display_folded = true
+anchor_right = 1.0
+margin_left = 459.23
+margin_top = 269.21
+margin_right = -44.7702
+margin_bottom = 309.21
+mouse_filter = 2
+texture = ExtResource( 7 )
+
+[node name="Scroll5" type="TextureRect" parent="Dropdown/Shelf_MID"]
+margin_left = 21.0381
+margin_top = -71.4598
+margin_right = 321.038
+margin_bottom = 228.54
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Scroll6" type="TextureRect" parent="Dropdown/Shelf_MID"]
+margin_left = 98.3855
+margin_top = -71.2542
+margin_right = 398.385
+margin_bottom = 228.746
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Scroll7" type="TextureRect" parent="Dropdown/Shelf_MID"]
+margin_left = 176.871
+margin_top = -71.2542
+margin_right = 476.871
+margin_bottom = 228.746
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Shelf_BOT" type="TextureRect" parent="Dropdown"]
+editor/display_folded = true
+anchor_right = 1.0
+margin_left = 483.311
+margin_top = 361.264
+margin_right = -20.6886
+margin_bottom = 401.264
+mouse_filter = 2
+texture = ExtResource( 8 )
+
+[node name="Scroll8" type="TextureRect" parent="Dropdown/Shelf_BOT"]
+margin_left = 31.542
+margin_top = -72.3472
+margin_right = 331.542
+margin_bottom = 227.653
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="Scroll9" type="TextureRect" parent="Dropdown/Shelf_BOT"]
+margin_left = 112.779
+margin_top = -72.1556
+margin_right = 412.779
+margin_bottom = 227.844
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
 
 [node name="Background" type="NinePatchRect" parent="."]
 anchor_right = 1.0
-margin_left = 7.0
+margin_left = -1.55002
 margin_top = -11.0
-margin_right = 2.0
+margin_right = -1.55005
 margin_bottom = 103.0
 rect_min_size = Vector2( 1024, 70 )
 mouse_filter = 0
-texture = ExtResource( 4 )
-script = ExtResource( 5 )
+texture = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="StatusBarContainer" type="HBoxContainer" parent="Background"]
-editor/display_folded = true
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -588,14 +258,14 @@ margin_right = -492.0
 margin_bottom = 37.0
 mouse_filter = 2
 
-[node name="BarContainer" parent="Background/StatusBarContainer" instance=ExtResource( 6 )]
+[node name="BarContainer" parent="Background/StatusBarContainer" instance=ExtResource( 11 )]
 margin_left = 0.0
-margin_right = 317.0
+margin_right = 356.0
+margin_bottom = 59.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="MainItems" type="HBoxContainer" parent="Background"]
-editor/display_folded = true
 anchor_left = 0.918
 anchor_top = 0.5
 anchor_right = 0.918
@@ -614,7 +284,7 @@ focus_mode = 2
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 stretch_mode = 4
 
 [node name="Item1" type="ItemList" parent="Background/MainItems/Slot1"]
@@ -622,20 +292,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.4706
+margin_left = -20.4706
 margin_top = -19.0
-margin_right = 19.5294
+margin_right = 20.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 15 )
-custom_styles/selected_focus = SubResource( 16 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 18 )
-custom_styles/bg = SubResource( 19 )
+theme = ExtResource( 3 )
+custom_styles/selected_focus = SubResource( 5 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 8 )
+script = ExtResource( 13 )
 
 [node name="Slot2" type="TextureRect" parent="Background/MainItems"]
 margin_left = 54.0
@@ -645,7 +315,7 @@ rect_min_size = Vector2( 50, 0 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 stretch_mode = 4
 
 [node name="Item2" type="ItemList" parent="Background/MainItems/Slot2"]
@@ -653,20 +323,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.4706
+margin_left = -20.4706
 margin_top = -19.0
-margin_right = 19.5294
+margin_right = 20.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 15 )
-custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 19 )
+theme = ExtResource( 3 )
+custom_styles/selected_focus = SubResource( 9 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 10 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 8 )
+script = ExtResource( 13 )
 
 [node name="Slot3" type="TextureRect" parent="Background/MainItems"]
 margin_left = 108.0
@@ -676,7 +346,7 @@ rect_min_size = Vector2( 50, 0 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 stretch_mode = 4
 
 [node name="Item3" type="ItemList" parent="Background/MainItems/Slot3"]
@@ -684,20 +354,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.4706
+margin_left = -20.4706
 margin_top = -19.0
-margin_right = 19.5294
+margin_right = 20.5294
 margin_bottom = 19.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 15 )
-custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 19 )
+theme = ExtResource( 3 )
+custom_styles/selected_focus = SubResource( 9 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 10 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 8 )
+script = ExtResource( 13 )
 
 [node name="Slot4" type="TextureRect" parent="Background/MainItems"]
 margin_left = 162.0
@@ -707,7 +377,7 @@ rect_min_size = Vector2( 50, 0 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 stretch_mode = 4
 
 [node name="Item4" type="ItemList" parent="Background/MainItems/Slot4"]
@@ -715,26 +385,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -21.1471
+margin_left = -20.1471
 margin_top = -18.6765
-margin_right = 19.8529
+margin_right = 20.8529
 margin_bottom = 19.3235
 size_flags_horizontal = 5
 size_flags_vertical = 5
-theme = SubResource( 15 )
-custom_styles/selected_focus = SubResource( 20 )
-custom_styles/bg_focus = SubResource( 17 )
-custom_styles/selected = SubResource( 21 )
-custom_styles/bg = SubResource( 19 )
+theme = ExtResource( 3 )
+custom_styles/selected_focus = SubResource( 9 )
+custom_styles/bg_focus = SubResource( 6 )
+custom_styles/selected = SubResource( 10 )
+custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 8 )
+script = ExtResource( 13 )
 
 [node name="Area2D" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 68.1622, 343.083 )
-shape = SubResource( 22 )
+shape = SubResource( 11 )
 
 [node name="Panel" type="Panel" parent="Area2D"]
 anchor_right = 1.0
@@ -743,9 +414,9 @@ margin_left = -6.0
 margin_top = 103.0
 margin_right = 138.0
 margin_bottom = 582.0
-custom_styles/panelf = SubResource( 23 )
-custom_styles/panel = SubResource( 24 )
-script = ExtResource( 9 )
+custom_styles/panelf = SubResource( 12 )
+custom_styles/panel = SubResource( 13 )
+script = ExtResource( 14 )
 
 [node name="Label" type="Label" parent="Area2D/Panel"]
 anchor_left = 0.5
@@ -756,27 +427,28 @@ margin_left = -41.5
 margin_top = -15.5
 margin_right = 41.5
 margin_bottom = 15.5
-custom_colors/font_color = Color( 0.6, 0.6, 0.6, 0.733333 )
-text = "
-      HERE"
+custom_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
+text = "DRAG HERE TO
+       DROP"
 
 [node name="Area2D2" type="Area2D" parent="."]
 editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 951.999, 343.083 )
-shape = SubResource( 22 )
+shape = SubResource( 11 )
 
 [node name="Panel2" type="Panel" parent="Area2D2"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 885.0
 margin_top = 103.0
 margin_right = 1026.0
 margin_bottom = 582.0
-custom_styles/panelf = SubResource( 23 )
-custom_styles/panel = SubResource( 24 )
-script = ExtResource( 9 )
+custom_styles/panelf = SubResource( 12 )
+custom_styles/panel = SubResource( 13 )
+script = ExtResource( 14 )
 
 [node name="Label2" type="Label" parent="Area2D2/Panel2"]
 anchor_left = 0.5
@@ -787,9 +459,9 @@ margin_left = -41.5
 margin_top = -15.5
 margin_right = 41.5
 margin_bottom = 15.5
-custom_colors/font_color = Color( 0.6, 0.6, 0.6, 0.768627 )
-text = "DROP ITEMS 
-      HERE"
+custom_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
+text = "DRAG HERE TO
+      DROP"
 
 [connection signal="input_event" from="Area2D" to="Background/MainItems/Slot1/Item1" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Area2D2" to="Background/MainItems/Slot1/Item1" method="_on_Area2D2_input_event"]

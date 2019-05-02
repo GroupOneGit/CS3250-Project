@@ -7,9 +7,6 @@ var spike_x = 0
 var can_shoot = true
 var in_range = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 
 func shoot():
@@ -35,11 +32,11 @@ func shoot():
 			spike_instance.direction_x = 1
 		add_child(spike_instance)
 	can_shoot = false
+	$Pole.animation = "reload"
+	$Pole.play("reload")
 	get_node("Pole/ReloadTimer").start()
 		
 func _process(delta):
-	if Input.is_action_just_pressed("ui_LMB") && can_shoot:
-		shoot()
 	if in_range && can_shoot:
 		shoot()
 
@@ -56,4 +53,5 @@ func _on_Area2D_body_exited(body):
 
 func _on_ReloadTimer_timeout():
 	can_shoot = true
+	$Pole.play("default")
 	pass # Replace with function body.

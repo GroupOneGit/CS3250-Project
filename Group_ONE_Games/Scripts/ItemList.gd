@@ -101,6 +101,7 @@ func drop_data(position, data):
 			ItemDatabase.heldItem = null
 			ItemDatabase.holdingItem = false
 	ItemDatabase.holdingItem = false
+	ItemDatabase.originalOwner = null
 	unselect_all()
 	release_focus()
 	pass
@@ -111,10 +112,6 @@ func createCrate():
 	itemList.resize(0)
 	var numItems = randi()%10
 	var id 
-#	if (numItems + inventoryTotal) > MAX:
-#		numItems = MAX - inventoryTotal
-#
-	
 #warning-ignore:unused_variable
 	for i in range(numItems):
 		id = randi()%10
@@ -127,7 +124,7 @@ func addItems():
 		for id in loot:
 				var icon = ItemDatabase.ITEMS[str(id)].icon
 				add_icon_item(icon, true)
-				index = self.get_item_count() - 1 
+				index = self.get_item_count() - 1
 				set_item_tooltip(index, ItemDatabase.ITEMS[str(id)].description)
 				set_item_metadata(index, id)
 				inventoryTotal += 1
@@ -138,11 +135,28 @@ func addItems():
 		return
 		
 func addItem(key):
+	if ItemDatabase.originalOwner == null:
+		if Slot1.get_item_count() == 0:
+			Slot1.addItem(key)
+			return
+		elif Slot2.get_item_count() == 0:
+			Slot2.addItem(key)
+			return
+		elif Slot3.get_item_count() == 0:
+			Slot3.addItem(key)
+			return
+		elif Slot4.get_item_count() == 0:
+			Slot4.addItem(key)
+			return
+		else:
+			pass
 	if inventoryTotal < 28:
 			var icon = ItemDatabase.ITEMS[str(key)].icon
 			add_icon_item(icon, true)
 			index = self.get_item_count() - 1
-			set_item_tooltip(index, ItemDatabase.ITEMS[str(key)].description)
+			var itemTooltip = ItemDatabase.ITEMS[str(key)].description + "\n    Health: " + str(ItemDatabase.ITEMS[str(key)].healthEffect)
+			itemTooltip = itemTooltip + "\n    Thirst: " + str(ItemDatabase.ITEMS[str(key)].thirstEffect)
+			set_item_tooltip(index, itemTooltip)
 			set_item_metadata(index, key)
 			inventoryTotal += 1
 			ItemDatabase.heldItem = null

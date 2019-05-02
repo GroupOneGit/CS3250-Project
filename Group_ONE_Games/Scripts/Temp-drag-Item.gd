@@ -36,7 +36,6 @@ func drop_data(position, data):
 		mainItemList.removeItem(data[0])
 		addItem()
 	if ItemDatabase.originalOwner == get_focus_owner().name:
-		print("fuck")
 		return
 	else:
 		removeItem()

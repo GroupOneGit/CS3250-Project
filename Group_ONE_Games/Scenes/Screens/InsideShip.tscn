@@ -1,0 +1,178 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://NES Pirate Ship Tileset.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 80.6448, 18.0271 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4.80869, 20.8688 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5.75271, 72.9669 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 74.0366, 10 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 3.37952, 33.2489 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 4.03879, 14.5066 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8.21399, 54.045 )
+
+[sub_resource type="SegmentShape2D" id=6]
+a = Vector2( 5.80212, -10.2877 )
+b = Vector2( -64.2593, -9.35223 )
+
+[sub_resource type="SegmentShape2D" id=7]
+a = Vector2( 67.3486, -2.47644 )
+
+[sub_resource type="SegmentShape2D" id=8]
+a = Vector2( 55.6659, -12.1028 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( 30.1577, -16.2936 )
+b = Vector2( -0.190338, 10.4656 )
+
+[sub_resource type="SegmentShape2D" id=10]
+a = Vector2( -40.836, 1.12343 )
+b = Vector2( -0.608124, 31.0464 )
+
+[sub_resource type="SegmentShape2D" id=11]
+a = Vector2( 81.6492, 30.0001 )
+b = Vector2( 152.826, 52.8493 )
+
+[sub_resource type="SegmentShape2D" id=12]
+a = Vector2( -38.8464, 5.77206 )
+
+[sub_resource type="SegmentShape2D" id=13]
+a = Vector2( 31.4894, 0.847652 )
+b = Vector2( -24.2749, 0.650677 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 2.81456, 32.4144 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 24.879, 4.88979 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 24.8481, 8.18139 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 14.0644, 13.5984 )
+
+[node name="InsideShip" type="Node2D"]
+
+[node name="Room" type="Sprite" parent="."]
+position = Vector2( 256.719, 299.094 )
+scale = Vector2( 3.17791, 3.16711 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 39, 105, 160, 190 )
+
+[node name="Area2D" type="Area2D" parent="Room"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Area2D"]
+position = Vector2( 2.20271, -74.5161 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Room/Area2D"]
+position = Vector2( -19.195, -38.2053 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Room/Area2D"]
+position = Vector2( -72.6894, 15.1558 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Room/Area2D"]
+position = Vector2( 6.2935, 66.3067 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Room/Area2D"]
+position = Vector2( 76.2525, -23.5932 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Room/Area2D"]
+position = Vector2( 76.4722, 43.438 )
+shape = SubResource( 17 )
+
+[node name="Ship_front" type="Sprite" parent="."]
+position = Vector2( 769.527, 305.924 )
+scale = Vector2( 2.24911, 3.19963 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 499, 635, 230, 190 )
+
+[node name="Area2D" type="Area2D" parent="Ship_front"]
+editor/display_folded = true
+position = Vector2( 0.310486, 0.65477 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( -54.6885, -40.6298 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( -51.4319, 64.07 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( -47.1299, 44.6927 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( 18.9402, 32.0836 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( 69.8621, 11.7858 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( 100.068, -35.9284 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( -90.2317, -85.4876 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( -9.24731, -65.1991 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( -90.7921, -61.4565 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Ship_front/Area2D"]
+position = Vector2( -111.955, -29.0526 )
+shape = SubResource( 18 )
+
+[node name="Stairs" type="Sprite" parent="."]
+position = Vector2( 569.935, 390.118 )
+scale = Vector2( 3.1809, 1.7616 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 269, 27, 36, 78 )
+
+[node name="Area2D" type="Area2D" parent="Stairs"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stairs/Area2D"]
+position = Vector2( -0.975342, -20.8759 )
+rotation = -2.37365
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stairs/Area2D"]
+position = Vector2( -3.78905, 12.942 )
+rotation = 0.767945
+shape = SubResource( 15 )
+one_way_collision_margin = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stairs/Area2D"]
+position = Vector2( -4.39082, 24.6199 )
+shape = SubResource( 19 )
+
