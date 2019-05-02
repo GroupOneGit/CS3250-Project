@@ -255,6 +255,7 @@ scale = Vector2( 1.28832, 1.44411 )
 texture = ExtResource( 11 )
 
 [node name="Rock" type="Sprite" parent="TileMap"]
+editor/display_folded = true
 position = Vector2( 799.904, 1796.05 )
 scale = Vector2( 1.59005, 1.4327 )
 texture = ExtResource( 5 )
