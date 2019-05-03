@@ -79,8 +79,8 @@ func _input(event):
 				unselect_all()
 			else:
 				return
-	
-	
+
+
 func get_drag_data(position):
 	var dragIcon = TextureRect.new()
 	if is_anything_selected():
@@ -94,10 +94,11 @@ func get_drag_data(position):
 	ItemDatabase.holdingItem = true
 	return itemSelected
 
+
 func can_drop_data(position, data):
 	grab_focus()
-	return true
-	pass	
+	return true	
+
 
 func drop_data(position, data):
 	if ItemDatabase.originalOwner != get_focus_owner().name:
@@ -132,16 +133,19 @@ func drop_data(position, data):
 			ItemDatabase.slot4Item = ItemDatabase.heldItem
 			ItemDatabase.heldItem = null
 			ItemDatabase.holdingItem = false
-		if ItemDatabase.originalOwner != self.name && ItemDatabase.originalOwner != mainItemList.name && itemsSlotted > 0:
+		elif ItemDatabase.originalOwner != self.name && ItemDatabase.originalOwner != mainItemList.name && itemsSlotted > 0:
+			print(ItemDatabase.originalOwner)
+			print(itemsSlotted)
 			swapItem()
-		elif itemsSlotted == 0:
-			addItem(ItemDatabase.heldItem)
+#		elif itemsSlotted == 0:
+#			addItem(ItemDatabase.heldItem)
 	ItemDatabase.heldItem = null
 	ItemDatabase.holdingItem = false
 	ItemDatabase.originalOwner = null
 	unselect_all()
 	release_focus()
 	pass
+
 
 func addItem(key):
 	if itemsSlotted == 0:
@@ -169,6 +173,7 @@ func addItem(key):
 		ItemDatabase.heldItem = null
 		return
 
+
 func removeItem(key):
 	remove_item(key)
 	if ItemDatabase.originalOwner == Slot1.name:
@@ -183,7 +188,8 @@ func removeItem(key):
 	itemsSlotted -= 1
 	ItemDatabase.holdingItem = true
 	pass
-	
+
+
 func swapItem():
 	var tempItem = null
 	var tempSlot = originalSlotCheck()
@@ -226,7 +232,8 @@ func originalSlotCheck():
 		return Slot4
 	else:
 		return mainItemList
-		
+
+
 func originalSlotItemCheck():
 	var slot = originalSlotCheck()
 	if ItemDatabase.originalOwner == slot.name && slot.get_item_metadata(0) != null:
@@ -246,10 +253,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		var mainNode = $"//root/DemoLevel/Dropped_Items"
 		var player = $"//root/DemoLevel/Player/KinematicBody2D"
 		var itemInstance = itemObject.instance()
-		
-	
+
 		if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
-				print("released")
 				itemOwner.removeItem(itemOwner.itemSelected[0])
 				mainNode.add_child(itemInstance)
 				itemInstance.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
@@ -257,7 +262,6 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 				itemInstance.position = player.position + offset
 				ItemDatabase.holdingItem = false
 				offset += Vector2(0, 5)
-				print("ITEM POSITION: " + str(itemInstance.position))
 	else:
 		return
 
@@ -271,9 +275,7 @@ func _on_Area2D2_input_event(viewport, event, shape_idx):
 		var player = $"//root/DemoLevel/Player/KinematicBody2D"
 		var itemInstance = itemObject.instance()
 
-	
 		if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
-				print("released")
 				itemOwner.removeItem(itemOwner.itemSelected[0])
 				mainNode.add_child(itemInstance)
 				itemInstance.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
@@ -281,5 +283,10 @@ func _on_Area2D2_input_event(viewport, event, shape_idx):
 				itemInstance.position = player.position + offset
 				ItemDatabase.holdingItem = false
 				offset += Vector2(0, 5)
-				print("ITEM POSITION: " + str(itemInstance.position))
-				print("PLayer Position: " + str(player.position + Vector2(608.587, 227.399)))
+
+
+func _on_Area2D3_input_event(viewport, event, shape_idx):
+	if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
+		ItemDatabase.originalOwner = null
+		ItemDatabase.heldItem = null
+		ItemDatabase.holdingItem = false

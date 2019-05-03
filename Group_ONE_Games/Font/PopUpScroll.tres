@@ -1,11 +1,11 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://Font/Rochella.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Font/Bringshoot.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 28
-outline_color = Color( 1, 0.94902, 0.94902, 1 )
+size = 48
 use_filter = true
+extra_spacing_top = -1
 extra_spacing_char = 2
 extra_spacing_space = 1
 font_data = ExtResource( 1 )
