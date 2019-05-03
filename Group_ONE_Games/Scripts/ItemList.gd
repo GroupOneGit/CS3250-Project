@@ -135,6 +135,7 @@ func addItems():
 		return
 		
 func addItem(key):
+	print("ORIGNAL OWNER: " + str(ItemDatabase.originalOwner))
 	if ItemDatabase.originalOwner == null:
 		if Slot1.get_item_count() == 0:
 			Slot1.addItem(key)

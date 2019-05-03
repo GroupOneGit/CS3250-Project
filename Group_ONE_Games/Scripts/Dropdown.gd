@@ -16,3 +16,4 @@ func can_drop_data(position, data):
 func drop_data(position, data):
 	ItemDatabase.holdingItem = false
 	ItemDatabase.heldItem = null
+	ItemDatabase.originalOwner = null

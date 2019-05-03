@@ -27,6 +27,7 @@ volume_db = -25.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -51,6 +52,7 @@ visible = false
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="Obstacles" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 797.55, 1228.5 )
 scale = Vector2( 0.179144, 0.151001 )
 
