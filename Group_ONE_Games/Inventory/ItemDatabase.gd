@@ -21,6 +21,7 @@ const itemImages = [
 	preload("res://Art/Food/Banana.png"),
 	preload("res://Art/Items/Clam2.png"),
 	preload("res://Art/Food/Apple.png"),
+	preload("res://Art/Items/Pirate hat.png")
 ]
 
 var ITEMS = {
@@ -54,9 +55,9 @@ var ITEMS = {
 		 repairable = false,
 		 cookable = false,
 		 stackable = true,
-		 effects = "dehydration",
+		 effects = "Health Bonus",
 		 thirstEffect = 5,
-		 healthEffect = 15
+		 healthEffect = 25
 	},
 
 	"2" : {
@@ -70,9 +71,9 @@ var ITEMS = {
 		 repairable = false,
 		 cookable = false,
 		 stackable = true,
-		 effects = "dehydration",
+		 effects = "Health Bonus",
 		 thirstEffect = 5,
-		 healthEffect = 15
+		 healthEffect = 25
 	},
 
 	"3" : {
@@ -740,21 +741,21 @@ var ITEMS = {
 #		 healthEffect = 0
 #	},
 #
-#	"44" : {
-#		 name = "Mysterious Artifact",
-#		 icon = PATH + "",
-#		 description = "A A mysterious artifact that may be used for something.",
-#		 itemHealth = null,
-#		 dph = 0,
-#		 edible = false,
-#		 questItem = true,
-#		 repairable = false,
-#		 cookable = false,
-#		 stackable = false,
-#		 effects = "key",
-#		 thirstEffect = 0,
-#		 healthEffect = 0
-#	},
+	"44" : {
+		 name = "Pirate hat",
+		 icon = itemImages[10],
+		 description = "A glowing green hat.",
+		 itemHealth = null,
+		 dph = 0,
+		 edible = false,
+		 questItem = true,
+		 repairable = false,
+		 cookable = false,
+		 stackable = false,
+		 effects = "key",
+		 thirstEffect = 0,
+		 healthEffect = 0
+	},
 #
 #	"45" : {
 #		 name = "SOS Beacon",
