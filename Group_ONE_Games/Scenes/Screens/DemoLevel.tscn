@@ -41,9 +41,6 @@ margin_bottom = 4.01056
 mouse_filter = 0
 script = ExtResource( 4 )
 
-[node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
-editor/display_folded = true
-
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 5 )]
 pause_mode = 2
 visible = false
