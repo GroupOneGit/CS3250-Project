@@ -1,5 +1,6 @@
 extends Node2D
-
+#onready var popUpScrollScene = preload("res://Scenes/PopUpScroll.tscn")
+onready var demoLevel = get_node("/root/DemoLevel")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

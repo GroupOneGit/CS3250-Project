@@ -8,6 +8,7 @@ onready var scrollLabel = get_node("Z_Index/Label")
 onready var popUpScrollScene = preload("res://Scenes/PopUpScroll.tscn")
 onready var demoLevel = get_node("/root/DemoLevel")
 onready var popUpScroll = popUpScrollScene.instance()
+var scrollPage = ItemDatabase.scrollPage
 
 var scrollText = {
 	
@@ -56,52 +57,11 @@ func _on_InteractArea_body_exited(body):
 
 func _input(event):
 	if event.is_action_pressed("ui_interact") && inArea == true:
-		match self.name:
-			"Scroll1":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
-				print("1")
-				print(scrollText[1].text)
-				show_scroll(scrollText[1].text)
-				#Do stuff if scroll picked up is Scroll1
-			"Scroll2":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
-				print("2")
-				show_scroll(scrollText[2].text)
-				#Do stuff if scroll picked up is Scroll2
-			"Scroll3":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
-				print("3")
-				show_scroll(scrollText[3].text)
-				#Do stuff if scroll picked up is Scroll3
-			"Scroll4":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/" + str(self.name))
-				print("4")
-				show_scroll(scrollText[4].text)
-				#Do stuff if scroll picked up is Scroll4
-			"Scroll5":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_MID/" + str(self.name))
-				print("5")
-				show_scroll(scrollText[5].text)
-				#Do stuff if scroll picked up is Scroll5
-			"Scroll6":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_MID/" + str(self.name))
-				print("6")
-				show_scroll(scrollText[6].text)
-				#Do stuff if scroll picked up is Scroll6
-			"Scroll7":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_MID/" + str(self.name))
-				print("7")
-				show_scroll(scrollText[7].text)
-				#Do stuff if scroll picked up is Scroll7
-			"Scroll8":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_BOT/" + str(self.name))
-				print("8")
-				show_scroll(scrollText[8].text)
-				#Do stuff if scroll picked up is Scroll8
-			"Scroll9":
-				scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_BOT/" + str(self.name))
-				print("9")
-				
+		scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/Scroll" + str(ItemDatabase.scrollsFound + 1))
+		show_scroll(scrollText[ItemDatabase.scrollPage].text)
+		ItemDatabase.scrollPage += 1
+		ItemDatabase.scroll[ItemDatabase.scrollsFound + 1].hasFound = true
+		ItemDatabase.scrollsFound += 1
 		queue_free()
 		scrollOnShelf.texture = scrollIMG
 		AudioServer.set_bus_mute(1, true)
@@ -109,7 +69,6 @@ func _input(event):
 
 func _on_SoundArea_body_entered(body):
 	if body.is_in_group("Player"):
-		print("playing")
 		AudioServer.set_bus_mute(1, false)
 		$AudioStreamPlayer2D.play(0.90)
 
