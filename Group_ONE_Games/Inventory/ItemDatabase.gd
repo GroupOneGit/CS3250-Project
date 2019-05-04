@@ -1124,4 +1124,13 @@ func stats(id):
 	var stats = ("Item: " + ITEMS[id].name + " Description: " + ITEMS[id].description + " Health: " + str(ITEMS[id].health) + " Abilities: " + ITEMS[id].abilities)
 	return stats
 
-
+func restart():
+	var heldItem = null
+	var originalOwner = null
+	var scrollPage = 1
+	var holdingItem = false
+	var slot1Item = null
+	var slot2Item = null
+	var slot3Item = null
+	var slot4Item = null
+	var scrollsFound = 0
