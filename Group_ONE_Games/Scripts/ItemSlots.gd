@@ -12,7 +12,8 @@ onready var itemObject = load("res://Scenes/Dropped_Item.tscn")
 onready var dropDown = get_parent().get_parent().get_parent().get_parent().get_node("Dropdown")
 onready var panel = get_parent().get_parent().get_parent().get_parent().get_node("Area2D/Panel")
 onready var panel2 = get_parent().get_parent().get_parent().get_parent().get_node("Area2D2/Panel2")
-var offset = Vector2(648.587, 237.399)
+var offset = Vector2(600,220)
+var leftOffset = Vector2(520, 220)
 
 func _process(delta):
 	if ItemDatabase.holdingItem == true && dropDown.is_visible():
@@ -86,12 +87,15 @@ func get_drag_data(position):
 	if is_anything_selected():
 		itemSelected = get_selected_items()
 		dragIcon.texture = get_item_icon(itemSelected[0])
+	elif self.get_item_count() > 0:
+		itemSelected = select(0, true)
 	else:
 		return
 	set_drag_preview(dragIcon)
 	ItemDatabase.heldItem = get_item_metadata(itemSelected[0])
 	ItemDatabase.originalOwner = get_focus_owner().name
 	ItemDatabase.holdingItem = true
+	print(ItemDatabase.heldItem)
 	return itemSelected
 
 
@@ -101,7 +105,7 @@ func can_drop_data(position, data):
 
 
 func drop_data(position, data):
-	if ItemDatabase.originalOwner != get_focus_owner().name:
+	if ItemDatabase.originalOwner != get_focus_owner().name && ItemDatabase.heldItem != null:
 		if ItemDatabase.originalOwner == mainItemList.name && itemsSlotted == 0:
 			mainItemList.removeItem(data[0])
 			addItem(ItemDatabase.heldItem)
@@ -137,8 +141,8 @@ func drop_data(position, data):
 			print(ItemDatabase.originalOwner)
 			print(itemsSlotted)
 			swapItem()
-#		elif itemsSlotted == 0:
-#			addItem(ItemDatabase.heldItem)
+		else:
+			print("dunno")
 	ItemDatabase.heldItem = null
 	ItemDatabase.holdingItem = false
 	ItemDatabase.originalOwner = null
@@ -259,9 +263,10 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 				mainNode.add_child(itemInstance)
 				itemInstance.texture = ItemDatabase.ITEMS[str(ItemDatabase.heldItem)].icon
 				itemInstance.itemData = ItemDatabase.heldItem
-				itemInstance.position = player.position + offset
+				itemInstance.position = player.position + leftOffset
 				ItemDatabase.holdingItem = false
-				offset += Vector2(0, 5)
+				ItemDatabase.heldItem = null
+				ItemDatabase.originalOwner = null
 	else:
 		return
 
@@ -269,12 +274,12 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _on_Area2D2_input_event(viewport, event, shape_idx):
 	if dropDown.is_visible():
 		var itemOwner = originalSlotCheck()
-		print(itemOwner)
+		print(itemOwner.name)
 		print(itemOwner.itemSelected)
 		var mainNode = $"//root/DemoLevel/Dropped_Items"
 		var player = $"//root/DemoLevel/Player/KinematicBody2D"
 		var itemInstance = itemObject.instance()
-
+		
 		if Input.is_action_just_released("ui_LMB") && ItemDatabase.heldItem != null:
 				itemOwner.removeItem(itemOwner.itemSelected[0])
 				mainNode.add_child(itemInstance)
@@ -282,7 +287,11 @@ func _on_Area2D2_input_event(viewport, event, shape_idx):
 				itemInstance.itemData = ItemDatabase.heldItem
 				itemInstance.position = player.position + offset
 				ItemDatabase.holdingItem = false
-				offset += Vector2(0, 5)
+				ItemDatabase.heldItem = null
+				ItemDatabase.originalOwner = null
+	else:
+		return
+
 
 
 func _on_Area2D3_input_event(viewport, event, shape_idx):
@@ -290,3 +299,9 @@ func _on_Area2D3_input_event(viewport, event, shape_idx):
 		ItemDatabase.originalOwner = null
 		ItemDatabase.heldItem = null
 		ItemDatabase.holdingItem = false
+
+
+
+func _on_Area2D2_mouse_entered():
+	print("entered")
+	pass # Replace with function body.

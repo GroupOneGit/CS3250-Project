@@ -7,7 +7,10 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	print(body.name)
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") && mainItemList.get_item_count() < 28:
 		mainItemList.addItem(self.itemData)
 		queue_free()
+
+func _on_Timer_timeout():
+	queue_free()
+	pass # Replace with function body.

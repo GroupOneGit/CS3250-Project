@@ -4,12 +4,18 @@ var heldItem = null
 var originalOwner = null
 var scrollPage = 1
 var holdingItem = false
+
 var slot1Item = null
 var slot2Item = null
 var slot3Item = null
 var slot4Item = null
+var scrollsFound = 0
+
+
+
 var itemListArray = Array()
 const PATH = null
+
 const itemImages = [ 
 	preload("res://Art/Items/Water Bottle.png"),
 	preload("res://Art/Food/Blue Berry.png"),
@@ -23,6 +29,47 @@ const itemImages = [
 	preload("res://Art/Food/Apple.png"),
 	preload("res://Art/Items/Pirate hat.png")
 ]
+
+var scroll = {
+	
+	1: {
+		text = "I ended up on this island... Some massive storm carried my ship here while I was on my way to Europe to deliver these crates of artifacts to a client. I tried to escape by...",
+		hasFound = false
+	},
+	
+	2: {
+		text = "... building a raft out of these long vines I found in the forest, some clothe from a washed up crate, and a few trees; basically whatever I found on the island, but...",
+		hasFound = false
+	},
+	3: {
+		text = "... that same type of storm keeps bringing me back to this island. I'm starting to feel cursed. My latest effort ended with a wrecked raft. I also keep hearing... ",
+		hasFound = false
+	},
+	4: {
+		text = "... sounds at night now and it's getting creepy. I feel like something is following me. I dont think I can stay here. I must move again. I have to find another way off this island.  THe museum better pay up big time for making me carry those crates of...",
+		hasFound = false
+	},
+	5: {
+		text = "... cursed items for that new exhibit.  I wonder why they wanted a bunch of a dead guy's clothing. Probably because it was taken out of a chest found in the ocean.  I admit they are... ",
+		hasFound = false
+	},
+	6: {
+		text = "... pretty comfortable clothes and I look pretty snappy in this getup.  It's missing a hat though, must have been on the next shipment. The noises are getting worse. I see things now, faintly glowing weird looking creatures.  They seem to be interested in these clothes and...",
+		hasFound = false
+	},
+	7: {
+		text = "... they seem angry that I am sporting them.  I noticed an old pirate ship on the far beach, seems ghosly. I'mguessing that is where these weird creatures are coming from. These clothes...",
+		hasFound = false
+	},
+	8: {
+		text = "... kept pulling me toward the ship and I found a glowing chest that is simply tantalizing.  It calls to my mind... I feel like it wants me to open it. I keep hearing 'return them' in my mind. Them? The clothes maybe?",
+		hasFound = false
+	},
+	9: {
+		text = "The hat...it...wanted the hat.",
+		hasFound = false
+	}
+}
 
 var ITEMS = {
 
