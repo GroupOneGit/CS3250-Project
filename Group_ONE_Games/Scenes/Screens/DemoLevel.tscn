@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/DemoLevel.gd" type="Script" id=1]
-[ext_resource path="res://Audio/Exploration6 - Tropical Island.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Audio/Stroll 'n Roll.wav" type="AudioStream" id=2]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Screens/Pause.tscn" type="PackedScene" id=5]
@@ -22,7 +22,6 @@
 script = ExtResource( 1 )
 
 [node name="Music" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
 pause_mode = 2
@@ -40,9 +39,6 @@ margin_right = 1.67017
 margin_bottom = 4.01056
 mouse_filter = 0
 script = ExtResource( 4 )
-
-[node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
-editor/display_folded = true
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 5 )]
 pause_mode = 2
