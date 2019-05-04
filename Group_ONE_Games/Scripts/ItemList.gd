@@ -25,9 +25,6 @@ func _input(event):
 func _ready():
 	pass
 
-
-
-
 func get_drag_data(position):
 	var dragIcon = TextureRect.new()
 	if is_anything_selected():
