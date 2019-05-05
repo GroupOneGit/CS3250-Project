@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Audio/Exploration6 - Tropical Island.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=2]
@@ -10,10 +10,11 @@
 [ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Crab.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/TrapPole.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/ScrollBottle.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Tikiman.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/TrapPole.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/ScrollBottle.tscn" type="PackedScene" id=15]
 
 [node name="DemoLevel" type="Node"]
 
@@ -27,7 +28,6 @@ volume_db = -25.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 2 )]
 editor/display_folded = true
@@ -40,7 +40,6 @@ script = ExtResource( 3 )
 
 [node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
 editor/display_folded = true
-visible = false
 
 [node name="Shelf_TOP" parent="CanvasLayer/GUI/Dropdown" index="1"]
 editor/display_folded = false
@@ -52,7 +51,6 @@ visible = false
 [node name="DialogBox" parent="CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="Obstacles" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 797.55, 1228.5 )
 scale = Vector2( 0.179144, 0.151001 )
 
@@ -86,7 +84,6 @@ position = Vector2( 11412.9, -4668.7 )
 position = Vector2( 10788.8, -3921.41 )
 
 [node name="Random" type="Node2D" parent="Obstacles"]
-editor/display_folded = true
 
 [node name="Small_Spike" parent="Obstacles/Random" instance=ExtResource( 7 )]
 position = Vector2( 1942.45, -3851.96 )
@@ -112,7 +109,6 @@ position = Vector2( 3558.41, -5665.02 )
 position = Vector2( 9977.4, -7005.48 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Crab" parent="Enemies" instance=ExtResource( 9 )]
 position = Vector2( 1311.71, 411.316 )
@@ -150,40 +146,42 @@ position = Vector2( 1131.05, 831.801 )
 [node name="Spawner" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 2465.6, 34.4163 )
 
-[node name="Player" parent="." instance=ExtResource( 11 )]
+[node name="Tikiman" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 1300.08, -55.6166 )
+
+[node name="Player" parent="." instance=ExtResource( 12 )]
 editor/display_folded = true
 position = Vector2( 608.587, 227.399 )
 
 [node name="KinematicBody2D" parent="Player" index="0"]
 editor/display_folded = true
 
-[node name="Map" parent="." instance=ExtResource( 12 )]
+[node name="Map" parent="." instance=ExtResource( 13 )]
 position = Vector2( 112.893, -80.0161 )
 
 [node name="Dropped_Items" type="Node2D" parent="."]
 z_as_relative = false
 
 [node name="Traps" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="SpikePole" parent="Traps" instance=ExtResource( 13 )]
+[node name="SpikePole" parent="Traps" instance=ExtResource( 14 )]
 position = Vector2( 2109.53, 347.89 )
 z_index = -1
 
 [node name="SpikePole2" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 13 )]
+] instance=ExtResource( 14 )]
 position = Vector2( 1001.08, 1178.97 )
 z_index = -1
 
 [node name="SpikePole3" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 13 )]
+] instance=ExtResource( 14 )]
 position = Vector2( 2465.26, 1509.15 )
 
 [node name="SpikePole4" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 13 )]
+] instance=ExtResource( 14 )]
 position = Vector2( -267.712, 1834.08 )
 
 [node name="Scrolls" type="Node2D" parent="."]
@@ -191,7 +189,7 @@ editor/display_folded = true
 position = Vector2( 602.303, 312.551 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="Scroll1" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll1" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 1413.41, -895.661 )
 rotation = 0.322269
@@ -204,8 +202,7 @@ margin_right = 122.932
 margin_bottom = 388.561
 rect_rotation = -19.1354
 
-[node name="Scroll2" parent="Scrolls" instance=ExtResource( 14 )]
-editor/display_folded = true
+[node name="Scroll2" parent="Scrolls" instance=ExtResource( 15 )]
 position = Vector2( 8178.65, -1494.63 )
 rotation = -0.898589
 scale = Vector2( 1, 1 )
@@ -217,7 +214,7 @@ margin_right = 335.814
 margin_bottom = 270.52
 rect_rotation = 50.885
 
-[node name="Scroll3" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll3" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 3986.51, 1203.28 )
 rotation = 0.657503
@@ -230,7 +227,7 @@ margin_right = 70.5313
 margin_bottom = 412.766
 rect_rotation = -37.799
 
-[node name="Scroll4" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll4" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 9414.06, 3686.28 )
 rotation = -0.667892
@@ -243,12 +240,12 @@ margin_right = 197.586
 margin_bottom = 359.829
 rect_rotation = 38.603
 
-[node name="Scroll5" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll5" parent="Scrolls" instance=ExtResource( 15 )]
 position = Vector2( -6327.27, 4983.93 )
 rotation = 0.0594288
 scale = Vector2( 1, 1 )
 
-[node name="Scroll6" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll6" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( -2187.86, 3535.41 )
 rotation = 0.516868
@@ -261,7 +258,7 @@ margin_right = 137.018
 margin_bottom = 442.659
 rect_rotation = -30.4866
 
-[node name="Scroll7" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll7" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 8635.14, 7875.84 )
 rotation = -1.1841
@@ -274,7 +271,7 @@ margin_right = 240.203
 margin_bottom = 381.521
 rect_rotation = 67.592
 
-[node name="Scroll8" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll8" parent="Scrolls" instance=ExtResource( 15 )]
 position = Vector2( -2712.04, -1170.4 )
 rotation = 0.321127
 scale = Vector2( 1, 1 )

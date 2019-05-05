@@ -11,6 +11,9 @@ var invTime = 0.0
 func _ready():
 	screensize = get_viewport_rect().size
 	
+func isplayer():
+	return true
+	
 func damage(thing, amt):
 	if invTime > 0:
 		pass

@@ -3,7 +3,7 @@ extends KinematicBody2D
 var speed = 0
 var health = 0 
 var attack = 0
-var creaturelist = ["crab"]
+var creaturelist = ["crab", "tikiman"]
 var drops = []
 onready var itemObject = load("res://Scenes/Dropped_Item.tscn")
 
@@ -29,6 +29,12 @@ func setcreature(key):
 			attack = 2
 			# first value is item key second is its wieght, weights should add to be less than one.
 			drops = [[5, .8]]
+		"tikiman":
+			speed = 200
+			health = 40
+			attack = 10
+			# first value is item key second is its wieght, weights should add to be less than one.
+			drops = [[-1, 1]]
 
 func death():
 	randomize()
