@@ -17,13 +17,13 @@ var scrollText = {
 	},
 	
 	2: {
-		text = "... building a raft out of these long vines I found in the forest, some clothe from a washed up crate, and a few trees; basically whatever I found on the island, but..."
+		text = "... building a raft out of these long vines I found in the forest, some cloth from a washed up crate, and a few trees; basically whatever I found on the island, but..."
 	},
 	3: {
-		text = "... that same type of storm keeps bringing me back to this island. I'm starting to feel cursed. My latest effort ended with a wrecked raft. I also keep hearing... "
+		text = "... that same type of storm keeps bringing me back to this island, I'm starting to feel cursed. My latest effort ended with a wrecked raft. I also keep hearing... "
 	},
 	4: {
-		text = "... sounds at night now and it's getting creepy. I feel like something is following me. I dont think I can stay here. I must move again. I have to find another way off this island.  THe museum better pay up big time for making me carry those crates of..."
+		text = "... sounds at night now and it's getting creepy. I feel like something is following me. I don’t think I can stay here. I must move again. I must find another way off this island.  The museum better pay up big time for making me carry those crates of..."
 	},
 	5: {
 		text = "... cursed items for that new exhibit.  I wonder why they wanted a bunch of a dead guy's clothing. Probably because it was taken out of a chest found in the ocean.  I admit they are... "
@@ -32,10 +32,10 @@ var scrollText = {
 		text = "... pretty comfortable clothes and I look pretty snappy in this getup.  It's missing a hat though, must have been on the next shipment. The noises are getting worse. I see things now, faintly glowing weird looking creatures.  They seem to be interested in these clothes and..."
 	},
 	7: {
-		text = "... they seem angry that I am sporting them.  I noticed an old pirate ship on the far beach, seems ghosly. I'mguessing that is where these weird creatures are coming from. These clothes..."
+		text = "... they seem angry that I am sporting them.  I noticed an old pirate ship on the far beach, seems ghostly. I'm guessing that is where these weird creatures are coming from. These clothes..."
 	},
 	8: {
-		text = "... kept pulling me toward the ship and I found a glowing chest that is simply tantalizing.  It calls to my mind... I feel like it wants me to open it. I keep hearing 'return them' in my mind. Them? The clothes maybe?"
+		text = "... keep pulling me toward the ship and I found a glowing chest that is simply tantalizing.  It calls to my mind... I feel like it wants me to open it. I keep hearing 'return them' in my mind. Them? The clothes maybe?"
 	},
 	9: {
 		text = "The hat...it...wanted the hat."
