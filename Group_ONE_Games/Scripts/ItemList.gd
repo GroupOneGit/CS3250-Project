@@ -25,9 +25,6 @@ func _input(event):
 func _ready():
 	pass
 
-
-
-
 func get_drag_data(position):
 	var dragIcon = TextureRect.new()
 	if is_anything_selected():
@@ -55,7 +52,7 @@ func drop_data(position, data):
 	
 
 			
-	if ItemDatabase.originalOwner != get_focus_owner().name:
+	if ItemDatabase.originalOwner != get_focus_owner().name && ItemDatabase.heldItem != null: 
 		if inventoryTotal < 28:
 			addItem(ItemDatabase.heldItem)
 			if ItemDatabase.originalOwner == Slot1.name:
@@ -89,7 +86,7 @@ func drop_data(position, data):
 				addItem(ItemDatabase.heldItem)
 				ItemDatabase.holdingItem = false
 			unselect_all()
-		elif dropSlot == -1:
+		elif dropSlot == -1 && itemSelected != null:
 			if ItemDatabase.originalOwner != get_focus_owner().name:
 				removeItem(itemSelected[0])
 				addItem(ItemDatabase.heldItem)
@@ -120,6 +117,9 @@ func createCrate():
 
 
 func addItems():
+	if loot.size() == 0:
+		print("NO ITEMS")
+		return
 	if inventoryTotal < 28:
 		for id in loot:
 				var icon = ItemDatabase.ITEMS[str(id)].icon

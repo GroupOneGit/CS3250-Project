@@ -1,19 +1,22 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Inventory/Inventory/580b585b2edbce24c47b2463.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Dropdown.gd" type="Script" id=2]
 [ext_resource path="res://Themes/Tooltip.tres" type="Theme" id=3]
 [ext_resource path="res://Scripts/ItemList.gd" type="Script" id=4]
 [ext_resource path="res://Art/Items/Shelf_TOP.png" type="Texture" id=5]
-[ext_resource path="res://Art/Items/Grayed_Bottle_Message.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Shelf_Scrolls.gd" type="Script" id=6]
 [ext_resource path="res://Art/Items/Shelf_MID.png" type="Texture" id=7]
 [ext_resource path="res://Art/Items/Shelf_BOT.png" type="Texture" id=8]
-[ext_resource path="res://Inventory/Inventory/scroll-large-bottom.png" type="Texture" id=9]
-[ext_resource path="res://Scripts/Background.gd" type="Script" id=10]
-[ext_resource path="res://Scenes/BarContainer.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Art/GUI-ART/Inventory/InventorySlot.png" type="Texture" id=12]
-[ext_resource path="res://Scripts/ItemSlots.gd" type="Script" id=13]
-[ext_resource path="res://Scripts/Panel.gd" type="Script" id=14]
+[ext_resource path="res://Art/Items/Grayed_Bottle_Message.png" type="Texture" id=9]
+[ext_resource path="res://Art/GUI-ART/mouse-click-icon.png" type="Texture" id=10]
+[ext_resource path="res://Font/KennyFuture.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Inventory/Inventory/scroll-large-bottom.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/Background.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/BarContainer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Art/GUI-ART/Inventory/InventorySlot.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/ItemSlots.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/Panel.gd" type="Script" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.858824, 0.8, 0.721569, 1 )
@@ -81,19 +84,19 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
 [sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 371, 300 )
+
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 70, 240 )
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id=13]
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0.172549, 0.172549, 0.172549, 0.294118 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 512, 300 )
 
 [node name="GUI" type="Control"]
 anchor_right = 1.0
@@ -102,11 +105,12 @@ mouse_filter = 2
 size_flags_horizontal = 2
 
 [node name="Dropdown" type="NinePatchRect" parent="."]
-visible = false
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 82.0
 margin_right = -94.0
+mouse_filter = 1
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
@@ -145,102 +149,172 @@ margin_left = 430.285
 margin_top = 185.132
 margin_right = -73.7153
 margin_bottom = 225.132
-mouse_filter = 2
+focus_mode = 1
 texture = ExtResource( 5 )
+script = ExtResource( 6 )
 
-[node name="Scroll1" type="TextureRect" parent="Dropdown/Shelf_TOP"]
-margin_left = 14.0205
-margin_top = -70.3322
-margin_right = 314.021
-margin_bottom = 229.668
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
-
-[node name="Scroll2" type="TextureRect" parent="Dropdown/Shelf_TOP"]
-margin_left = 90.1617
-margin_top = -69.3107
-margin_right = 390.162
-margin_bottom = 230.689
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
-
-[node name="Scroll3" type="TextureRect" parent="Dropdown/Shelf_TOP"]
-margin_left = 166.281
-margin_top = -70.4
-margin_right = 466.281
-margin_bottom = 229.6
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
-
-[node name="Scroll4" type="TextureRect" parent="Dropdown/Shelf_TOP"]
-margin_left = 243.337
-margin_top = -70.3106
-margin_right = 543.337
-margin_bottom = 229.689
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
-
-[node name="Shelf_MID" type="TextureRect" parent="Dropdown"]
-editor/display_folded = true
+[node name="Shelf_MID" type="TextureRect" parent="Dropdown/Shelf_TOP"]
 anchor_right = 1.0
-margin_left = 459.23
-margin_top = 269.21
-margin_right = -44.7702
-margin_bottom = 309.21
+margin_left = 27.0778
+margin_top = 89.4816
+margin_right = -29.9222
+margin_bottom = 129.482
 mouse_filter = 2
 texture = ExtResource( 7 )
 
-[node name="Scroll5" type="TextureRect" parent="Dropdown/Shelf_MID"]
-margin_left = 21.0381
-margin_top = -71.4598
-margin_right = 321.038
-margin_bottom = 228.54
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
-
-[node name="Scroll6" type="TextureRect" parent="Dropdown/Shelf_MID"]
-margin_left = 98.3855
-margin_top = -71.2542
-margin_right = 398.385
-margin_bottom = 228.746
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
-
-[node name="Scroll7" type="TextureRect" parent="Dropdown/Shelf_MID"]
-margin_left = 176.871
-margin_top = -71.2542
-margin_right = 476.871
-margin_bottom = 228.746
-rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
-
-[node name="Shelf_BOT" type="TextureRect" parent="Dropdown"]
-editor/display_folded = true
+[node name="Shelf_BOT" type="TextureRect" parent="Dropdown/Shelf_TOP"]
 anchor_right = 1.0
-margin_left = 483.311
-margin_top = 361.264
-margin_right = -20.6886
-margin_bottom = 401.264
+margin_left = 51.0356
+margin_top = 176.132
+margin_right = -51.9644
+margin_bottom = 216.132
 mouse_filter = 2
 texture = ExtResource( 8 )
 
-[node name="Scroll8" type="TextureRect" parent="Dropdown/Shelf_BOT"]
-margin_left = 31.542
-margin_top = -72.3472
-margin_right = 331.542
-margin_bottom = 227.653
+[node name="Scroll1" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 52.8376
+margin_top = -58.1207
+margin_right = -210.162
+margin_bottom = 161.879
 rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
 
-[node name="Scroll9" type="TextureRect" parent="Dropdown/Shelf_BOT"]
-margin_left = 112.779
-margin_top = -72.1556
-margin_right = 412.779
-margin_bottom = 227.844
+[node name="Scroll2" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 129.049
+margin_top = -58.1207
+margin_right = -133.951
+margin_bottom = 161.879
 rect_scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 6 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="Scroll3" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 207.599
+margin_top = -58.1207
+margin_right = -55.401
+margin_bottom = 161.879
+rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="Scroll4" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 280.556
+margin_top = -58.1207
+margin_right = 17.5562
+margin_bottom = 161.879
+rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="Scroll5" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 85.4697
+margin_top = 29.5582
+margin_right = -172.53
+margin_bottom = 249.558
+rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="Scroll6" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 162.501
+margin_top = 29.5582
+margin_right = -95.4986
+margin_bottom = 249.558
+rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="Scroll7" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 243.958
+margin_top = 29.5582
+margin_right = -14.0415
+margin_bottom = 249.558
+rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="Scroll8" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 125.031
+margin_top = 116.016
+margin_right = -132.969
+margin_bottom = 336.016
+rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="Scroll9" type="TextureRect" parent="Dropdown/Shelf_TOP"]
+anchor_right = 1.0
+margin_left = 208.787
+margin_top = 116.556
+margin_right = -49.213
+margin_bottom = 336.556
+rect_scale = Vector2( 0.3, 0.3 )
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 9 )
+
+[node name="ClickInfo" type="Control" parent="Dropdown"]
+visible = false
+margin_left = 512.264
+margin_top = 434.761
+margin_right = 552.264
+margin_bottom = 474.761
+
+[node name="ClickIcon" type="TextureRect" parent="Dropdown/ClickInfo"]
+modulate = Color( 0.282353, 0.2, 0.00784314, 1 )
+margin_left = -21.8159
+margin_top = -8.70459
+margin_right = 286.184
+margin_bottom = 354.295
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="Dropdown/ClickInfo"]
+modulate = Color( 0.282353, 0.2, 0.00784314, 1 )
+margin_left = 15.0
+margin_top = 1.0
+margin_right = 239.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 11 )
+text = "Click scroll to read."
 
 [node name="Background" type="NinePatchRect" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 margin_left = -1.55002
 margin_top = -11.0
@@ -248,10 +322,11 @@ margin_right = -1.55005
 margin_bottom = 103.0
 rect_min_size = Vector2( 1024, 70 )
 mouse_filter = 0
-texture = ExtResource( 9 )
-script = ExtResource( 10 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="StatusBarContainer" type="HBoxContainer" parent="Background"]
+editor/display_folded = true
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -261,7 +336,7 @@ margin_right = -492.0
 margin_bottom = 37.0
 mouse_filter = 2
 
-[node name="BarContainer" parent="Background/StatusBarContainer" instance=ExtResource( 11 )]
+[node name="BarContainer" parent="Background/StatusBarContainer" instance=ExtResource( 14 )]
 margin_left = 0.0
 margin_right = 356.0
 margin_bottom = 59.0
@@ -287,7 +362,7 @@ focus_mode = 2
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 12 )
+texture = ExtResource( 15 )
 stretch_mode = 4
 
 [node name="Item1" type="ItemList" parent="Background/MainItems/Slot1"]
@@ -308,7 +383,7 @@ custom_styles/selected = SubResource( 7 )
 custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 13 )
+script = ExtResource( 16 )
 
 [node name="Slot2" type="TextureRect" parent="Background/MainItems"]
 margin_left = 54.0
@@ -318,7 +393,7 @@ rect_min_size = Vector2( 50, 0 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 12 )
+texture = ExtResource( 15 )
 stretch_mode = 4
 
 [node name="Item2" type="ItemList" parent="Background/MainItems/Slot2"]
@@ -339,7 +414,7 @@ custom_styles/selected = SubResource( 10 )
 custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 13 )
+script = ExtResource( 16 )
 
 [node name="Slot3" type="TextureRect" parent="Background/MainItems"]
 margin_left = 108.0
@@ -349,7 +424,7 @@ rect_min_size = Vector2( 50, 0 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 12 )
+texture = ExtResource( 15 )
 stretch_mode = 4
 
 [node name="Item3" type="ItemList" parent="Background/MainItems/Slot3"]
@@ -370,7 +445,7 @@ custom_styles/selected = SubResource( 10 )
 custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 13 )
+script = ExtResource( 16 )
 
 [node name="Slot4" type="TextureRect" parent="Background/MainItems"]
 margin_left = 162.0
@@ -380,7 +455,7 @@ rect_min_size = Vector2( 50, 0 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource( 12 )
+texture = ExtResource( 15 )
 stretch_mode = 4
 
 [node name="Item4" type="ItemList" parent="Background/MainItems/Slot4"]
@@ -401,14 +476,22 @@ custom_styles/selected = SubResource( 10 )
 custom_styles/bg = SubResource( 8 )
 icon_mode = 0
 fixed_icon_size = Vector2( 35, 35 )
-script = ExtResource( 13 )
+script = ExtResource( 16 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( -417.542, 5.14427 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 927.617, 294.766 )
+shape = SubResource( 11 )
 
 [node name="Area2D" type="Area2D" parent="."]
 editor/display_folded = true
+priority = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 68.1622, 343.083 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="Panel" type="Panel" parent="Area2D"]
 anchor_right = 1.0
@@ -417,9 +500,9 @@ margin_left = -6.0
 margin_top = 103.0
 margin_right = 138.0
 margin_bottom = 582.0
-custom_styles/panelf = SubResource( 12 )
-custom_styles/panel = SubResource( 13 )
-script = ExtResource( 14 )
+custom_styles/panelf = SubResource( 13 )
+custom_styles/panel = SubResource( 14 )
+script = ExtResource( 17 )
 
 [node name="Label" type="Label" parent="Area2D/Panel"]
 anchor_left = 0.5
@@ -436,10 +519,11 @@ text = "DRAG HERE TO
 
 [node name="Area2D2" type="Area2D" parent="."]
 editor/display_folded = true
+priority = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 951.999, 343.083 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="Panel2" type="Panel" parent="Area2D2"]
 editor/display_folded = true
@@ -449,9 +533,9 @@ margin_left = 885.0
 margin_top = 103.0
 margin_right = 1026.0
 margin_bottom = 582.0
-custom_styles/panelf = SubResource( 12 )
-custom_styles/panel = SubResource( 13 )
-script = ExtResource( 14 )
+custom_styles/panelf = SubResource( 13 )
+custom_styles/panel = SubResource( 14 )
+script = ExtResource( 17 )
 
 [node name="Label2" type="Label" parent="Area2D2/Panel2"]
 anchor_left = 0.5
@@ -466,13 +550,16 @@ custom_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
 text = "DRAG HERE TO
       DROP"
 
-[node name="Area2D3" type="Area2D" parent="."]
-position = Vector2( -417.542, 5.14427 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2( 931.491, 294.507 )
-shape = SubResource( 14 )
-
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll1" to="Dropdown/Shelf_TOP" method="_on_Scroll1_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll2" to="Dropdown/Shelf_TOP" method="_on_Scroll2_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll3" to="Dropdown/Shelf_TOP" method="_on_Scroll3_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll4" to="Dropdown/Shelf_TOP" method="_on_Scroll4_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll5" to="Dropdown/Shelf_TOP" method="_on_Scroll5_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll6" to="Dropdown/Shelf_TOP" method="_on_Scroll6_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll7" to="Dropdown/Shelf_TOP" method="_on_Scroll7_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll8" to="Dropdown/Shelf_TOP" method="_on_Scroll8_gui_input"]
+[connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll9" to="Dropdown/Shelf_TOP" method="_on_Scroll9_gui_input"]
+[connection signal="input_event" from="Area2D3" to="Background/MainItems/Slot1/Item1" method="_on_Area2D3_input_event"]
 [connection signal="input_event" from="Area2D" to="Background/MainItems/Slot1/Item1" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Area2D2" to="Background/MainItems/Slot1/Item1" method="_on_Area2D2_input_event"]
-[connection signal="input_event" from="Area2D3" to="Background/MainItems/Slot1/Item1" method="_on_Area2D3_input_event"]
+[connection signal="mouse_entered" from="Area2D2" to="Background/MainItems/Slot1/Item1" method="_on_Area2D2_mouse_entered"]
