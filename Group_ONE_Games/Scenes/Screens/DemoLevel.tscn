@@ -172,7 +172,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Scroll1" parent="Scrolls" instance=ExtResource( 15 )]
+[node name="Scroll1" parent="Scrolls" instance=ExtResource( 16 )]
 editor/display_folded = true
 position = Vector2( 1413.41, -895.661 )
 rotation = 0.322269
@@ -190,12 +190,12 @@ margin_right = 335.814
 margin_bottom = 270.52
 rect_rotation = 50.885
 
-[node name="Scroll3" parent="Scrolls" instance=ExtResource( 15 )]
+[node name="Scroll3" parent="Scrolls" instance=ExtResource( 16 )]
 editor/display_folded = true
 position = Vector2( 3986.51, 1203.28 )
 rotation = 0.657503
 
-[node name="Scroll4" parent="Scrolls" instance=ExtResource( 15 )]
+[node name="Scroll4" parent="Scrolls" instance=ExtResource( 16 )]
 editor/display_folded = true
 position = Vector2( 9414.06, 3686.28 )
 rotation = -0.667892
@@ -205,7 +205,7 @@ position = Vector2( -3989.96, 5935.29 )
 rotation = 0.0594288
 scale = Vector2( 1, 1 )
 
-[node name="Scroll6" parent="Scrolls" instance=ExtResource( 15 )]
+[node name="Scroll6" parent="Scrolls" instance=ExtResource( 16 )]
 editor/display_folded = true
 position = Vector2( -900.679, 2625.6 )
 rotation = 0.516868
