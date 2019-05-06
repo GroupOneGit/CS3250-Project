@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var speed = 200 #how fast the player will move
 var screensize 
-var direction = Vector2(0,0)
+var direction = Vector2(0,-1)
 var velocity = Vector2(0,0)
 var sprint = false
 var move = false

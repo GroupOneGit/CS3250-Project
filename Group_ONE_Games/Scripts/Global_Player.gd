@@ -26,16 +26,7 @@ func setP(i):
 	poisoned = i
 
 func _process(delta):
-	dehydrate(0.5 , delta)
-	if Input.is_action_just_pressed('ui_page_down'):
-		lose_thirst(10)
-		lose_energy(10)
-		take_damage(10)
-	if Input.is_action_just_pressed('ui_page_up'):
-		gain_energy(10)
-		gain_health(10)
-		gain_thirst(10)
-	
+	dehydrate(0.3 , delta)
 	
 
 func switch_to(name):

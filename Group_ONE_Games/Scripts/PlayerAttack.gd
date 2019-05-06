@@ -15,7 +15,12 @@ func attack(amt, vec):
 	self.position.x = vec.x * 35
 	self.position.y = vec.y * 35
 	self.show()
+	if vec.x >= 0:
+		$Sprite.flip_h = false
+	else:
+		$Sprite.flip_h = true
 	self.rotation = angle
+		
 	time = .1
 	hit()
 

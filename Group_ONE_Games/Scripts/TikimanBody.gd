@@ -7,10 +7,12 @@ var move = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.hide()
 	setcreature("tikiman")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	#ADD GLOBAL HERE
 	if move:
 		for body in $Area2D.get_overlapping_bodies():
 			if body.is_in_group("Player"):
@@ -29,6 +31,8 @@ func _physics_process(delta):
 
 
 func _on_Area2D_body_entered(body):
+	# if global
+	self.show()
 	if body.is_in_group("Player"):
 		move = true
 		$AnimatedSprite.animation = "Walk"

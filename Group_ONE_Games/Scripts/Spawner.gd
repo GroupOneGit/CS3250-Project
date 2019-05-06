@@ -13,8 +13,7 @@ func nextT():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time = time - delta
-	if time < 0:
-		print("spawned crab")
+	if time < 0 and self.get_child_count():
 		var enemyinstance = enemy.instance()
 		self.add_child(enemyinstance)
 		nextT()

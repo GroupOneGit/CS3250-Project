@@ -29,13 +29,13 @@ func setcreature(key):
 			health = 10
 			attack = 2
 			# first value is item key second is its wieght, weights should add to be less than one.
-			drops = [[5, .8]]
+			drops = [[5, .8],[0,.1]]
 		"tikiman":
 			speed = 200
 			health = 100
 			attack = 10
 			# first value is item key second is its wieght, weights should add to be less than one.
-			drops = [[-1, 1]]
+			drops = [[0, .5],[3, 0.5]]
 
 func death():
 	randomize()

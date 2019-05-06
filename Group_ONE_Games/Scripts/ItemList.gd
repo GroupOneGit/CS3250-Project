@@ -15,16 +15,6 @@ onready var Slot2 = get_parent().get_parent().get_node("Background/MainItems/Slo
 onready var Slot3 = get_parent().get_parent().get_node("Background/MainItems/Slot3/Item3")
 onready var Slot4 = get_parent().get_parent().get_node("Background/MainItems/Slot4/Item4")
 
-func _input(event):
-	if event is InputEvent and event.is_action_pressed("ui_select"):
-		print("testing")
-		var rando = randi()%10
-		addItem(rando)
-
-
-func _ready():
-	pass
-
 func get_drag_data(position):
 	var dragIcon = TextureRect.new()
 	if is_anything_selected():
@@ -32,8 +22,8 @@ func get_drag_data(position):
 		dragIcon.texture = get_item_icon(itemSelected[0])
 	else:
 		return
-	print("ITEM SELECTED: " + str(itemSelected))
-	print("ITEM DICT KEY 1 : " + str(get_item_metadata(itemSelected[0])))
+	#print("ITEM SELECTED: " + str(itemSelected))
+	#print("ITEM DICT KEY 1 : " + str(get_item_metadata(itemSelected[0])))
 	set_drag_preview(dragIcon)
 	ItemDatabase.heldItem = get_item_metadata(itemSelected[0])
 	ItemDatabase.holdingItem = true
@@ -118,7 +108,7 @@ func createCrate():
 
 func addItems():
 	if loot.size() == 0:
-		print("NO ITEMS")
+		#print("NO ITEMS")
 		return
 	if inventoryTotal < 28:
 		for id in loot:
@@ -135,7 +125,7 @@ func addItems():
 		return
 		
 func addItem(key):
-	print("ORIGNAL OWNER: " + str(ItemDatabase.originalOwner))
+	#print("ORIGNAL OWNER: " + str(ItemDatabase.originalOwner))
 	if ItemDatabase.originalOwner == null:
 		if Slot1.get_item_count() == 0:
 			Slot1.addItem(key)
@@ -162,7 +152,7 @@ func addItem(key):
 			inventoryTotal += 1
 			ItemDatabase.heldItem = null
 			ItemDatabase.holdingItem = false
-			print("INVTENTORY TOTAL: " + str(inventoryTotal))
+			#print("INVTENTORY TOTAL: " + str(inventoryTotal))
 	else:
 		ItemDatabase.holdingItem = false
 		return
@@ -171,5 +161,5 @@ func removeItem(key):
 	remove_item(key)
 	index -= 1
 	inventoryTotal -= 1
-	print("INVTENTORY TOTAL: " + str(inventoryTotal))
+	#print("INVTENTORY TOTAL: " + str(inventoryTotal))
 	pass
