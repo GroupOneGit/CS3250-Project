@@ -92,9 +92,10 @@ func _physics_process(delta):
 		$AnimatedSprite.stop()
 
 	if direction.x != 0:
-		$AnimatedSprite.animation = 'Right'
-		$AnimatedSprite.flip_v = false
-		$AnimatedSprite.flip_h = direction.x < 0
+		if direction.x >0:
+			$AnimatedSprite.animation = 'Right'
+		else: 
+			$AnimatedSprite.animation = 'Left'
 	elif direction.y > 0:
 		$AnimatedSprite.animation = 'Down'
 	elif direction.y != 0:

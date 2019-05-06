@@ -45,10 +45,11 @@ func death():
 	var i = 0
 	for drop in drops:
 		i = i + drop[1]
-		if i < r:
+		if r < i:
 			itemkey = drop[0]
 
-	var Item = ItemDatabase.ITEMS.get(str(itemkey))
+	var Item = ItemDatabase.ITEMS.get(itemkey)
+	
 	if Item:
 		print("item dropped")
 		var itemInstance = itemObject.instance()
