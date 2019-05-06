@@ -75,6 +75,7 @@ anims/Top_down = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackgroundMusic"]
 stream = ExtResource( 6 )
+volume_db = -25.143
 autoplay = true
 
 [connection signal="pressed" from="Background/TextureRect/HBoxContainer/Yes" to="." method="_on_Yes_pressed"]

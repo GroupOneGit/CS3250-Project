@@ -31,7 +31,7 @@ func setcreature(key):
 			drops = [[5, .8]]
 		"tikiman":
 			speed = 200
-			health = 40
+			health = 100
 			attack = 10
 			# first value is item key second is its wieght, weights should add to be less than one.
 			drops = [[-1, 1]]

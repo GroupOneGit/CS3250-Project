@@ -11,9 +11,6 @@ var invTime = 0.0
 func _ready():
 	screensize = get_viewport_rect().size
 	
-func isplayer():
-	return true
-	
 func damage(thing, amt):
 	if invTime > 0:
 		pass
@@ -59,6 +56,7 @@ func _input(event):
 
 	if event.is_action_pressed('ui_attack'):
 		if Global_Player.energy >= 5:
+			$AudioStreamPlayer.play()
 			Global_Player.lose_energy(5)
 			$Attack.attack(10, direction.normalized())
 
