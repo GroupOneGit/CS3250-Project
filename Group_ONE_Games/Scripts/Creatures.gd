@@ -5,6 +5,7 @@ var health = 0
 var attack = 0
 var creaturelist = ["crab", "tikiman"]
 var drops = []
+onready var itemlayer = get_node("/root/DemoLevel/Dropped_Items")
 onready var itemObject = load("res://Scenes/Dropped_Item.tscn")
 
 func _ready():
@@ -47,16 +48,17 @@ func death():
 		i = i + drop[1]
 		if r < i:
 			itemkey = drop[0]
+			break
 
-	var Item = ItemDatabase.ITEMS.get(itemkey)
+	var Item = ItemDatabase.ITEMS.get(str(itemkey))
 	
 	if Item:
 		print("item dropped")
 		var itemInstance = itemObject.instance()
 		itemInstance.texture = Item.icon
-		itemInstance.itemData = Item
-
-	else:
-		queue_free()
+		itemInstance.itemData = str(itemkey)
+		itemInstance.set_global_position(self.get_global_position())
+		itemlayer.add_child(itemInstance)
+	queue_free()
 	
 	
