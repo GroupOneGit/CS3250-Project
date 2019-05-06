@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Art/Items/Tiki.png" type="Texture" id=1]
 [ext_resource path="res://Art/Items/Tikis.png" type="Texture" id=2]
@@ -9,9 +9,10 @@
 [ext_resource path="res://Art/Items/Machete.png" type="Texture" id=7]
 [ext_resource path="res://Art/Items/Tent.png" type="Texture" id=8]
 [ext_resource path="res://Art/Items/Campfire.png" type="Texture" id=9]
-[ext_resource path="res://Art/Background/Palmtree.png" type="Texture" id=10]
-[ext_resource path="res://Art/Background/Palmtree_coconuts.png" type="Texture" id=11]
-[ext_resource path="res://Scenes/crate.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Art/Background/Pirateship.png" type="Texture" id=10]
+[ext_resource path="res://Art/Background/Palmtree.png" type="Texture" id=11]
+[ext_resource path="res://Art/Background/Palmtree_coconuts.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/crate.tscn" type="PackedScene" id=13]
 
 [node name="MAP" type="Node2D"]
 position = Vector2( 15.5672, 13.1723 )
@@ -226,6 +227,11 @@ region_filter_clip = true
 position = Vector2( 323.487, 428.631 )
 scale = Vector2( 1.28832, 1.44411 )
 texture = ExtResource( 9 )
+
+[node name="Pirateship" type="Sprite" parent="TileMap/Campfire"]
+position = Vector2( -2123.02, 481.268 )
+scale = Vector2( 4.02532, 5.68118 )
+texture = ExtResource( 10 )
 
 [node name="Rock2" type="Sprite" parent="TileMap"]
 editor/display_folded = true
@@ -670,7 +676,6 @@ texture = ExtResource( 5 )
 
 [node name="Rock" type="Sprite" parent="TileMap/Rock2/Rock17/Rock/Rock/Rock18"]
 position = Vector2( 0, 37.4653 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="Rock19" type="Sprite" parent="TileMap/Rock2/Rock17/Rock/Rock/Rock18/Rock"]
@@ -787,1482 +792,1481 @@ position = Vector2( 39.7313, -9.81433 )
 texture = ExtResource( 5 )
 
 [node name="Palmtree" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 174.885, 89.2877 )
 z_as_relative = false
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree"]
 position = Vector2( 28.88, -31.5875 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree"]
 position = Vector2( 196.098, 107.908 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree"]
 position = Vector2( 12.635, 389.131 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree7" type="Sprite" parent="Palmtree"]
 position = Vector2( 384.465, 37.0025 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree6" type="Sprite" parent="Palmtree"]
 position = Vector2( 550.613, 402.361 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree9" type="Sprite" parent="Palmtree"]
 position = Vector2( 600.162, -13.5375 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree8" type="Sprite" parent="Palmtree"]
 position = Vector2( 410.737, 45.2484 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree"]
 position = Vector2( -157.926, -66.3021 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree"]
 position = Vector2( 522.547, 360.097 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -678.368, -308.505 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -681.526, -248.505 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -689.26, -188.728 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -686.552, -126.455 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -693.773, -58.7675 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts8" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -696.48, 12.53 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts9" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -692.87, 83.8275 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts10" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -682.943, 149.71 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts11" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -627.89, 154.222 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts12" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -570.13, 144.295 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts14" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 325.316, -475.136 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts15" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 321.105, -407.768 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts13" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -511.467, 151.515 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts16" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 326.368, -335.136 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts17" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 325.316, -275.136 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts18" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 325.316, -211.978 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts19" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 324.263, -138.294 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts20" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 327.599, -87.1209 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts21" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 329.526, 84.8636 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts22" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 326.368, 142.758 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts23" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 282.158, 160.653 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts24" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 224.263, 162.758 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts25" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 164.263, 152.232 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts26" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -449.421, 152.232 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts27" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -382.053, 149.074 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts28" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -315.737, 158.548 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts29" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -246.263, 154.337 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts30" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -174.684, 162.758 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts31" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -107.316, 154.337 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts32" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -38.8947, 161.706 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts33" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 22.1579, 155.39 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts34" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 91.6316, 160.653 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts35" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -9.12878, 56.0338 )
 scale = Vector2( 0.353647, 0.519853 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts36" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -494.679, -344.616 )
 scale = Vector2( 0.658356, 0.584487 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts37" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -298.442, -230.021 )
 scale = Vector2( 0.501385, 0.519852 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts38" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -130.136, -268.715 )
 scale = Vector2( 0.381348, 0.409049 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts39" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( 58.784, -341.292 )
 scale = Vector2( 0.445983, 0.56602 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts40" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -744.091, -389.688 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts42" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40"]
 position = Vector2( 2.68306, 112.147 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts41" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40"]
 position = Vector2( 0.692795, 55.7558 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts44" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41"]
 position = Vector2( 1.84856, 174.011 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44"]
 position = Vector2( -3.87708, 127.943 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44"]
 position = Vector2( -9.16888, 209.859 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44"]
 position = Vector2( 1.93781, 292.366 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44"]
 position = Vector2( 11.4579, 349.486 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44"]
 position = Vector2( 66.9914, 368.526 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44"]
 position = Vector2( 141.565, 354.246 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 66.6403, 4.76007 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 133.281, 6.34674 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 196.748, 3.1734 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 264.974, 6.34674 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 330.028, 0 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 391.781, 11.7463 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 457.642, 10.5489 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts8" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 524.701, 9.95013 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts9" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 593.556, 3.96277 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts10" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 663.608, 5.75897 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts11" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 735.105, -7.0249 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts12" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 803.919, -0.0267944 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts13" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 863.403, 10.4703 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts14" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 908.701, -17.9079 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts15" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6"]
 position = Vector2( 976.013, -76.8188 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6/Palmtree_coconuts15"]
 position = Vector2( -2.33264, -41.9887 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6/Palmtree_coconuts15"]
 position = Vector2( -5.83179, -248.433 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6/Palmtree_coconuts15"]
 position = Vector2( -17.9962, -217.117 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6/Palmtree_coconuts15"]
 position = Vector2( -5.83179, -328.911 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6/Palmtree_coconuts15"]
 position = Vector2( 5.83179, -409.389 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6/Palmtree_coconuts15"]
 position = Vector2( -6.99805, -478.204 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts44/Palmtree_coconuts6/Palmtree_coconuts15"]
 position = Vector2( 3.49902, -557.516 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts43" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41"]
 position = Vector2( 0.663422, 108.801 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts45" type="Sprite" parent="Palmtree/Palmtree5/Palmtree_coconuts40/Palmtree_coconuts41/Palmtree_coconuts43"]
 position = Vector2( 5.06221, 128.535 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree5"]
 position = Vector2( -679.421, -366.4 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree10" type="Sprite" parent="Palmtree"]
 editor/display_folded = true
 position = Vector2( 937.34, 490.673 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts47" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 226.613, -248.149 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts46" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 111.949, -250.365 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts48" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 304.916, -187.211 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 171.129, -250.429 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts49" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 302.711, -187.946 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts50" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 294.625, -108.556 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts51" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 291.289, -10.4838 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts52" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 188.771, -12.2593 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree11" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 243.552, -27.4852 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree10" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 321.088, -60.0403 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts53" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 80.7131, -7.84875 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree12" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 133.65, -15.659 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree13" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( 38.0887, -14.5617 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree10"]
 position = Vector2( -31.4694, -196.8 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree"]
 editor/display_folded = true
 position = Vector2( 1228, 2.04741 )
 scale = Vector2( 0.98977, 0.887458 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( 3.1012, 71.2468 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( -3.10095, 136.268 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( 0.620361, 233.8 )
 scale = Vector2( 1, 1.47267 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( -9.39648, 292.943 )
 scale = Vector2( 1.01034, 1.12681 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( -288.174, 61.4667 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( -217.469, 53.5811 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( -144.408, 60.1524 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree_coconuts5"]
 position = Vector2( 261.572, -55.0873 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree_coconuts5"]
 position = Vector2( 319.929, -68.3076 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree_coconuts5"]
 position = Vector2( 359.138, -48.9856 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree_coconuts5"]
 position = Vector2( 351.843, 30.3365 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree_coconuts5"]
 position = Vector2( 358.226, 100.506 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree_coconuts5"]
 position = Vector2( 357.314, 170.676 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree_coconuts5"]
 position = Vector2( 356.402, 230.676 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree_coconuts2"]
 position = Vector2( -256.611, 75.3028 )
 scale = Vector2( 0.78396, 0.726196 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree2"]
 position = Vector2( 93.1948, 0.904968 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree_coconuts2/Palmtree2/Palmtree"]
 position = Vector2( 311.63, -105.87 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree"]
 position = Vector2( 1437.83, 317.003 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree_coconuts3"]
 position = Vector2( 0.820313, 180.638 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree_coconuts3/Palmtree3"]
 position = Vector2( 47.4998, 16.15 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree_coconuts3"]
 position = Vector2( -49.6895, 148.985 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree_coconuts3"]
 position = Vector2( -107.48, 151.197 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree_coconuts3"]
 position = Vector2( 4.46558, 32.1035 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree_coconuts3/Palmtree_coconuts2"]
 position = Vector2( -165.287, 140.595 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree"]
 editor/display_folded = true
 position = Vector2( 1482.94, 7.59008 )
 scale = Vector2( 0.845202, 0.723574 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree"]
 position = Vector2( 53.3749, -8.2518 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts"]
 position = Vector2( 36.8915, 15.5867 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree"]
 position = Vector2( 58.8699, -15.5867 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree"]
 position = Vector2( 112.245, -2.75061 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree"]
 position = Vector2( 162.48, -22.9217 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3"]
 position = Vector2( 55.7295, 26.5892 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3"]
 position = Vector2( 101.255, -2.7506 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3/Palmtree_coconuts"]
 position = Vector2( 35.322, 31.1735 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3/Palmtree_coconuts/Palmtree"]
 position = Vector2( 40.8159, -33.0072 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3/Palmtree_coconuts/Palmtree"]
 position = Vector2( 81.6321, -18.3374 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3/Palmtree_coconuts/Palmtree"]
 position = Vector2( 130.298, -41.259 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3/Palmtree_coconuts/Palmtree/Palmtree3"]
 position = Vector2( 12.1665, 38.5085 )
 scale = Vector2( 0.94113, 1 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts/Palmtree/Palmtree_coconuts3/Palmtree_coconuts/Palmtree/Palmtree3/Palmtree_coconuts"]
 position = Vector2( 65.9336, -15.5868 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree"]
 position = Vector2( 898.739, -0.458458 )
 scale = Vector2( 1.06541, 1.2063 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts2"]
 position = Vector2( 41.9941, -14.0613 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts2"]
 position = Vector2( 97.2495, -1.90018 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree/Palmtree_coconuts2"]
 position = Vector2( 167.24, -31.5428 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree11" type="Sprite" parent="Palmtree"]
 position = Vector2( 2444.11, 4.33407 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree27" type="Sprite" parent="Palmtree"]
 position = Vector2( 2304.89, 19.0751 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree28" type="Sprite" parent="Palmtree"]
 position = Vector2( 2370.41, 10.8856 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree"]
 position = Vector2( 2446.44, 63.818 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree"]
 position = Vector2( 2255.4, 30.6894 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree12" type="Sprite" parent="Palmtree"]
 position = Vector2( 2199.17, 45.1564 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree13" type="Sprite" parent="Palmtree"]
 position = Vector2( 2158.35, 60.319 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree"]
 position = Vector2( 2123.36, 64.9844 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree14" type="Sprite" parent="Palmtree"]
 position = Vector2( 2124.53, 112.805 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree"]
 position = Vector2( 2073.21, 126.801 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree15" type="Sprite" parent="Palmtree"]
 position = Vector2( 2079.83, 154.972 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts8" type="Sprite" parent="Palmtree"]
 position = Vector2( 2031.69, 157.304 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts9" type="Sprite" parent="Palmtree"]
 position = Vector2( 1995.92, 169.856 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -49.968, 107.214 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree2"]
 position = Vector2( -215.454, -60.1267 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree6" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree2/Palmtree3"]
 position = Vector2( 151.987, 215.454 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree2/Palmtree3"]
 position = Vector2( 8.35083, 248.858 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree2/Palmtree3"]
 position = Vector2( -121.924, 71.818 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -505.314, 411.854 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -494.864, 464.104 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -501.416, 481.717 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -562.357, 478.835 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -614.323, 481.783 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -662.206, 472.185 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -695.598, 473.561 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -747.706, 465.153 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -813.256, 462.204 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -841.657, 489.809 )
 scale = Vector2( 0.746666, 0.754583 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts7"]
 position = Vector2( -65.2107, 2.23557 )
 scale = Vector2( 1.34464, 1.32162 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -769.599, 490.852 )
 scale = Vector2( 0.746666, 0.754583 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree6" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -942.696, 481.117 )
 scale = Vector2( 0.970698, 1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts8" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -981.264, 460.304 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts9" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -1019.45, 488.477 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree7" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -1050.84, 476.454 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts10" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -1176.19, 431.087 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree8" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -1199.76, 445.104 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts11" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -1234.88, 551.248 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts12" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -446.362, 481.403 )
 scale = Vector2( 0.853493, 0.912096 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree9" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -411.107, 482.078 )
 scale = Vector2( 0.912096, 0.970699 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts13" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -384.178, 445.461 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts14" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -333.985, 478.352 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts15" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -284.875, 483.522 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree10" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -234.473, 474.475 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts16" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -193.118, 495.153 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts17" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -127.208, 483.522 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree11" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -81.9753, 491.276 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts18" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( -27.6963, 470.598 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts19" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( 14.9514, 493.861 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree12" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( 65.3532, 477.06 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts20" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( 106.709, 491.276 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts21" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( 153.234, 471.891 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree13" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( 192.005, 492.568 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts22" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 position = Vector2( 260.604, 0.914185 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts23" type="Sprite" parent="Palmtree/Palmtree_coconuts9"]
 editor/display_folded = true
 position = Vector2( 263.189, 48.7314 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( -14.2158, 58.156 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( 5.16943, 96.9267 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( -10.3389, 164.129 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( 10.3389, 197.731 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( -16.8008, 254.594 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( 9.04639, 307.581 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( -11.6313, 348.936 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( 9.04639, 400.631 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( -16.9055, 428.329 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( 197.731, -112.435 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23"]
 position = Vector2( 182.223, -54.2791 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 19.3853, 45.2325 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 1.29224, 96.9268 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 21.97, 143.452 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1.29248, 199.023 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 14.2158, 254.594 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 2.58423, 314.043 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 19.385, 365.737 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -0.000488281, 427.77 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 14.2156, 474.295 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts6" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 3.87671, 522.112 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts7" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 19.385, 575.099 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts8" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1.29272, 619.039 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( 25.4858, 618.771 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts9" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -21.0388, 614.894 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree6" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -53.3479, 596.801 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts10" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -85.6567, 614.894 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree7" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -128.409, 614.382 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts11" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -165.783, 617.478 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts12" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -214.173, 604.999 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree8" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -250.903, 626.765 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts13" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -305.318, 606.359 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts14" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -343.409, 625.404 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts15" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -384.22, 606.359 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts16" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -442.716, 621.323 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree9" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -498.492, 603.638 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts17" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -546.105, 617.242 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree10" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -603.24, 599.557 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts18" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -646.772, 618.602 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree11" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -687.584, 602.278 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts19" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -740.362, 618.162 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts20" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -792.62, 606.801 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree12" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -840.333, 622.706 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree13" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -888.047, 609.073 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts21" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -947.121, 622.706 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts22" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1022.1, 624.978 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts23" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1065.27, 602.257 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree14" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1099.35, 624.978 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts24" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1152.84, 611.524 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree15" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1201.53, 622.98 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree16" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1255.94, 612.956 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts25" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1296.04, 620.116 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree17" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1346.16, 607.228 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree18" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1391.98, 624.412 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts26" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1444.96, 608.66 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts27" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1509.4, 601.5 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts28" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1528.67, 695.373 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts29" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1661.85, 582.247 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree19" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1667.58, 632.366 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree20" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1666.14, 672.461 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts30" type="Sprite" parent="Palmtree/Palmtree_coconuts9/Palmtree_coconuts23/Palmtree_coconuts7"]
 position = Vector2( -1698.31, 681.226 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts10" type="Sprite" parent="Palmtree"]
 position = Vector2( 956.115, 980.542 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree16" type="Sprite" parent="Palmtree"]
 position = Vector2( 911.992, 960.257 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts11" type="Sprite" parent="Palmtree"]
 position = Vector2( 958.932, 922.931 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts12" type="Sprite" parent="Palmtree"]
 position = Vector2( 1008.36, 969.496 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree17" type="Sprite" parent="Palmtree"]
 position = Vector2( 1062.38, 922.931 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts13" type="Sprite" parent="Palmtree"]
 position = Vector2( 1102.03, 969.496 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts14" type="Sprite" parent="Palmtree"]
 position = Vector2( 1151.97, 925.375 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts15" type="Sprite" parent="Palmtree"]
 position = Vector2( 1196.51, 967.053 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree18" type="Sprite" parent="Palmtree"]
 position = Vector2( 1238.31, 920.488 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts16" type="Sprite" parent="Palmtree"]
 position = Vector2( 1269.82, 965.424 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts17" type="Sprite" parent="Palmtree"]
 position = Vector2( 1327.09, 923.746 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts18" type="Sprite" parent="Palmtree"]
 position = Vector2( 1376.99, 943.312 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree19" type="Sprite" parent="Palmtree"]
 position = Vector2( 1435.42, 921.302 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts19" type="Sprite" parent="Palmtree"]
 position = Vector2( 1480.24, 948.341 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts20" type="Sprite" parent="Palmtree"]
 position = Vector2( 1533.16, 922.931 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts21" type="Sprite" parent="Palmtree"]
 position = Vector2( 1578.65, 941.401 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree20" type="Sprite" parent="Palmtree"]
 position = Vector2( 1631.72, 921.302 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts22" type="Sprite" parent="Palmtree"]
 position = Vector2( 1678.15, 924.56 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts23" type="Sprite" parent="Palmtree"]
 position = Vector2( 1727.02, 915.601 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree21" type="Sprite" parent="Palmtree"]
 position = Vector2( 1763.67, 925.375 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree22" type="Sprite" parent="Palmtree"]
 position = Vector2( 1809.28, 924.56 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts24" type="Sprite" parent="Palmtree"]
 position = Vector2( 1854.08, 921.302 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts25" type="Sprite" parent="Palmtree"]
 position = Vector2( 1913.54, 922.931 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts26" type="Sprite" parent="Palmtree"]
 position = Vector2( 1953.66, 940.391 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts27" type="Sprite" parent="Palmtree"]
 position = Vector2( 2003.13, 922.931 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts28" type="Sprite" parent="Palmtree"]
 position = Vector2( 2063.15, 964.609 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree23" type="Sprite" parent="Palmtree"]
 position = Vector2( 2128.57, 918.859 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree24" type="Sprite" parent="Palmtree"]
 position = Vector2( 2170.11, 915.601 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree25" type="Sprite" parent="Palmtree"]
 position = Vector2( 2199.17, 970.311 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts29" type="Sprite" parent="Palmtree"]
 position = Vector2( 2249.12, 922.117 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts30" type="Sprite" parent="Palmtree"]
 position = Vector2( 2302.87, 927.004 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts31" type="Sprite" parent="Palmtree"]
 position = Vector2( 2354.19, 914.786 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree26" type="Sprite" parent="Palmtree"]
 position = Vector2( 2390.03, 922.117 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts32" type="Sprite" parent="Palmtree"]
 position = Vector2( 2452.74, 922.117 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts33" type="Sprite" parent="Palmtree"]
 position = Vector2( 2502.17, 958.093 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts34" type="Sprite" parent="Palmtree"]
 position = Vector2( 802.339, 1211.85 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts35" type="Sprite" parent="Palmtree"]
 position = Vector2( 861.222, 1292.88 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts36" type="Sprite" parent="Palmtree"]
 position = Vector2( 968.035, 1350.59 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts37" type="Sprite" parent="Palmtree"]
 position = Vector2( 1065.03, 1345.67 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts38" type="Sprite" parent="Palmtree"]
 position = Vector2( 1155.88, 1367.77 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts39" type="Sprite" parent="Palmtree"]
 position = Vector2( 1259.01, 1318.66 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts40" type="Sprite" parent="Palmtree"]
 position = Vector2( 689.338, 1235.18 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts41" type="Sprite" parent="Palmtree"]
 position = Vector2( 629.179, 1165.2 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree29" type="Sprite" parent="Palmtree"]
 position = Vector2( 638.896, 1227.28 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree30" type="Sprite" parent="Palmtree"]
 position = Vector2( 759.03, 1244.78 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree31" type="Sprite" parent="Palmtree"]
 position = Vector2( 801.018, 1299.59 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree32" type="Sprite" parent="Palmtree"]
 position = Vector2( 894.327, 1342.75 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree33" type="Sprite" parent="Palmtree"]
 position = Vector2( 1014.46, 1380.07 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree34" type="Sprite" parent="Palmtree"]
 position = Vector2( 1110.1, 1370.74 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree35" type="Sprite" parent="Palmtree"]
 position = Vector2( 1218.57, 1367.24 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts42" type="Sprite" parent="Palmtree"]
 position = Vector2( 554.918, 1161.97 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts43" type="Sprite" parent="Palmtree"]
 position = Vector2( 734.153, 1473.58 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts44" type="Sprite" parent="Palmtree"]
 position = Vector2( 654.631, 1457.67 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts45" type="Sprite" parent="Palmtree"]
 position = Vector2( 509.218, 1391.78 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts46" type="Sprite" parent="Palmtree"]
 position = Vector2( 393.342, 1398.6 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts47" type="Sprite" parent="Palmtree"]
 position = Vector2( 286.554, 1348.61 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts48" type="Sprite" parent="Palmtree"]
 position = Vector2( 216.12, 1225.92 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts49" type="Sprite" parent="Palmtree"]
 position = Vector2( 175.223, 1266.82 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts50" type="Sprite" parent="Palmtree"]
 position = Vector2( 338.812, 751.055 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts51" type="Sprite" parent="Palmtree"]
 position = Vector2( 703.801, 845.984 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts52" type="Sprite" parent="Palmtree"]
 position = Vector2( 629.62, 898.529 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts53" type="Sprite" parent="Palmtree"]
 position = Vector2( 555.439, 876.892 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts54" type="Sprite" parent="Palmtree"]
 position = Vector2( 487.44, 923.256 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts55" type="Sprite" parent="Palmtree"]
 position = Vector2( 419.441, 985.073 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts56" type="Sprite" parent="Palmtree"]
 position = Vector2( 332.896, 1043.8 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts57" type="Sprite" parent="Palmtree"]
 position = Vector2( 267.988, 1139.62 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree36" type="Sprite" parent="Palmtree"]
 position = Vector2( 209.261, 1185.98 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree37" type="Sprite" parent="Palmtree"]
 position = Vector2( 308.169, 1102.53 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree38" type="Sprite" parent="Palmtree"]
 position = Vector2( 218.534, 1337.43 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree39" type="Sprite" parent="Palmtree"]
 position = Vector2( 314.351, 1402.34 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree40" type="Sprite" parent="Palmtree"]
 position = Vector2( 437.986, 1399.25 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree41" type="Sprite" parent="Palmtree"]
 position = Vector2( 583.257, 1427.07 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts58" type="Sprite" parent="Palmtree"]
 position = Vector2( 706.892, 1485.79 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts59" type="Sprite" parent="Palmtree"]
 position = Vector2( 784.164, 1485.79 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree42" type="Sprite" parent="Palmtree"]
 position = Vector2( 388.532, 1031.44 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree43" type="Sprite" parent="Palmtree"]
 position = Vector2( 444.168, 960.346 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree44" type="Sprite" parent="Palmtree"]
 position = Vector2( 549.257, 901.619 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree45" type="Sprite" parent="Palmtree"]
 position = Vector2( 685.256, 886.165 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree46" type="Sprite" parent="Palmtree"]
 position = Vector2( -338.395, 521.365 )
 scale = Vector2( 1.35875, 1.53812 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree46"]
 position = Vector2( -476.132, -14.7717 )
 scale = Vector2( 1.24936, 1.01296 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3"]
 position = Vector2( -110.597, 70.6114 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3"]
 position = Vector2( -226.124, 49.121 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3"]
 position = Vector2( -248.666, 178.063 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3"]
 position = Vector2( -381.1, 323.891 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( -243.735, 1.53497 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( -118.345, 3.07007 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts2" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 190.198, -224.114 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree_coconuts3" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 25.3598, 228.719 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree2" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 187.38, 76.7514 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts4" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 309.952, -75.2164 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree3" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 404.347, -105.917 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree4" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 583.609, -99.3112 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 704.355, -17.8709 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree6" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 825.101, -78.4291 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree_coconuts5" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 777.186, -61.7234 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Palmtree7" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 892.181, 25.9815 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree8" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3/Palmtree4"]
 position = Vector2( 963.489, 69.7238 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Palmtree5" type="Sprite" parent="Palmtree/Palmtree46/Palmtree3"]
 position = Vector2( 643.565, 58.6639 )
 scale = Vector2( 0.835632, 0.987208 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 offset = Vector2( -463.302, -22.8833 )
 
 [node name="Crates" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="ItemCrate" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 2235.67, 364.611 )
 
-[node name="ItemCrate6" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate6" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 2041.43, 1168.68 )
 
-[node name="ItemCrate7" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate7" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 1512.16, 1647.99 )
 
-[node name="ItemCrate8" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate8" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 256.866, 2322.18 )
 
-[node name="ItemCrate9" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate9" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( -730.164, 1670.93 )
 
-[node name="ItemCrate11" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate11" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( -648.142, 1886.78 )
 
-[node name="ItemCrate10" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate10" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( -220.911, 1270.66 )
 
-[node name="pirate hat" parent="Crates" instance=ExtResource( 12 )]
+[node name="pirate hat" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 478.698, 886.408 )
 
-[node name="ItemCrate2" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate2" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 1513.93, 206.313 )
 
-[node name="ItemCrate3" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate3" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 945.338, 109.891 )
 
-[node name="ItemCrate4" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate4" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 1554.84, 666.18 )
 
-[node name="ItemCrate5" parent="Crates" instance=ExtResource( 12 )]
+[node name="ItemCrate5" parent="Crates" instance=ExtResource( 13 )]
 position = Vector2( 2753.52, -48.868 )
 
 [node name="Rock" type="Sprite" parent="."]
@@ -2277,5 +2281,5 @@ texture = ExtResource( 4 )
 [node name="Palmtree4" type="Sprite" parent="."]
 position = Vector2( 316.235, 1177.09 )
 scale = Vector2( 1.51372, 1.54226 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 

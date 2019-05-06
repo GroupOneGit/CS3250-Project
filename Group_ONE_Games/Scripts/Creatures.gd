@@ -3,8 +3,9 @@ extends KinematicBody2D
 var speed = 0
 var health = 0 
 var attack = 0
-var creaturelist = ["crab"]
+var creaturelist = ["crab", "tikiman"]
 var drops = []
+onready var itemlayer = get_node("/root/DemoLevel/Dropped_Items")
 onready var itemObject = load("res://Scenes/Dropped_Item.tscn")
 
 func _ready():
@@ -29,6 +30,12 @@ func setcreature(key):
 			attack = 2
 			# first value is item key second is its wieght, weights should add to be less than one.
 			drops = [[5, .8]]
+		"tikiman":
+			speed = 200
+			health = 100
+			attack = 10
+			# first value is item key second is its wieght, weights should add to be less than one.
+			drops = [[-1, 1]]
 
 func death():
 	randomize()
@@ -39,17 +46,19 @@ func death():
 	var i = 0
 	for drop in drops:
 		i = i + drop[1]
-		if i < r:
+		if r < i:
 			itemkey = drop[0]
+			break
 
 	var Item = ItemDatabase.ITEMS.get(str(itemkey))
+	
 	if Item:
 		print("item dropped")
 		var itemInstance = itemObject.instance()
 		itemInstance.texture = Item.icon
-		itemInstance.itemData = Item
-
-	else:
-		queue_free()
+		itemInstance.itemData = str(itemkey)
+		itemInstance.set_global_position(self.get_global_position())
+		itemlayer.add_child(itemInstance)
+	queue_free()
 	
 	

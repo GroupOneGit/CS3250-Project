@@ -55,8 +55,9 @@ func _input(event):
 		sprint = false
 
 	if event.is_action_pressed('ui_attack'):
-		if Global_Player.energy >= 10:
-			Global_Player.lose_energy(10)
+		if Global_Player.energy >= 5:
+			$AudioStreamPlayer.play()
+			Global_Player.lose_energy(5)
 			$Attack.attack(10, direction.normalized())
 
 
@@ -69,7 +70,7 @@ func _physics_process(delta):
 			speed = 50
 		elif move:
 			speed = 400
-			Global_Player.lose_energy(delta*15)
+			Global_Player.lose_energy(delta*10)
 
 	else:
 		if Global_Player.energy >= 15:
@@ -78,7 +79,7 @@ func _physics_process(delta):
 			speed = 100
 		else:
 			speed = 50
-		Global_Player.gain_energy(delta*4)
+		Global_Player.gain_energy(delta*5)
 		
 	if not move:
 		Global_Player.gain_energy(delta*5)
@@ -91,9 +92,10 @@ func _physics_process(delta):
 		$AnimatedSprite.stop()
 
 	if direction.x != 0:
-		$AnimatedSprite.animation = 'Right'
-		$AnimatedSprite.flip_v = false
-		$AnimatedSprite.flip_h = direction.x < 0
+		if direction.x >0:
+			$AnimatedSprite.animation = 'Right'
+		else: 
+			$AnimatedSprite.animation = 'Left'
 	elif direction.y > 0:
 		$AnimatedSprite.animation = 'Down'
 	elif direction.y != 0:
