@@ -1,16 +1,26 @@
 extends Control
 onready var audioStream = $"/root/DemoLevel/Music/BackgroundMusic"
-
+onready var controlPopUp = load("res://Scenes/PopUpScroll_Controls.tscn")
+onready var demoLevel = get_node("/root/DemoLevel")
 func _ready():
 	audioStream.stop()
 	pass 
 
 func _on_VideoPlayer_finished():
-	if $VideoPlayer.stream.get_file() == "res://Cutscenes/s5bx9-i9aoy.ogv":
+	if $VideoPlayer.stream.get_file() == "res://Cutscenes/Ending.ogv":
 		Global_Player.switch_to("title")
-	get_tree().paused = false
-	audioStream.play()
-	hide()
+		get_tree().paused = false
+		audioStream.play()
+		hide()
+	if $VideoPlayer.stream.get_file() == "res://Cutscenes/Opening.ogv":
+		demoLevel.add_child(controlPopUp.instance())
+		get_tree().paused = true
+		audioStream.play()
+		hide()
+	else:
+		get_tree().paused = false
+		audioStream.play()
+		hide()
 
 
 func _unhandled_key_input(event):
@@ -22,8 +32,14 @@ func _unhandled_key_input(event):
 
 
 func _on_Timer_timeout():
-	if $VideoPlayer.stream.get_file() == "res://Cutscenes/s5bx9-i9aoy.ogv":
+	if $VideoPlayer.stream.get_file() == "res://Cutscenes/Ending.ogv":
 		Global_Player.switch_to("title")
+	if $VideoPlayer.stream.get_file() == "res://Cutscenes/Opening.ogv":
+		demoLevel.add_child(controlPopUp.instance())
+		$VideoPlayer.stop()
+		get_tree().paused = true
+		audioStream.play()
+		hide()
 	else:
 		$VideoPlayer.stop()
 		get_tree().paused = false
