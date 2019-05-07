@@ -24,7 +24,6 @@
 script = ExtResource( 1 )
 
 [node name="Music" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
 pause_mode = 2
@@ -172,6 +171,7 @@ editor/display_folded = true
 position = Vector2( 105.293, -83.816 )
 
 [node name="Scrolls" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 423.311, 210.479 )
 scale = Vector2( 0.25, 0.25 )
 __meta__ = {
@@ -307,6 +307,7 @@ margin_bottom = 617.281
 rect_rotation = 24.5398
 
 [node name="Traps" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="SpikePole" parent="Traps" instance=ExtResource( 16 )]
 position = Vector2( 2109.53, 347.89 )
