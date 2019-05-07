@@ -31,10 +31,11 @@ func _on_Area2D_body_exited(body):
 func _input(event):
 	if event.is_action_pressed("ui_interact") && inArea == true && Global_Player.has_Hat && ItemDatabase.scrollsFound == 9:
 		videoPlayer.play_scene(ending)
-	elif event.is_action_pressed('ui_interact') && inArea == true:
-		dialogBox.set_single_dialog_text(openedText[0])
 	elif event.is_action_pressed('ui_interact') && inArea == true && Global_Player.has_Hat:
 		dialogBox.set_single_dialog_text(openedText[1])
+	elif event.is_action_pressed('ui_interact') && inArea == true:
+		dialogBox.set_single_dialog_text(openedText[0])
+
 
 
 
