@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/DemoLevel.gd" type="Script" id=1]
 [ext_resource path="res://Audio/Stroll 'n Roll.wav" type="AudioStream" id=2]
@@ -16,13 +16,15 @@
 [ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/ScrollBottle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/TrapPole.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Dropped_Item.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Art/Items/Clam2.png" type="Texture" id=18]
+[ext_resource path="res://Scripts/Barrier.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Dropped_Item.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Art/Items/Clam2.png" type="Texture" id=19]
 
 [node name="DemoLevel" type="Node"]
 script = ExtResource( 1 )
 
 [node name="Music" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
 pause_mode = 2
@@ -30,6 +32,7 @@ stream = ExtResource( 2 )
 volume_db = -25.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 3 )]
 editor/display_folded = true
@@ -109,6 +112,9 @@ position = Vector2( 4271.27, -4070.28 )
 
 [node name="Enemies" type="Node2D" parent="."]
 editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Crab" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 1311.71, 411.316 )
@@ -302,10 +308,6 @@ margin_bottom = 617.281
 rect_rotation = 24.5398
 
 [node name="Traps" type="Node2D" parent="."]
-editor/display_folded = true
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="SpikePole" parent="Traps" instance=ExtResource( 16 )]
 position = Vector2( 2109.53, 347.89 )
@@ -347,6 +349,9 @@ position = Vector2( -396.915, 1068.47 )
 ] instance=ExtResource( 16 )]
 position = Vector2( -267.712, 1834.08 )
 
+[node name="Barrier" parent="Traps" instance=ExtResource( 17 )]
+position = Vector2( -634.366, 737.469 )
+
 [node name="Dropped_Items" type="Node2D" parent="."]
 editor/display_folded = true
 z_index = 100
@@ -355,10 +360,10 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" parent="Dropped_Items" instance=ExtResource( 17 )]
+[node name="Sprite" parent="Dropped_Items" instance=ExtResource( 18 )]
 visible = false
 position = Vector2( -1, 0 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [connection signal="ready" from="." to="." method="_on_DemoLevel_ready"]
 [connection signal="gui_input" from="CanvasLayer/VideoPlayer" to="CanvasLayer/VideoPlayer" method="_on_VideoPlayer_gui_input"]

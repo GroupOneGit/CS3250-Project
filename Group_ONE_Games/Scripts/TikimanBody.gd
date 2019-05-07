@@ -12,7 +12,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	#ADD GLOBAL HERE
 	if move:
 		for body in $Area2D.get_overlapping_bodies():
 			if body.is_in_group("Player"):
@@ -31,11 +30,11 @@ func _physics_process(delta):
 
 
 func _on_Area2D_body_entered(body):
-	# if global
-	self.show()
-	if body.is_in_group("Player"):
-		move = true
-		$AnimatedSprite.animation = "Walk"
+	if Global_Player.has_Hat:
+		self.show()
+		if body.is_in_group("Player"):
+			move = true
+			$AnimatedSprite.animation = "Walk"
 
 
 func _on_Area2D_body_exited(body):
