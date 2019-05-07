@@ -44,9 +44,12 @@ func _on_InteractArea_opened():
 	#play sound
 	if numOfItems == 0: #for getting no items
 		dialogBox.set_single_dialog_text(openedText[1])
-	if numOfItems == -1: #for inventory full
+		return
+	elif numOfItems == -1: #for inventory full
 		dialogBox.set_single_dialog_text(openedText[2])
+		return
 	else:                #for getting # of items
 		dialogBox.set_single_dialog_text(openedText[0])
+		return
 
 	

@@ -90,15 +90,26 @@ func _physics_process(delta):
 		move_and_slide(velocity.normalized()*speed)
 	else:
 		$AnimatedSprite.stop()
+		
+	if Global_Player.has_Hat == true:
+		if direction.x != 0:
+			if direction.x >0:
+				$AnimatedSprite.animation = 'Right_hat'
+			else: 
+				$AnimatedSprite.animation = 'Left_hat'
+		elif direction.y > 0:
+			$AnimatedSprite.animation = 'Down_hat'
+		elif direction.y != 0:
+			$AnimatedSprite.animation = 'Up_hat'
+	else:
+		if direction.x != 0:
+			if direction.x >0:
+				$AnimatedSprite.animation = 'Right'
+			else: 
+				$AnimatedSprite.animation = 'Left'
+		elif direction.y > 0:
+			$AnimatedSprite.animation = 'Down'
+		elif direction.y != 0:
+			$AnimatedSprite.animation = 'Up'
 
-	if direction.x != 0:
-		if direction.x >0:
-			$AnimatedSprite.animation = 'Right'
-		else: 
-			$AnimatedSprite.animation = 'Left'
-	elif direction.y > 0:
-		$AnimatedSprite.animation = 'Down'
-	elif direction.y != 0:
-		$AnimatedSprite.animation = 'Up'
-
-
+	

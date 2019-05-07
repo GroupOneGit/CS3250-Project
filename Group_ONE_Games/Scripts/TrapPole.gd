@@ -35,7 +35,8 @@ func shoot():
 	$Pole.animation = "reload"
 	$Pole.play("reload")
 	get_node("Pole/ReloadTimer").start()
-		
+
+
 func _process(delta):
 	if in_range && can_shoot:
 		shoot()
@@ -43,13 +44,11 @@ func _process(delta):
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		in_range = true
-		
-	pass # Replace with function body.
 
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("Player"):
 		in_range = false
-	pass # Replace with function body.
+
 
 func _on_ReloadTimer_timeout():
 	can_shoot = true

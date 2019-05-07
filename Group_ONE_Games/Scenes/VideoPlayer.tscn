@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/VideoPlayer.gd" type="Script" id=1]
-[ext_resource path="res://Cutscenes/Test3 (2).ogv" type="VideoStream" id=2]
+[ext_resource path="res://Cutscenes/Opening.ogv" type="VideoStream" id=2]
 [ext_resource path="res://Font/KennyFuture.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Font/KeyPress_Font.tres" type="DynamicFont" id=4]
 
