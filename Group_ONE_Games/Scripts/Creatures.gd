@@ -58,7 +58,8 @@ func death():
 		itemInstance.texture = Item.icon
 		itemInstance.itemData = str(itemkey)
 		itemInstance.set_global_position(self.get_global_position())
-		itemlayer.add_child(itemInstance)
+		itemlayer.call_deferred("add_child", itemInstance)
+		
 	queue_free()
 	
 	
