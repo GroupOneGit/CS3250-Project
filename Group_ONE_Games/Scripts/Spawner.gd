@@ -8,7 +8,7 @@ func _ready():
 
 func nextT():
 	t = 3.8*t*(1-t)
-	time = t*5
+	time = t*20
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

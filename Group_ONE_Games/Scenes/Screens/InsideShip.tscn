@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://NES Pirate Ship Tileset.png" type="Texture" id=1]
+[ext_resource path="res://Audio/Lava Flow Stressamp Turbo Pulse.wav" type="AudioStream" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 80.6448, 18.0271 )
@@ -175,4 +176,11 @@ one_way_collision_margin = 0.0
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Stairs/Area2D"]
 position = Vector2( -4.39082, 24.6199 )
 shape = SubResource( 19 )
+
+[node name="ShipMusic" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ShipMusic"]
+stream = ExtResource( 2 )
+volume_db = -17.964
+autoplay = true
 

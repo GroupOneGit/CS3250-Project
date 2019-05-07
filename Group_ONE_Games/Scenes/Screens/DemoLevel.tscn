@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/DemoLevel.gd" type="Script" id=1]
-[ext_resource path="res://Audio/Exploration6 - Tropical Island.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Audio/Stroll 'n Roll.wav" type="AudioStream" id=2]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Screens/Pause.tscn" type="PackedScene" id=5]
@@ -11,18 +11,18 @@
 [ext_resource path="res://Scenes/Small_Spike.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Crab.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/ScrollBottle.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/TrapPole.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/Dropped_Item.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Art/Items/Clam2.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Tikiman.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/MAP.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/ScrollBottle.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/TrapPole.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Dropped_Item.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Art/Items/Clam2.png" type="Texture" id=18]
 
 [node name="DemoLevel" type="Node"]
 script = ExtResource( 1 )
 
 [node name="Music" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
 pause_mode = 2
@@ -41,9 +41,6 @@ margin_bottom = 4.01056
 mouse_filter = 0
 script = ExtResource( 4 )
 
-[node name="Dropdown" parent="CanvasLayer/GUI" index="0"]
-editor/display_folded = true
-
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 5 )]
 pause_mode = 2
 visible = false
@@ -56,9 +53,11 @@ pause_mode = 2
 visible = false
 
 [node name="Obstacles" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 797.55, 1228.5 )
 scale = Vector2( 0.179144, 0.151001 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="SpikeWallObtacles" type="Node2D" parent="Obstacles"]
 editor/display_folded = true
@@ -109,7 +108,6 @@ position = Vector2( 3101.63, -3822.08 )
 position = Vector2( 4271.27, -4070.28 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Crab" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 1311.71, 411.316 )
@@ -147,41 +145,39 @@ position = Vector2( 1131.05, 831.801 )
 [node name="Spawner" parent="Enemies" instance=ExtResource( 11 )]
 position = Vector2( 2459.12, 17.1484 )
 
-[node name="Player" parent="." instance=ExtResource( 12 )]
+[node name="Tikiman" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( -1269.83, -125.923 )
+
+[node name="Tikiman2" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( -289.216, 356.513 )
+
+[node name="Tikiman3" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( -1740.77, 630.712 )
+
+[node name="Player" parent="." instance=ExtResource( 13 )]
 editor/display_folded = true
 position = Vector2( 563.367, 239.458 )
 
 [node name="KinematicBody2D" parent="Player" index="0"]
 editor/display_folded = true
 
-[node name="Map" parent="." instance=ExtResource( 13 )]
+[node name="Map" parent="." instance=ExtResource( 14 )]
 position = Vector2( 105.293, -83.816 )
 
 [node name="Scrolls" type="Node2D" parent="."]
 editor/display_folded = true
-position = Vector2( 602.303, 312.551 )
+position = Vector2( 423.311, 210.479 )
 scale = Vector2( 0.25, 0.25 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Scroll1" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll1" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 1413.41, -895.661 )
 rotation = 0.322269
-scale = Vector2( 1, 1 )
 
-[node name="Shape" parent="Scrolls/Scroll1/Texture/SoundArea" index="0"]
-position = Vector2( -7.49585, 2.41632 )
-
-[node name="Label" parent="Scrolls/Scroll1/Z_Index" index="0"]
-margin_left = -254.068
-margin_top = 37.5609
-margin_right = 122.932
-margin_bottom = 388.561
-rect_rotation = -19.1354
-
-[node name="AudioStreamPlayer2D" parent="Scrolls/Scroll1" index="2"]
-position = Vector2( 28.1692, 34.8976 )
-
-[node name="Scroll2" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll2" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 8178.65, -1494.63 )
 rotation = -0.898589
@@ -194,70 +190,27 @@ margin_right = 335.814
 margin_bottom = 270.52
 rect_rotation = 50.885
 
-[node name="Scroll3" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll3" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 3986.51, 1203.28 )
 rotation = 0.657503
-scale = Vector2( 1, 1 )
 
-[node name="Label" parent="Scrolls/Scroll3/Z_Index" index="0"]
-margin_left = -306.469
-margin_top = 61.7661
-margin_right = 70.5313
-margin_bottom = 412.766
-rect_rotation = -37.799
-
-[node name="Scroll4" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll4" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 9414.06, 3686.28 )
 rotation = -0.667892
-scale = Vector2( 1, 1 )
 
-[node name="Label" parent="Scrolls/Scroll4/Z_Index" index="0"]
-margin_left = -179.414
-margin_top = 8.82861
-margin_right = 197.586
-margin_bottom = 359.829
-rect_rotation = 38.603
-
-[node name="Scroll5" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll5" parent="Scrolls" instance=ExtResource( 15 )]
 position = Vector2( -3989.96, 5935.29 )
 rotation = 0.0594288
 scale = Vector2( 1, 1 )
 
-[node name="Scroll6" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll6" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( -900.679, 2625.6 )
 rotation = 0.516868
-scale = Vector2( 1, 1 )
 
-[node name="Texture" parent="Scrolls/Scroll6" index="0"]
-position = Vector2( -46.7461, 26.9739 )
-
-[node name="Shape" parent="Scrolls/Scroll6/Texture/InteractArea" index="0"]
-position = Vector2( 14.6638, 30.4766 )
-
-[node name="SoundArea" parent="Scrolls/Scroll6/Texture" index="1"]
-position = Vector2( -6.57056, -11.5596 )
-
-[node name="Shape" parent="Scrolls/Scroll6/Texture/SoundArea" index="0"]
-position = Vector2( 25.4863, 53.6592 )
-
-[node name="Z_Index" parent="Scrolls/Scroll6" index="1"]
-editor/display_folded = false
-position = Vector2( -37.5698, 41.1719 )
-
-[node name="Label" parent="Scrolls/Scroll6/Z_Index" index="0"]
-margin_left = -239.982
-margin_top = 91.6592
-margin_right = 137.018
-margin_bottom = 442.659
-rect_rotation = -30.4866
-
-[node name="AudioStreamPlayer2D" parent="Scrolls/Scroll6" index="2"]
-position = Vector2( 506.896, -1613.57 )
-
-[node name="Scroll7" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll7" parent="Scrolls" instance=ExtResource( 15 )]
 editor/display_folded = true
 position = Vector2( 8635.14, 7875.84 )
 rotation = -1.1841
@@ -270,41 +223,96 @@ margin_right = 240.203
 margin_bottom = 381.521
 rect_rotation = 67.592
 
-[node name="Scroll8" parent="Scrolls" instance=ExtResource( 14 )]
+[node name="Scroll8" parent="Scrolls" instance=ExtResource( 15 )]
+position = Vector2( -8572.02, 1831.57 )
+rotation = 0.321127
+scale = Vector2( 1, 1 )
+
+[node name="Scrolls2" type="Node2D" parent="Scrolls"]
+editor/display_folded = true
+position = Vector2( -5740.39, -374.12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Scroll1" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
+editor/display_folded = true
+position = Vector2( 1413.41, -895.661 )
+rotation = 0.322269
+
+[node name="Scroll2" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
+editor/display_folded = true
+position = Vector2( 8178.65, -1494.63 )
+rotation = -0.898589
+scale = Vector2( 1, 1 )
+
+[node name="Scroll3" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
+editor/display_folded = true
+position = Vector2( 3986.51, 1203.28 )
+rotation = 0.657503
+
+[node name="Scroll4" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
+editor/display_folded = true
+position = Vector2( 9414.06, 3686.28 )
+rotation = -0.667892
+
+[node name="Scroll5" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
+position = Vector2( -3989.96, 5935.29 )
+rotation = 0.0594288
+scale = Vector2( 1, 1 )
+
+[node name="Scroll6" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
+editor/display_folded = true
+position = Vector2( -900.679, 2625.6 )
+rotation = 0.516868
+
+[node name="Scroll7" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
+editor/display_folded = true
+position = Vector2( 8635.14, 7875.84 )
+rotation = -1.1841
+scale = Vector2( 1, 1 )
+
+[node name="Scroll8" parent="Scrolls/Scrolls2" instance=ExtResource( 15 )]
 position = Vector2( -8572.02, 1831.57 )
 rotation = 0.321127
 scale = Vector2( 1, 1 )
 
 [node name="Traps" type="Node2D" parent="."]
 editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="SpikePole" parent="Traps" instance=ExtResource( 15 )]
+[node name="SpikePole" parent="Traps" instance=ExtResource( 16 )]
 position = Vector2( 2109.53, 347.89 )
 z_index = -1
 
 [node name="SpikePole2" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 15 )]
+] instance=ExtResource( 16 )]
 position = Vector2( 1001.08, 1178.97 )
 z_index = -1
 
 [node name="SpikePole3" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 15 )]
+] instance=ExtResource( 16 )]
 position = Vector2( 2465.26, 1509.15 )
 
 [node name="SpikePole4" parent="Traps" groups=[
 "Traps",
-] instance=ExtResource( 15 )]
+] instance=ExtResource( 16 )]
 position = Vector2( -267.712, 1834.08 )
 
 [node name="Dropped_Items" type="Node2D" parent="."]
-editor/display_folded = true
 z_index = 100
 z_as_relative = false
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Sprite" parent="Dropped_Items" instance=ExtResource( 16 )]
-texture = ExtResource( 17 )
+[node name="Sprite" parent="Dropped_Items" instance=ExtResource( 17 )]
+position = Vector2( -1, 0 )
+texture = ExtResource( 18 )
 
 [connection signal="ready" from="." to="." method="_on_DemoLevel_ready"]
 [connection signal="gui_input" from="CanvasLayer/VideoPlayer" to="CanvasLayer/VideoPlayer" method="_on_VideoPlayer_gui_input"]

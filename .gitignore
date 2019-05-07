@@ -3,5 +3,8 @@ Group_ONE_Games/\.import/
 
 *.png.import
 *.import
-
+*stex
+*.md5
 *.import
+
+*.sample
