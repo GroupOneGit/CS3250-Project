@@ -6,5 +6,5 @@ extends Node2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global_Player.has_Hat and ItemDatabase.scrollsFound > 8:
+	if Global_Player.has_Hat and ItemDatabase.scrollsFound >= 8:
 		queue_free()

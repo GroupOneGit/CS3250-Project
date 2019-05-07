@@ -11,7 +11,8 @@ var slot3Item = null
 var slot4Item = null
 var scrollsFound = 0
 
-
+func increment_scrolls():
+	scrollsFound = scrollsFound +1
 
 var itemListArray = Array()
 const PATH = null

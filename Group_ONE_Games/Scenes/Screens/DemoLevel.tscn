@@ -172,7 +172,6 @@ editor/display_folded = true
 position = Vector2( 105.293, -83.816 )
 
 [node name="Scrolls" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 423.311, 210.479 )
 scale = Vector2( 0.25, 0.25 )
 __meta__ = {

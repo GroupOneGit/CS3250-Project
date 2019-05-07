@@ -60,7 +60,7 @@ func _on_InteractArea_body_exited(body):
 
 func _input(event):
 	if event.is_action_pressed("ui_interact") && inArea == true:
-		ItemDatabase.scrollsFound += 1
+		ItemDatabase.increment_scrolls()
 		scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/Scroll" + str(ItemDatabase.scrollsFound))
 		show_scroll(scrollText[ItemDatabase.scrollPage].text)
 		ItemDatabase.scrollPage += 1
