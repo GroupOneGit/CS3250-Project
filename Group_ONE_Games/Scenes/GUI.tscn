@@ -487,6 +487,7 @@ shape = SubResource( 11 )
 
 [node name="Area2D" type="Area2D" parent="."]
 editor/display_folded = true
+visible = false
 priority = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -519,6 +520,7 @@ text = "DRAG HERE TO
 
 [node name="Area2D2" type="Area2D" parent="."]
 editor/display_folded = true
+visible = false
 priority = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
@@ -549,6 +551,42 @@ margin_bottom = 15.5
 custom_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
 text = "DRAG HERE TO
       DROP"
+
+[node name="1" type="Label" parent="."]
+margin_left = 643.766
+margin_top = 67.8921
+margin_right = 683.766
+margin_bottom = 84.8921
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0.282353, 0.2, 0.00784314, 1 )
+text = "1"
+
+[node name="2" type="Label" parent="."]
+margin_left = 699.467
+margin_top = 67.8843
+margin_right = 739.467
+margin_bottom = 84.8843
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0.282353, 0.2, 0.00784314, 1 )
+text = "2"
+
+[node name="3" type="Label" parent="."]
+margin_left = 753.24
+margin_top = 67.7778
+margin_right = 793.24
+margin_bottom = 84.7778
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0.282353, 0.2, 0.00784314, 1 )
+text = "3"
+
+[node name="4" type="Label" parent="."]
+margin_left = 807.73
+margin_top = 67.5258
+margin_right = 847.73
+margin_bottom = 84.5258
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0.282353, 0.2, 0.00784314, 1 )
+text = "4"
 
 [connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll1" to="Dropdown/Shelf_TOP" method="_on_Scroll1_gui_input"]
 [connection signal="gui_input" from="Dropdown/Shelf_TOP/Scroll2" to="Dropdown/Shelf_TOP" method="_on_Scroll2_gui_input"]
