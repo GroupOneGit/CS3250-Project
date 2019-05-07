@@ -8,6 +8,9 @@ onready var scrollLabel = get_node("Z_Index/Label")
 onready var popUpScrollScene = preload("res://Scenes/PopUpScroll.tscn")
 onready var demoLevel = get_node("/root/DemoLevel")
 onready var popUpScroll = popUpScrollScene.instance()
+onready var videoPlayer = $"/root/DemoLevel/CanvasLayer/VideoPlayer"
+
+var endingScene = preload("res://Cutscenes/Ending.ogv")
 var scrollPage = ItemDatabase.scrollPage
 
 var scrollText = {
@@ -57,11 +60,11 @@ func _on_InteractArea_body_exited(body):
 
 func _input(event):
 	if event.is_action_pressed("ui_interact") && inArea == true:
-		scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/Scroll" + str(ItemDatabase.scrollsFound + 1))
+		ItemDatabase.scrollsFound += 1
+		scrollOnShelf = get_node("/root/DemoLevel/CanvasLayer/GUI/Dropdown/Shelf_TOP/Scroll" + str(ItemDatabase.scrollsFound))
 		show_scroll(scrollText[ItemDatabase.scrollPage].text)
 		ItemDatabase.scrollPage += 1
-		ItemDatabase.scroll[ItemDatabase.scrollsFound + 1].hasFound = true
-		ItemDatabase.scrollsFound += 1
+		ItemDatabase.scroll[ItemDatabase.scrollsFound].hasFound = true
 		queue_free()
 		scrollOnShelf.texture = scrollIMG
 		AudioServer.set_bus_mute(1, true)

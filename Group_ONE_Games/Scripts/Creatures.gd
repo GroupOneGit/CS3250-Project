@@ -53,7 +53,7 @@ func death():
 	var Item = ItemDatabase.ITEMS.get(str(itemkey))
 	
 	if Item:
-		print("item dropped")
+#		print("item dropped")
 		var itemInstance = itemObject.instance()
 		itemInstance.texture = Item.icon
 		itemInstance.itemData = str(itemkey)

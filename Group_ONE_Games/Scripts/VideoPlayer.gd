@@ -1,10 +1,15 @@
 extends Control
+onready var audioStream = $"/root/DemoLevel/Music/BackgroundMusic"
 
 func _ready():
-	pass # Replace with function body.
+	audioStream.stop()
+	pass 
 
 func _on_VideoPlayer_finished():
+	if $VideoPlayer.stream.get_file() == "res://Cutscenes/s5bx9-i9aoy.ogv":
+		Global_Player.switch_to("title")
 	get_tree().paused = false
+	audioStream.play()
 	hide()
 
 
@@ -17,7 +22,19 @@ func _unhandled_key_input(event):
 
 
 func _on_Timer_timeout():
-	$VideoPlayer.stop()
-	get_tree().paused = false
-	hide()
+	if $VideoPlayer.stream.get_file() == "res://Cutscenes/s5bx9-i9aoy.ogv":
+		Global_Player.switch_to("title")
+	else:
+		$VideoPlayer.stop()
+		get_tree().paused = false
+		audioStream.play()
+		hide()
 
+
+func play_scene(scene):
+	$VideoPlayer.stream = scene
+	if get_tree().paused != true:
+		get_tree().paused = true
+	audioStream.stop()
+	show()
+	$VideoPlayer.play()

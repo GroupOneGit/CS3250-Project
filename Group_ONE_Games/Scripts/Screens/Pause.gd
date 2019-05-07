@@ -30,6 +30,11 @@ func _on_Menu_pressed():
 
 
 func _on_Restart_pressed():
+	Global_Player.full_health()
+	Global_Player.has_Hat = false
+	ItemDatabase.restart()
+	for i in range(1,9):
+		ItemDatabase.scroll[i].hasfound = false
 	stop_p()
 	Global_Player.switch_to("main")
 

@@ -8,7 +8,7 @@ var current_scene_name = ""
 var MAX_health = 100
 var MAX_thirst = 100
 var MAX_energy = 100
-
+var has_Hat = false
 var health = MAX_health
 var thirst = MAX_thirst
 var energy = MAX_energy

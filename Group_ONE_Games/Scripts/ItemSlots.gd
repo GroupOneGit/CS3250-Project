@@ -95,7 +95,6 @@ func get_drag_data(position):
 	ItemDatabase.heldItem = get_item_metadata(itemSelected[0])
 	ItemDatabase.originalOwner = get_focus_owner().name
 	ItemDatabase.holdingItem = true
-	print(ItemDatabase.heldItem)
 	return itemSelected
 
 
@@ -299,9 +298,3 @@ func _on_Area2D3_input_event(viewport, event, shape_idx):
 		ItemDatabase.originalOwner = null
 		ItemDatabase.heldItem = null
 		ItemDatabase.holdingItem = false
-
-
-
-func _on_Area2D2_mouse_entered():
-	print("entered")
-	pass # Replace with function body.
